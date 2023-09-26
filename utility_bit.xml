@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--# based on ADLS 82Q  +chnages for RPL  # lgershma 6 JULY 21-->
+<Utility_bits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="utility_bit.xsd">
+  <ConfigSet name="ADL_Utility_Bit">
+    <RelayToken waitMillisecondsToVerifyChange="6" name="all_default">
+      <DriveVector>H,H,H,H,H,H,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_GRTL2_0">
+      <DriveVector>L,H,H,H,H,H,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_GRTL2_1">
+      <DriveVector>H,L,H,H,H,H,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_GRTL2_2">
+      <DriveVector>H,H,L,H,H,H,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_GRTL2_3">
+      <DriveVector>H,H,H,L,H,H,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_SA">
+      <DriveVector>H,H,H,H,L,H,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_VCCDIG">
+      <DriveVector>H,H,H,H,H,L,H,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_VCCDDQ">
+      <DriveVector>H,H,H,H,H,H,L,H</DriveVector>
+    </RelayToken>
+    <RelayToken waitMillisecondsToVerifyChange="6" name="FIVR_VLOAD_ANA">
+      <DriveVector>H,H,H,H,H,H,H,L</DriveVector>
+    </RelayToken>
+    <RelayPins>IO_RLY_00,IO_RLY_01,IO_RLY_02,IO_RLY_03,IO_RLY_04,IO_RLY_05,IO_RLY_06,IO_RLY_07</RelayPins>
+  </ConfigSet>
+</Utility_bits>

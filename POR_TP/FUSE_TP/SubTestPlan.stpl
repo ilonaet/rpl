@@ -1,0 +1,29 @@
+Version 1.0;
+
+SubTestPlans
+{
+	..\..\Modules\CLK_LJPLL_BASE\CLK_LJPLL_BASE.mtpl;
+	..\..\Modules\FUS_FACT\FUS_FACT.mtpl;
+	..\..\Modules\FUS_FLE\FUS_FLE.mtpl;
+	..\..\Modules\FUS_FUSEBURN\FUS_FUSEBURN.mtpl;
+	..\..\Modules\FUS_FUSECFG\FUS_FUSECFG.mtpl;
+	..\..\Modules\FUS_FUSEREAD\FUS_FUSEREAD.mtpl;
+	..\..\Modules\FUS_UNITINFO\FUS_UNITINFO.mtpl;
+	..\..\Modules\PTH_DIODE_SOT\PTH_DIODE_SOT.mtpl;
+	..\..\Modules\PTH_DIODE_THRSOAK\PTH_DIODE_THRSOAK.mtpl;
+	..\..\Modules\PTH_DTS\PTH_DTS.mtpl;
+	..\..\Modules\PTH_FIVR_OPSC\PTH_FIVR_OPSC.mtpl;
+	..\..\Modules\PTH_FIVR_TRIMC\PTH_FIVR_TRIMC.mtpl;
+	..\..\Modules\PTH_VREFLDO\PTH_VREFLDO.mtpl;
+	..\..\Modules\TPI_BASE\TPI_BASE.mtpl;
+	..\..\Modules\TPI_BASE_END\TPI_BASE_END.mtpl;
+	..\..\Modules\TPI_BIN\TPI_BIN.mtpl;
+	..\..\Modules\TPI_DFF\TPI_DFF.mtpl;
+	..\..\Modules\TPI_EDM\TPI_EDM.mtpl;
+	..\..\Modules\TPI_FLOWID\TPI_FLOWID.mtpl;
+	..\..\Modules\TPI_GFX_AGG\TPI_GFX_AGG.mtpl;
+	..\..\Modules\TPI_SHOPS\TPI_SHOPS.mtpl;
+	..\..\Modules\TPI_VCC\TPI_VCC.mtpl;
+	..\..\Modules\VCC_MIM_ADTL\VCC_MIM_ADTL.mtpl;
+	Final .\ProgramFlowsTestPlan\ProgramFlows.mtpl;
+}

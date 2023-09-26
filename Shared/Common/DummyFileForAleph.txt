@@ -1,0 +1,5 @@
+               ".\Modules\TPI_BASE\InputFiles\PrimeConfig\RED.fuseconfig.json;" +
+               ".\Modules\TPI_BASE\InputFiles\PrimeConfig\RED.fivrDomain.json;" +
+               ".\Modules\TPI_BASE\InputFiles\PrimeConfig\RED.fivrCondition.json;"+
+			   ".\Modules\TPI_BASE\InputFiles\PrimeConfig\RED.patmod.json;" +
+				".\Modules\TPI_BASE\InputFiles\PrimeConfig\Main.fuseDef.json"; 

@@ -1,0 +1,187 @@
+
+Version 1.0;
+
+
+UserVars FUN_CORE_vars
+{
+Array<String> CRX2_FCP_F3 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F3:FCP_BY_2_REC":"CRX2_F3:FCP_BY_2");
+Array<String> CR_FCP_F3 = (FlowMatrix.START_FLOW =="UX"?"CR_F3:FCP_BY_2_REC":"CR_F3:FCP_BY_2");
+Array<String> CRX2_FCP_F4 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F4:FCP_BY_2_REC":"CRX2_F4:FCP_BY_2");
+Array<String> CR_FCP_F4 = (FlowMatrix.START_FLOW =="UX"?"CR_F4:FCP_BY_2_REC":"CR_F4:FCP_BY_2");
+Array<String> CRX2_FCP_F5 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F5:FCP_BY_2_REC":"CRX2_F5:FCP_BY_2");
+Array<String> CR_FCP_F5 = (FlowMatrix.START_FLOW =="UX"?"CR_F5:FCP_BY_2_REC":"CR_F5:FCP_BY_2");
+Array<String> CRX2_F3 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F3:FCP_REC":"CRX2_F3:FCP");
+Array<String> CR_F3 = (FlowMatrix.START_FLOW =="UX"?"CR_F3:FCP_REC":"CR_F3:FCP");
+Array<String> CR_F5 = (FlowMatrix.START_FLOW =="UX"?"CR_F5:FCP_REC":"CR_F5:FCP");
+Array<String> CRX2_F5 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F5:FCP_REC":"CRX2_F5:FCP");
+Array<String> CR_F6 = (FlowMatrix.START_FLOW =="UX"?"CR_F6:FCP_BY_2_REC":"CR_F6:FCP_BY_2");
+Array<String> CRX2_F6 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F6:FCP_BY_2_REC":"CRX2_F6:FCP_BY_2");
+Array<String> CR_SBFT_F3 = (FlowMatrix.START_FLOW =="UX"?"CR_F3:SBFT_REC":"CR_F3:SBFT");
+Array<String> CR_SBFT_F5 = (FlowMatrix.START_FLOW =="UX"?"CR_F5:SBFT_REC":"CR_F5:SBFT");
+Array<String> CR_SBFT_F6 = (FlowMatrix.START_FLOW =="UX"?"CR_F6:SBFT_BY_2_REC":"CR_F6:SBFT_BY_2");
+Array<String> CR_MP_F3 = (FlowMatrix.START_FLOW =="UX"?"CR_F3:MP_REC":"CR_F3:MP");
+Array<String> CR_MP_F5 = (FlowMatrix.START_FLOW =="UX"?"CR_F5:MP_REC":"CR_F5:MP");
+Array<String> CRX2_SBFT_F3 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F3:SBFT_REC":"CRX2_F3:SBFT");
+Array<String> CRX2_SBFT_F5 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F5:SBFT_REC":"CRX2_F5:SBFT");
+Array<String> CRX2_SBFT_F6 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F6:SBFT_BY_2_REC":"CRX2_F6:SBFT_BY_2");
+Array<String> CRX2_MP_F3 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F3:MP_REC":"CRX2_F3:MP");
+Array<String> CRX2_MP_F5 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F5:MP_REC":"CRX2_F5:MP");
+Array<String> CRX2_F4 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F4:FCP_REC":"CRX2_F4:FCP");
+Array<String> CR_F4 = (FlowMatrix.START_FLOW =="UX"?"CR_F4:FCP_REC":"CR_F4:FCP");
+Array<String> CR_SBFT_F4 = (FlowMatrix.START_FLOW =="UX"?"CR_F4:SBFT_REC":"CR_F4:SBFT");
+Array<String> CR_MP_F4 = (FlowMatrix.START_FLOW =="UX"?"CR_F4:MP_REC":"CR_F4:MP");
+Array<String> CRX2_SBFT_F4 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F4:SBFT_REC":"CRX2_F4:SBFT");
+Array<String> CRX2_MP_F4 = (FlowMatrix.START_FLOW =="UX"?"CRX2_F4:MP_REC":"CRX2_F4:MP");
+
+}
+
+
+UserVars ARR_CORE_LSA_vars
+{
+    
+    Array<String> CR_F7 = (FlowMatrix.START_FLOW =="UX"?"CR_F7:ARR_REC":"CR_F7:ARR");
+    Array<String> CR_F6 = (FlowMatrix.START_FLOW =="UX"?"CR_F6:ARR_REC":"CR_F6:ARR");
+    Array<String> CR_F5 = (FlowMatrix.START_FLOW =="UX"?"CR_F5:ARR_REC":"CR_F5:ARR");
+    Array<String> CR_F4 = (FlowMatrix.START_FLOW =="UX"?"CR_F4:ARR_REC":"CR_F4:ARR");
+    Array<String> CR_F3 = (FlowMatrix.START_FLOW =="UX"?"CR_F3:ARR_REC":"CR_F3:ARR");  
+    
+}    
+	
+UserVars ARR_CORE_SSA_vars
+{
+    Array<String> CRSSA_F7 = (FlowMatrix.START_FLOW =="UX"?"CRSSA_F7:ARR_REC":"CRSSA_F7:ARR");
+    Array<String> CRSSA_F6 = (FlowMatrix.START_FLOW =="UX"?"CRSSA_F6:ARR_REC":"CRSSA_F6:ARR");
+    Array<String> CRSSA_F5 = (FlowMatrix.START_FLOW =="UX"?"CRSSA_F5:ARR_REC":"CRSSA_F5:ARR");
+    Array<String> CRSSA_F4 = (FlowMatrix.START_FLOW =="UX"?"CRSSA_F4:ARR_REC":"CRSSA_F4:ARR"); 
+    Array<String> CRSSA_F3 = (FlowMatrix.START_FLOW =="UX"?"CRSSA_F3:ARR_REC":"CRSSA_F3:ARR");    
+}
+
+
+
+UserVars FUN_CCF_Thermal_vars
+{
+	Array<String> Thermal_CHOT_SRHIAF7_FCSDRAG_CORE01_preinstance = (FlowMatrix.CLR_F7_Freq =="5.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80":"")+(FlowMatrix.CLR_F7_Freq =="5.2"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80":"")+(FlowMatrix.CLR_F7_Freq =="5.1"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="5.0"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.9"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.8"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.7"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.6"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.5"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.4"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"");
+    Array<String> Thermal_PHOT_SRHIAF7_FCSDRAG_CORE01_preinstance = (FlowMatrix.CLR_F7_Freq =="5.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80":"")+(FlowMatrix.CLR_F7_Freq =="5.2"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80":"")+(FlowMatrix.CLR_F7_Freq =="5.1"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="5.0"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.9"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.8"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.7"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.6"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.5"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.4"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"");
+     Array<String> Thermal_COLD_SRHIAF7_FCSDRAG_CORE01_preinstance = (FlowMatrix.CLR_F7_Freq =="5.3"?"":"");
+    Array<String> Thermal_CHOT_SRHIAF7_FCSDRAG_CORE45_preinstance = (FlowMatrix.CLR_F7_Freq =="5.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80":"")+(FlowMatrix.CLR_F7_Freq =="5.2"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_85,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80":"")+(FlowMatrix.CLR_F7_Freq =="5.1"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90":"")+(FlowMatrix.CLR_F7_Freq =="5.0"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.9"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.8"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.7"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.6"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.5"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.4"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"")+(FlowMatrix.CLR_F7_Freq =="4.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS":"");
+   Array<String> Thermal_PHOT_CHKIAF7_SBFT_CORE01_preinstance = (FlowMatrix.CLR_F7_Freq =="5.1"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75":"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_BYPASS");
+   Array<String> Thermal_CHOT_CHKIAF7_SBFT_CORE01_preinstance = (FlowMatrix.CLR_F7_Freq =="5.1"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90":"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90");
+    Array<String> Dummy = (FlowMatrix.CLR_F7_Freq =="5.3"?"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75":"PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75");
+}
+UserVars FUN_CORE_Thermal_vars
+{   Array<String> Thermal_CHOT_SRHIAF7_FC_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75)":"")+(FlowMatrix.Core_F7_Freq == "5.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75)":"")+(FlowMatrix.Core_F7_Freq == "5.2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75)":"")+(FlowMatrix.Core_F7_Freq == "5.1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"");
+    Array<String> Thermal_CHOT_SRHIAF6_FC_preinstance = (FlowMatrix.Core_F6_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_65)":"")+(FlowMatrix.Core_F6_Freq == "4.9"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_80,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_75)":"");
+	Array<String> Thermal_CHOT_CHKIAF7_SBFT_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"");
+ 	Array<String> Thermal_CHOT_CHKIAF6_SBFT_preinstance = (FlowMatrix.Core_F6_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F6_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F6_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"");
+    Array<String> Thermal_PHMHOT_CHKIAF7_SBFT_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"");
+    Array<String> Thermal_PHMHOT_CHKIAF6_SBFT_preinstance = (FlowMatrix.Core_F6_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F6_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F6_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"")+(FlowMatrix.Core_F6_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_60)":"");
+    Array<String> Thermal_COLD_CHKIAF7_SBFT_preinstance = (FlowMatrix.Core_F7_Freq == "5.6"?"":"");
+    Array<String> Thermal_CHOT_CHKIAF6_ARR_preinstance = (FlowMatrix.FlowIndex == "1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80)":"")+(FlowMatrix.FlowIndex == "2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_80)":"");
+    Array<String> Thermal_CHOT_SRHIAF7_SBFT_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_85)":"")+(FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_85)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_85)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"")+(FlowMatrix.Core_F7_Freq == "5.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"");
+    Array<String> Thermal_CHOT_SRHIAF5_SBFT_preinstance = (FlowMatrix.Core_F6_Freq == "5.1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_95)":""); 
+    Array<String> Thermal_CHOT_CHKIATVB_FC_preinstance = (FlowMatrix.CoreT_F8_Freq == "6.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_45,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_PHM40)":"")+(FlowMatrix.CoreT_F8_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_55,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_50)":"");
+	Array<String> Thermal_PHMHOT_CHKIATVB_FC_preinstance = (FlowMatrix.CoreT_F8_Freq == "6.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_PHM40,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_PHM40)":"");
+    Array<String> Thermal_CHOT_SRHIAF7_FC_CRX2_preinstance = (FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"");
+ 	Array<String> Thermal_CHOT_CHKIAF7_FC_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_70,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_65)":"")+(FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.Core_F7_Freq == "5.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"");
+	Array<String> Thermal_PHMHOT_CHKIAF7_FC_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_60,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_55)":"")+(FlowMatrix.Core_F7_Freq == "5.7"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_60,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_55)":"")+(FlowMatrix.Core_F7_Freq == "5.6"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_65,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_55)":"")+(FlowMatrix.Core_F7_Freq == "5.5"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_65,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_55)":"")+(FlowMatrix.Core_F7_Freq == "5.4"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_65,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_55)":"")+(FlowMatrix.Core_F7_Freq == "5.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_65,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_55)":"");
+    Array<String> Thermal_CHOT_SRHIAF7_SBFT_CRX2_preinstance = (FlowMatrix.Core_F7_Freq == "5.8"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_90,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_90)":"");
+}
+
+UserVars FUN_ATOM_Thermal_vars
+{
+	Array<String> Thermal_CHOT_CHKATOMF5_DRAGON_PRE_TCI = (FlowMatrix.ATOM_F5_Freq =="4.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.ATOM_F5_Freq =="4.2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.ATOM_F5_Freq =="4.1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.ATOM_F5_Freq =="4.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"");
+	Array<String> Thermal_COLD_CHKATOMF5_DRAGON_PRE_TCI = (FlowMatrix.ATOM_F5_Freq =="4.3"?"":"");
+	Array<String> Thermal_BLANK_CHKATOMF5_DRAGON_PRE_TCI = (FlowMatrix.ATOM_F5_Freq =="4.3"?"":"");
+	Array<String> Thermal_CHOT_CHKATOMF5_DRAGON_POST_TCI = (FlowMatrix.ATOM_F5_Freq=="4.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS110,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"")+(FlowMatrix.ATOM_F5_Freq =="4.2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS110,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"")+(FlowMatrix.ATOM_F5_Freq=="4.1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS110,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"")+(FlowMatrix.ATOM_F5_Freq=="4.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS110,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"");
+	Array<String> Thermal_PHMHOT_CHKATOMF5_DRAGON_POST_TCI = (FlowMatrix.ATOM_F5_Freq=="4.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"")+(FlowMatrix.ATOM_F5_Freq =="4.2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"")+(FlowMatrix.ATOM_F5_Freq=="4.1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"")+(FlowMatrix.ATOM_F5_Freq=="4.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_TEST,FUN_ATOM::FUN_ATOM_MEASURE_E_CHKATOMF5_X_X_X_RAMPSOAK_100_250ms)":"");
+	Array<String> Thermal_CHOT_CHKATOMF5_DRAGON_ATOML_PRE_TCI = (FlowMatrix.ATOM_F5_Freq =="4.3"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.ATOM_F5_Freq =="4.2"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.ATOM_F5_Freq =="4.1"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"")+(FlowMatrix.ATOM_F5_Freq =="4.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_75,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_70)":"");
+    Array<String> Thermal_CHOT_CHKATOMF4_DRAGON_ATOML_PRE_TCI = (FlowMatrix.ATOM_F4_Freq =="3.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_95)":"");
+    Array<String> Thermal_CHOT_CHKATOMF4_DRAGON_ATOML_POST_TCI = (FlowMatrix.ATOM_F4_Freq =="3.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS110,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_110)":"");
+
+}
+
+UserVars ARR_ATOM_Thermal_vars
+{
+    Array<String> Thermal_CHOT_CHKATOMF4_ARR_ATOML_PRE_TCI = (FlowMatrix.ATOM_F4_Freq =="3.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS95,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_95)":"");
+    Array<String> Thermal_CHOT_CHKATOMF4_ARR_ATOML_POST_TCI = (FlowMatrix.ATOM_F4_Freq =="3.0"?"ExecuteInstances(PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_TCI_CLASS110,PTH_DIODE_THRSOAK::PTH_DIODE_E_BEGIN_X_X_X_X_RAMPSOAK_110)":"");
+    Array<String> Thermal_BLANK_CHKATOMF4_ARR_ATOM_PRE_TCI = (FlowMatrix.ATOM_F5_Freq =="3.0"?"":"");
+
+}
+UserVars FUN_ATOML_limitVmin_vars
+{
+        Array<String> L2_Vmin_start_F3 = (FlowMatrix.FlowIndex == "1"?"GSDS[G.U.D.ATOML_F3_VMIN]":"GSDS[G.U.D.ATOML_F3_VMIN]");
+        Array<String> L2_Vmin_start_F4 = (FlowMatrix.FlowIndex == "1"?"GSDS[G.U.D.ATOML_F4_VMIN]":"GSDS[G.U.D.ATOML_F4_VMIN]");
+        Array<String> L2_Vmin_start_F5 = (FlowMatrix.FlowIndex == "1"?"GSDS[G.U.D.ATOML_F5_VMIN]":"GSDS[G.U.D.ATOML_F5_VMIN]");
+}
+	
+UserVars PTH_DIODE_THRSOAK_vars
+{   
+    Array<String> CHOT_TCI = (FlowMatrix.CoreT_F8_Freq == "6.0"?"TEST65":"")+(FlowMatrix.CoreT_F8_Freq == "5.8"?"TEST75":"");
+    Array<String> CHOT_TCI_TVB = (FlowMatrix.CoreT_F8_Freq == "6.0"?"TEST65":"")+(FlowMatrix.CoreT_F8_Freq == "5.8"?"TEST70":"");
+    Array<String> PHMHOT_TCI = (FlowMatrix.CoreT_F8_Freq == "6.0"?"TEST50":"")+(FlowMatrix.CoreT_F8_Freq == "5.8"?"TEST50":""); 
+    Array<String> CHOT_RAMPSOAK = (FlowMatrix.CoreT_F8_Freq == "6.0"?"65":"")+(FlowMatrix.CoreT_F8_Freq == "5.8"?"70":"");
+    Array<String> PHMHOT_RAMPSOAK = (FlowMatrix.CoreT_F8_Freq == "6.0"?"60":"")+(FlowMatrix.CoreT_F8_Freq == "5.8"?"55":"");    
+}
+
+UserVars VminPredict_vars
+{
+#CR
+Array<String> VminPredict_F2_CR = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CR_F2_1001":"")+(FlowMatrix.FlowIndexInt ==2 ?"VMIN_PREDICT_CR_F2_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F2_CR = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CR_F2_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CR_F2_1002":"");
+Array<String> VminPredict_F3_CR = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CR_F3_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_PREDICT_CR_F3_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F3_CR = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CR_F3_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CR_F3_1002":"");
+Array<String> VminPredict_F4_CR = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CR_F4_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_PREDICT_CR_F4_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F4_CR = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CR_F4_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CR_F4_1002":"");
+
+#CLR
+Array<String> VminPredict_F3_CLR = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLR_F3_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F3_CLR = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLR_F3_1001":"");
+Array<String> VminPredict_F4_CLR = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLR_F4_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F4_CLR = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLR_F4_1001":"");
+Array<String> VminPredict_F5_CLR = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLR_F5_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F5_CLR = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLR_F5_1001":"");
+
+#GT
+Array<String> VminPredict_F4_GTUS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_GTUS_F4_1001":FlowMatrixSingular.GTUS_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F4_GTUS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_GTUS_F4_1001":"");
+Array<String> VminPredict_F5_GTUS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_GTUS_F5_1001":FlowMatrixSingular.GTUS_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F5_GTUS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_GTUS_F5_1001":"");
+
+
+#CLRSS
+Array<String> VminPredict_F2_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLRSS_F2_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F2_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLRSS_F2_1001":"");
+Array<String> VminPredict_F3_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLRSS_F3_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F3_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLRSS_F3_1001":"");
+Array<String> VminPredict_F4_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLRSS_F4_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F4_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLRSS_F4_1001":"");
+Array<String> VminPredict_F5_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLRSS_F5_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F5_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLRSS_F5_1001":"");
+Array<String> VminPredict_F7_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CLRSS_F7_1001":FlowMatrixSingular.RING_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F7_CLRSS = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CLRSS_F7_1001":"");
+
+#CRSA
+Array<String> VminPredict_F3_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CRSA_F3_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_PREDICT_CRSA_F3_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F3_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CRSA_F3_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CRSA_F3_1002":"");
+Array<String> VminPredict_F4_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CRSA_F4_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_PREDICT_CRSA_F4_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F4_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CRSA_F4_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CRSA_F4_1002":"");
+Array<String> VminPredict_F5_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CRSA_F5_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_PREDICT_CRSA_F5_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F5_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CRSA_F5_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CRSA_F5_1002":"");
+Array<String> VminPredict_F7_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_CRSA_F7_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_PREDICT_CRSA_F7_1002":"")+(FlowMatrix.FlowIndexInt >2 ?FlowMatrixSingular.CORE_LOW_SEARCH_VALUE:"");
+Array<String> VminOvershoot_F7_CRSA = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_CRSA_F7_1001":"")+(FlowMatrix.FlowIndexInt ==2?"VMIN_OVERSHOOT_CRSA_F7_1002":"");
+
+#ATOM
+
+Array<String> VminPredict_F3_ATOM = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_ATOM_F3_1001":FlowMatrixSingular.ATOM_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F3_ATOM = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_ATOM_F3_1001":"");
+Array<String> VminPredict_F4_ATOM = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_ATOM_F4_1001":FlowMatrixSingular.ATOM_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F4_ATOM = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_ATOM_F4_1001":"");
+Array<String> VminPredict_F5_ATOM = (FlowMatrix.FlowIndexInt ==1?"VMIN_PREDICT_ATOM_F5_1001":FlowMatrixSingular.ATOM_LOW_SEARCH_VALUE);
+Array<String> VminOvershoot_F5_ATOM = (FlowMatrix.FlowIndexInt ==1?"VMIN_OVERSHOOT_ATOM_F5_1001":"");
+
+}
+
+TrialVars FlowDomain
+{
+	Default = 0;
+}

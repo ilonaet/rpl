@@ -1,0 +1,492 @@
+Version 1.0;
+PatternTriggerMap SICC_ALL_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = SICC_START_MEASURE_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+
+PatternTriggerMap DICC_IA_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = DICC_IA_START_MEASURE_cat0;
+        Trigger2 = SICC_START_MEASURE_cat0;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+
+PatternTriggerMap DICC_ATOM_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = DICC_ATOM_START_MEASURE_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+
+
+PatternTriggerMap DICC_GT_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = DICC_GT_START_MEASURE_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+
+PatternTriggerMap FIVR_START_MEASURE_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = FIVR_START_MEASURE_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap FIVR_VLOAD_MEAS_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = FIVR_VLOAD_MEAS_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap FIVR_VLOAD_MEAS_DEBUG_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = FIVR_VLOAD_MEAS_DEBUG_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap LOAD_Current_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = VCCIN_AUX_IBUMP_cat0;
+        Trigger2 = VCCIN_AUX_IBUMP_cat1;
+        Trigger3 = VCCIN_AUX_IBUMP_cat2;
+        Trigger4 = VCCIN_AUX_IBUMP_cat3;
+        Trigger5 = VCCIN_AUX_IBUMP_cat4;
+        Trigger6 = VCCIN_AUX_IBUMP_cat5;
+        Trigger7 = VCCIN_AUX_IBUMP_cat6;
+        Trigger8 = VCCIN_AUX_IBUMP_cat7;
+        Trigger9 = VCCIN_AUX_IBUMP_cat8;
+        Trigger10 = VCCIN_AUX_IBUMP_cat9;
+        Trigger11 = VCCIN_AUX_IBUMP_cat10;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap FIVR_START_EXBGREF_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = FIVR_START_EXBGREF_cat0;
+        Trigger2 = FIVR_VLOAD_MEAS_cat0;
+        Trigger3 = FIVR_END_EXBGREF_cat0;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap SICC_07_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = SICC_START_VLOAD_MEAS_cat0;
+        Trigger2 = SICC_VLOAD_SET_07_cat0;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap SICC_095_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = SICC_START_VLOAD_MEAS_cat0;
+        Trigger2 = SICC_VLOAD_SET_095_cat0;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap SICC_100_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = SICC_START_VLOAD_MEAS_cat0;
+        Trigger2 = SICC_VLOAD_SET_100_cat0;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap SICC_VLOAD_700mV_TriggerMap
+{
+     TriggerType LevelsTC
+    {
+          Trigger0 = power_dwn_xxx_pwrd_zerzer;
+          Trigger1 = SICC_START_VLOAD_MEAS_cat0;
+          Trigger2 = SICC_VLOAD_SET_07_cat0;
+          Trigger3 = power_dwn_xxx_pwrd_zerzer;
+          Trigger4 = power_dwn_xxx_pwrd_zerzer;
+         Trigger5 = power_dwn_xxx_pwrd_zerzer;
+         Trigger6 = power_dwn_xxx_pwrd_zerzer;
+         Trigger7 = power_dwn_xxx_pwrd_zerzer;
+         Trigger8 = power_dwn_xxx_pwrd_zerzer;
+         Trigger9 = power_dwn_xxx_pwrd_zerzer;
+         Trigger10 = power_dwn_xxx_pwrd_zerzer;
+         Trigger11 = power_dwn_xxx_pwrd_zerzer;
+         Trigger12 = power_dwn_xxx_pwrd_zerzer;
+         Trigger13 = power_dwn_xxx_pwrd_zerzer;
+         Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap SICC_Vload_950mV_TriggerMap
+{
+   TriggerType LevelsTC
+  {
+       Trigger0 = power_dwn_xxx_pwrd_zerzer;
+       Trigger1 = SICC_START_VLOAD_MEAS_cat0;
+       Trigger2 = SICC_VLOAD_SET_095_cat0;
+       Trigger3 = power_dwn_xxx_pwrd_zerzer;
+       Trigger4 = power_dwn_xxx_pwrd_zerzer;
+       Trigger5 = power_dwn_xxx_pwrd_zerzer;
+       Trigger6 = power_dwn_xxx_pwrd_zerzer;
+       Trigger7 = power_dwn_xxx_pwrd_zerzer;
+       Trigger8 = power_dwn_xxx_pwrd_zerzer;
+       Trigger9 = power_dwn_xxx_pwrd_zerzer;
+       Trigger10 = power_dwn_xxx_pwrd_zerzer;
+       Trigger11 = power_dwn_xxx_pwrd_zerzer;
+       Trigger12 = power_dwn_xxx_pwrd_zerzer;
+       Trigger13 = power_dwn_xxx_pwrd_zerzer;
+       Trigger14 = power_dwn_xxx_pwrd_zerzer;
+       Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+
+
+
+PatternTriggerMap DLVR_VLOAD_MEAS_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer;
+        Trigger1 = DLVR_VLOAD_MEAS_cat0;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = power_dwn_xxx_pwrd_zerzer;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = power_dwn_xxx_pwrd_zerzer;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = power_dwn_xxx_pwrd_zerzer;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+
+PatternTriggerMap IDV_650mV_Vbump_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer; 
+        Trigger1 = IDV_nom_lvl;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = IDV_idv_650mV_lvl;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = IDV_idv_650mV_lvl;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = IDV_idv_650mV_lvl;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap IDV_950mV_Vbump_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer; 
+        Trigger1 = IDV_nom_lvl;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = IDV_idv_950mV_lvl;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = IDV_idv_950mV_lvl;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = IDV_idv_950mV_lvl;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap IDV_1100mV_Vbump_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer; 
+        Trigger1 = IDV_nom_lvl;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = IDV_idv_1_1V_lvl;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = IDV_idv_1_1V_lvl;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = IDV_idv_1_1V_lvl;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap IDV_1200mV_Vbump_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = power_dwn_xxx_pwrd_zerzer; 
+        Trigger1 = IDV_nom_lvl;
+        Trigger2 = power_dwn_xxx_pwrd_zerzer;
+        Trigger3 = IDV_idv_1_2V_lvl;
+        Trigger4 = power_dwn_xxx_pwrd_zerzer;
+        Trigger5 = IDV_idv_1_2V_lvl;
+        Trigger6 = power_dwn_xxx_pwrd_zerzer;
+        Trigger7 = IDV_idv_1_2V_lvl;
+        Trigger8 = power_dwn_xxx_pwrd_zerzer;
+        Trigger9 = power_dwn_xxx_pwrd_zerzer;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+	}
+}
+
+PatternTriggerMap DLVR_VTARGET_SET_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = DLVR_VTARGET_BFUNC_vtarget0;
+        Trigger1 = DLVR_VTARGET_BFUNC_vtarget1;
+        Trigger2 = DLVR_VTARGET_BFUNC_vtarget2;
+        Trigger3 = DLVR_VTARGET_BFUNC_vtarget3;
+        Trigger4 = DLVR_VTARGET_BFUNC_vtarget4;
+        Trigger5 = DLVR_VTARGET_BFUNC_vtarget5;
+        Trigger6 = DLVR_VTARGET_BFUNC_vtarget6;
+        Trigger7 = DLVR_VTARGET_BFUNC_vtarget7;
+        Trigger8 = DLVR_VTARGET_BFUNC_vtarget8;
+        Trigger9 = DLVR_VTARGET_BFUNC_vtarget9;
+        Trigger10 = power_dwn_xxx_pwrd_zerzer;
+        Trigger11 = power_dwn_xxx_pwrd_zerzer;
+        Trigger12 = power_dwn_xxx_pwrd_zerzer;
+        Trigger13 = power_dwn_xxx_pwrd_zerzer;
+        Trigger14 = power_dwn_xxx_pwrd_zerzer;
+        Trigger15 = power_dwn_xxx_pwrd_zerzer;
+    }
+}
+
+PatternTriggerMap DLVR_VCCIN_SET_TriggerMap
+{
+    TriggerType LevelsTC
+    {
+        Trigger0 = DLVR_VCCIN_vccin0;
+        Trigger1 = DLVR_VLOAD_MEAS_cat0;
+        Trigger2 = DLVR_VCCIN_vccin2;
+        Trigger3 = DLVR_VCCIN_vccin3;
+        Trigger4 = DLVR_VCCIN_vccin4;
+        Trigger5 = DLVR_VCCIN_vccin5;
+        Trigger6 = DLVR_VCCIN_vccin6;
+        Trigger7 = DLVR_VCCIN_vccin7;
+        Trigger8 = DLVR_VCCIN_vccin8;
+        Trigger9 = DLVR_VCCIN_vccin9;
+        Trigger10 = DLVR_VCCIN_vccin10;
+        Trigger11 = DLVR_VCCIN_vccin11;
+        Trigger12 = DLVR_VCCIN_vccin12;
+        Trigger13 = DLVR_VCCIN_vccin13;
+        Trigger14 = DLVR_VCCIN_vccin14;
+        Trigger15 = DLVR_VCCIN_vccin15;
+    }
+}

@@ -1,0 +1,19 @@
+Version 1.0;
+
+TestPlan BASE;
+Import LocationsSets.usrv;
+Import UservarDefinitions.usrv;
+Import "FlowMatrix.flm.usrv";
+Import BaseSpecs.usrv;
+Import "FlowMatrixSpecs.flm.usrv";
+Import PinDefinitions.pin;
+Import LevelsSequences.lvl;
+Import TimingsSequences.tim;
+Import BaseLevels.tcg;
+Import BaseTiming.tcg;
+Import BinDefinitions.bdefs;
+Import Thermal.tcg;
+Import BasePatternTrigger.ptm;
+
+
+

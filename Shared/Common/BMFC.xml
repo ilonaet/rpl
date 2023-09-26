@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BinMatrix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="GEN_BinMatrixFlowControl_tt.xsd">
+  <BinMatrixName>RPL8161S_A0_WW30Y21_FlowMatrix</BinMatrixName>
+  <BinMatrixRevision>0</BinMatrixRevision>
+  <AttributeValueTable>
+    <Attribute name="default_domain" order="tightest-to-loosest">1,2,3,4,5,6,7,8,9,10,11,12,13,14,15</Attribute>
+  </AttributeValueTable>
+  <BOMGroupTable>
+    <BOMGroup name="CLASS_RPL8161S">
+      <!--
+<BOMList>
+        <BOM>P54ADTAV_A</BOM>
+        <BOM>P54ADTBV_A</BOM>
+        <BOM>P54ADTCV_A</BOM>
+        <BOM>P54ADTFV_A</BOM>
+        <BOM>P54ADTMV_A</BOM>
+        <BOM>P54ADTSV_A</BOM>
+</BOMList>
+-->
+      <Flow index="1" bin="1001">
+        <Attribute name="default_domain">1</Attribute>
+      </Flow>
+      <Flow index="2" bin="1002">
+        <Attribute name="default_domain">2</Attribute>
+      </Flow>
+      <Flow index="3" bin="1003">
+        <Attribute name="default_domain">3</Attribute>
+      </Flow>
+      <Flow index="4" bin="1004">
+        <Attribute name="default_domain">4</Attribute>
+      </Flow>
+      <Flow index="5" bin="1005">
+        <Attribute name="default_domain">5</Attribute>
+      </Flow>
+      <Flow index="6" bin="1006">
+        <Attribute name="default_domain">6</Attribute>
+      </Flow>
+      <Flow index="7" bin="1007">
+        <Attribute name="default_domain">7</Attribute>
+      </Flow>
+      <Flow index="8" bin="1008">
+        <Attribute name="default_domain">8</Attribute>
+      </Flow>
+      <Flow index="9" bin="1009">
+        <Attribute name="default_domain">9</Attribute>
+      </Flow>
+      <Flow index="10" bin="1010">
+        <Attribute name="default_domain">10</Attribute>
+      </Flow>
+    </BOMGroup>
+  </BOMGroupTable>
+</BinMatrix>

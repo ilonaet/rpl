@@ -1,0 +1,29 @@
+#DEFINE: SETPOINT : DATA_TYPE :   VARIABLE			    :  VARIABLE_TYPE :  VALUE		:  CONDITION
+ define:  ALL		  :  INTEGER  : BIN							    :    LITERAL		 : 0				:       *
+ define:  ALL		  :  BINARY   : FLAG						    :    LITERAL		 : 0				:       *
+ define:	ALL		  :  INTEGER  : DUMMYVAR				    :    LITERAL		 : -1				:       *
+ define:  ALL		  :  STRING   : Dummy						    :    LITERAL		 : "dummy"	:       *        
+ define:  ALL		  :  STRING	  : SITE_CHOICE         :    LITERAL		 : ""  			:				*
+ define:	ALL		  :  STRING		: PRODUCT_NAME        :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: PRODUCT_CHOICE      :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: SITE_CHOICE         :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: LOCN_CHOICE         :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: SCKT_CHOICE         :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: ENGID_CHOICE        :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: SSPEC_CHOICE        :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: DEVICE_CHOICE       :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: PACKGE_CHOICE       :    LITERAL		 : ""  			:    		*
+ define:	ALL		  :  STRING		: FLOW_CHOICE         :    LITERAL		 : ""  			:    		* 	
+ define:	ALL		  :  STRING		: REV_CHOICE          :    LITERAL		 : ""  			:    		* 	
+ define:	ALL		  :  STRING		: STEP_CHOICE         :    LITERAL		 : ""  			:    		* 	
+ define:	ALL		  :  STRING		: HCSL_CHOICE         :    LITERAL		 : ""  			:    		* 	
+ define:	ALL		  :  STRING		: HCSLSTEP_CHOICE     :    LITERAL		 : ""  			:    		* 	 
+ define:	ALL		  :  STRING		: BOM_CHOICE 			    :    LITERAL		 : ""  			:    		* 	 
+ define:	ALL		  :  STRING		: IS_RUN 		          :    LITERAL		 : "FALSE"	:    		* 	  
+ define:	ALL		  :  STRING		: RUN_MODE	          :    LITERAL		 : "PROD"	  :    		* 	  
+ define:	ALL			:  INTEGER  : BIN_TOS_HARD				:    LITERAL		 :  -1		  :       *
+ define:	ALL			:  INTEGER  : BIN_TOS_SOFT				:    LITERAL		 :  -1		  :       *
+ define:	ALL			:  INTEGER  : BIN_BMFC_DATA				:    LITERAL		 :  -1		  :       *
+ define:	ALL			:  INTEGER  : BIN_BMFC_FUNCTIONAL :    LITERAL		 :  -1		  :       *
+ define:	ALL			:  INTEGER  : BIN_BMFC_INTERFACE  :    LITERAL		 :  -1		  :       *     
+ define : ALL     : INTEGER		: STR2INT             : LITERAL        :   1  	  :       *

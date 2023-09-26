@@ -1,0 +1,662 @@
+Version 1.0;
+## base timing based on ADLS 82Q  # lgershma 6 JULY 21
+SpecificationSet cpu_func_sdr_univ_par (b100_t100_d100,b100_t100_d200,b100_t100_d250,b100_t100_d400,b100_t100_d50,b100_t50_d100,b100_t50_d200,b100_t50_d400,b25_t25_d100,b25_t25_d25,b50_t50_d50)
+{
+	Double p_pcie_drv_mul = 1;
+	Time p_pcie_drv_offset = 0nS;
+	Double p_pcie_strb_mul = 0.5;
+	Time p_pcie_strb_offset = 0nS;
+	Double p_dmi_drv_mul = 1;
+	Time p_dmi_drv_offset = 0nS;
+	Double p_dmi_strb_mul = 0.5;
+	Time p_dmi_strb_offset = 0nS;
+	Double p_pltrst_cpub_drv_mul = 1;
+	Time p_pltrst_cpub_drv_offset = 0nS;
+	Double p_pltrst_cpub_strb_mul = 0.5;
+	Time p_pltrst_cpub_strb_offset = 0nS;
+	Integer EC_ratio = 1;
+	Double p_aud_drv_mul = 0;
+	Time p_aud_drv_offset = 0nS;
+	Double p_aud_strb_mul = 0.75;
+	Time p_aud_strb_offset = 0nS;
+	Double p_tapin_drv_mul = 0;
+	Time p_tapin_drv_offset = 0nS;
+	Double p_tms_drv_mul = 0;
+	Time p_tms_drv_offset = 0nS;
+	Double p_tapin_strb_mul = 0.75;
+	Time p_tapin_strb_offset = 0nS;
+	Double p_tclk_drv_mul = 0;
+	Time p_tclk_drv_offset = 0nS;
+	Double p_tclk_per_mul = 1,1,1,1,1,1,2,2,1,1,1;
+	Time p_tclk_per_offset = 0nS;
+	Double p_tdo_strb_mul = 0;
+	Time p_tdo_strb_offset = 0nS;
+	Double p_bclk_drv_mul = 0;
+	Time p_bclk_drv_offset = 0nS;
+	Double p_bclk_ratio_mul = 1;
+	Time p_bclkper_spec = 10nS,10nS,10nS,10nS,10nS,10nS,10nS,10nS,40nS,40nS,20nS;
+	Double p_ddi_drv_mul = 0;
+	Time p_ddi_drv_offset = 0nS;
+	Double p_ddi_strb_mul = 0.5;
+	Time p_ddi_strb_offset = 0nS;
+	Double p_ddr_clk_drv_mul = 0;
+	Time p_ddr_clk_drv_offset = 0nS;
+	Double p_ddr_clk_strb_mul = 0.5;
+	Time p_ddr_clk_strb_offset = 0nS;
+	Double p_ddr_cmd_ma_drv_mul = 0;
+	Time p_ddr_cmd_ma_drv_offset = 0nS;
+	Double p_ddr_cmd_ma_strb_mul = 0.5;
+	Time p_ddr_cmd_ma_strb_offset = 0nS;
+	Double p_ddr_ctrl_drv_mul = 0;
+	Time p_ddr_ctrl_drv_offset = 0nS;
+	Double p_ddr_ctrl_strb_mul = 0.5;
+	Time p_ddr_ctrl_strb_offset = 0nS;
+	Time p_ddr_data_drv_offset = 0nS;
+	Double p_ddr_data_strb_mul = 0.3;
+	Time p_ddr_data_strb_offset = 0nS;
+	Integer DDR_EC_ratio = 1;
+	Integer PCIEBCLK_ratio = 1,2,1,4,1,1,2,4,1,1,1;
+	Double p_pcie_mult = 1,2,0.4,4,2,1,2,4,1,1,1;
+	Time p_pcie_offset = 0nS;
+	Double p_ddr_domain_mult = 1,0.5,0.4,0.25,2,1,0.5,0.25,0.25,1,1;
+	Double p_ddr_dqs_drv_mul = 0.25;
+	Time p_ddr_dqs_drv_offset = 2nS,0nS,0nS,0nS,0nS,0nS,0nS,0nS,0nS,0nS,0nS;
+	Double p_ddr_dqs_strb_mul = 0.5;
+	Time p_ddr_dqs_strb_offset = 0nS;
+	Double p_ddrview_ddr_drv_mul = 0;
+	Time p_ddrview_ddr_drv_offset = 0nS;
+	Double p_ddrview_ddr_strb_mul = 0.75;
+	Time p_ddrview_ddr_strb_offset = 0nS;
+	Double p_leg_misc_drv_mul = 0;
+	Time p_leg_misc_drv_offset = 0nS;
+	Double p_leg_misc_strb_mul = 0.5;
+	Time p_leg_misc_strb_offset = 0nS;
+	Double p_mbp_drv_mul = 0;
+	Time p_mbp_drv_offset = 0nS;
+	Double p_mbp_strb_mul = 0.75;
+	Time p_mbp_strb_offset = 0nS;
+	Double p_misc_ddr_drv_mul = 0;
+	Time p_misc_ddr_drv_offset = 0nS;
+	Double p_misc_ddr_strb_mul = 0.5;
+	Time p_misc_ddr_strb_offset = 0nS;
+	Double p_noa_drv_mul = 1;
+	Time p_noa_drv_offset = 0nS;
+	Double p_noa_strb_mul = 2.8;
+	Time p_noa_strb_offset = 0nS;
+	Time p_noa0_drv_offset = 0nS;
+	Time p_noa0_strb_offset = 0nS;
+	Time p_noa1_drv_offset = 0nS;
+	Time p_noa1_strb_offset = 0nS;
+	Time p_noa2_drv_offset = 0nS;
+	Time p_noa2_strb_offset = 0nS;
+	Time p_noa3_drv_offset = 0nS;
+	Time p_noa3_strb_offset = 0nS;
+	Time p_noa4_drv_offset = 0nS;
+	Time p_noa4_strb_offset = 0nS;
+	Time p_noa5_drv_offset = 0nS;
+	Time p_noa5_strb_offset = 0nS;
+	Time p_noa6_drv_offset = 0nS;
+	Time p_noa6_strb_offset = 0nS;
+	Time p_noa7_drv_offset = 0nS;
+	Time p_noa7_strb_offset = 0nS;
+	Time p_noa8_drv_offset = 0nS;
+	Time p_noa8_strb_offset = 0nS;
+	Time p_noa9_drv_offset = 0nS;
+	Time p_noa9_strb_offset = 0nS;
+	Time p_noa10_drv_offset = 0nS;
+	Time p_noa10_strb_offset = 0nS;
+	Time p_noa11_drv_offset = 0nS;
+	Time p_noa11_strb_offset = 0nS;
+	Time p_noa12_drv_offset = 0nS;
+	Time p_noa12_strb_offset = 0nS;
+	Time p_noa13_drv_offset = 0nS;
+	Time p_noa13_strb_offset = 0nS;
+	Time p_noa14_drv_offset = 0nS;
+	Time p_noa14_strb_offset = 0nS;
+	Time p_noa15_drv_offset = 0nS;
+	Time p_noa15_strb_offset = 0nS;
+	Double p_peci_drv_mul = 0;
+	Time p_peci_drv_offset = 0nS;
+	Double p_peci_strb_mul = 0.5;
+	Time p_peci_strb_offset = 0nS;
+	Double p_pegview_drv_mul = 0;
+	Time p_pegview_drv_offset = 0nS;
+	Double p_pegview_strb_mul = 0.5;
+	Time p_pegview_strb_offset = 0nS;
+	Double p_probe_drv_mul = 0;
+	Time p_probe_drv_offset = 0nS;
+	Double p_probe_strb_mul = 0.5;
+	Time p_probe_strb_offset = 0nS;
+	Double p_pwrg_drv_mul = 0;
+	Time p_pwrg_drv_offset = 0nS;
+	Double p_thrmmon_drv_mul = 0;
+	Time p_thrmmon_drv_offset = 0nS;
+	Double p_thrmmon_strb_mul = 0.5;
+	Time p_thrmmon_strb_offset = 0.5nS;
+	Double p_ddrper_drv_mul = 0;
+	Time p_ddrper_drv_offset = 0nS;
+	Double p_trst_drv_mul = 0;
+	Time p_trst_drv_offset = 0nS;
+	Double p_vid_drv_mul = 0;
+	Time p_vid_drv_offset = 0nS;
+	Double p_vid_strb_mul = 0.5;
+	Time p_vid_strb_offset = 0nS;
+	Double p_vtpsim_mul = 0.5;
+	Double p_xiu_misc_drv_mul = 0;
+	Time p_xiu_misc_drv_offset = 0nS;
+	Double p_xiu_misc_strb_mul = 0.5;
+	Time p_xiu_misc_strb_offset = 0nS;
+	Time p_ddr_common_offset = 0nS;
+	Time c_bclk_per = p_bclkper_spec*p_bclk_ratio_mul;
+	Time c_ddr_per = c_bclk_per*p_ddr_domain_mult;
+	Time c_bclk_drv_e1 = c_bclk_per*p_bclk_drv_mul+p_bclk_drv_offset;
+	Time c_bclk_drv_e2 = c_bclk_drv_e1+c_bclk_per/2;
+	Time c_ddrper_drv_e1 = c_ddr_per*DDR_EC_ratio*p_ddrper_drv_mul+p_ddrper_drv_offset+p_ddr_common_offset;
+	Time c_ddrper_drv_e2 = c_ddrper_drv_e1+c_ddr_per*DDR_EC_ratio/2;
+	Time c_ddr_dqs_drv_e1 = c_ddr_per*p_ddr_dqs_drv_mul+p_ddr_dqs_drv_offset+p_ddr_common_offset;
+	Time c_ddr_dqs_strb_e1 = c_ddr_dqs_drv_e1+p_ddr_dqs_strb_mul*c_ddr_per+p_ddr_dqs_strb_offset;
+	Time c_ddr_data_drv_e1 = c_ddr_dqs_drv_e1+p_vtpsim_mul*c_ddr_per+p_ddr_data_drv_offset;
+	Time c_ddr_data_strb_e1 = c_ddr_dqs_drv_e1+(p_ddr_data_strb_mul*c_ddr_per)+p_ddr_data_strb_offset;
+	Time c_ddr_clk_drv = c_ddr_dqs_drv_e1+(p_ddr_clk_drv_mul*c_ddr_per)+p_ddr_clk_drv_offset;
+	Time c_ddr_clk_strb = c_ddr_dqs_drv_e1+(p_ddr_clk_strb_mul*c_ddr_per)+p_ddr_clk_strb_offset;
+	Time c_ddr_cmd_ma_drv = c_ddr_dqs_drv_e1+(p_ddr_cmd_ma_drv_mul*c_ddr_per)+p_ddr_cmd_ma_drv_offset;
+	Time c_ddr_cmd_ma_strb = c_ddr_dqs_drv_e1+(p_ddr_cmd_ma_strb_mul*c_ddr_per)+p_ddr_cmd_ma_strb_offset;
+	Time c_ddr_ctrl_drv = c_ddr_dqs_drv_e1+(p_ddr_ctrl_drv_mul*c_ddr_per)+p_ddr_ctrl_drv_offset;
+	Time c_ddr_ctrl_strb = c_ddr_dqs_drv_e1+(p_ddr_ctrl_strb_mul*c_ddr_per)+p_ddr_ctrl_strb_offset;
+	Time c_misc_ddr_drv = c_ddr_dqs_drv_e1+(p_misc_ddr_drv_mul*c_ddr_per)+p_misc_ddr_drv_offset;
+	Time c_misc_ddr_strb = c_ddr_dqs_drv_e1+(p_misc_ddr_strb_mul*c_ddr_per)+p_misc_ddr_strb_offset;
+	Time c_ddrview_ddr_drv = c_ddr_dqs_drv_e1+(p_ddrview_ddr_drv_mul*c_ddr_per)+p_ddrview_ddr_drv_offset;
+	Time c_ddrview_ddr_strb = c_ddr_dqs_drv_e1+(p_ddrview_ddr_strb_mul*c_ddr_per)+p_ddrview_ddr_strb_offset;
+	Time c_aud_drv = c_ddr_dqs_drv_e1+(p_aud_drv_mul*c_ddr_per)+p_aud_drv_offset;
+	Time c_aud_strb = c_ddr_dqs_drv_e1+(p_aud_strb_mul*c_ddr_per)+p_aud_strb_offset;
+	Time c_ddi_drv = c_ddr_dqs_drv_e1+(c_ddr_per*p_ddi_drv_mul)+p_ddi_drv_offset;
+	Time c_ddi_strb = c_ddr_dqs_drv_e1+(c_ddr_per*p_ddi_strb_mul)+p_ddi_strb_offset;
+	Time c_pegview_drv = c_ddr_dqs_drv_e1+c_ddr_per*p_pegview_drv_mul+p_pegview_drv_offset;
+	Time c_pegview_strb = c_ddr_dqs_drv_e1+c_ddr_per*p_pegview_strb_mul+p_pegview_strb_offset;
+	Time c_dmi_drv = c_ddr_dqs_drv_e1+c_ddr_per*p_dmi_drv_mul+p_dmi_drv_offset;
+	Time c_dmi_strb = c_ddr_dqs_drv_e1+c_ddr_per*p_dmi_strb_mul+p_dmi_strb_offset;
+	Time c_pcie_drv = c_ddr_dqs_drv_e1+c_ddr_per*p_pcie_drv_mul+p_pcie_drv_offset;
+	Time c_pcie_strb = c_ddr_dqs_drv_e1+c_ddr_per*p_pcie_strb_mul+p_pcie_strb_offset;
+	Time c_leg_misc_drv = c_bclk_drv_e1+c_bclk_per*p_leg_misc_drv_mul+p_leg_misc_drv_offset;
+	Time c_leg_misc_strb = c_bclk_drv_e1+c_bclk_per*p_leg_misc_strb_mul+p_leg_misc_strb_offset;
+	Time c_mbp_drv = c_bclk_drv_e1+(p_mbp_drv_mul*c_bclk_per)+p_mbp_drv_offset;
+	Time c_mbp_strb = c_bclk_drv_e1+(p_mbp_strb_mul*c_bclk_per)+p_mbp_strb_offset;
+	Time c_noa_drv = c_bclk_drv_e1+(p_noa_drv_mul*c_bclk_per)+p_noa_drv_offset;
+	Time c_noa_strb = c_bclk_drv_e1+(p_noa_strb_mul*c_bclk_per)+p_noa_strb_offset;
+	Time c_noa0_drv = c_noa_drv+p_noa0_drv_offset;
+	Time c_noa0_strb = c_noa_strb+p_noa0_strb_offset;
+	Time c_noa1_drv = c_noa_drv+p_noa1_drv_offset;
+	Time c_noa1_strb = c_noa_strb+p_noa1_strb_offset;
+	Time c_noa2_drv = c_noa_drv+p_noa2_drv_offset;
+	Time c_noa2_strb = c_noa_strb+p_noa2_strb_offset;
+	Time c_noa3_drv = c_noa_drv+p_noa3_drv_offset;
+	Time c_noa3_strb = c_noa_strb+p_noa3_strb_offset;
+	Time c_noa4_drv = c_noa_drv+p_noa4_drv_offset;
+	Time c_noa4_strb = c_noa_strb+p_noa4_strb_offset;
+	Time c_noa5_drv = c_noa_drv+p_noa5_drv_offset;
+	Time c_noa5_strb = c_noa_strb+p_noa5_strb_offset;
+	Time c_noa6_drv = c_noa_drv+p_noa6_drv_offset;
+	Time c_noa6_strb = c_noa_strb+p_noa6_strb_offset;
+	Time c_noa7_drv = c_noa_drv+p_noa7_drv_offset;
+	Time c_noa7_strb = c_noa_strb+p_noa7_strb_offset;
+	Time c_noa8_drv = c_noa_drv+p_noa8_drv_offset;
+	Time c_noa8_strb = c_noa_strb+p_noa8_strb_offset;
+	Time c_noa9_drv = c_noa_drv+p_noa9_drv_offset;
+	Time c_noa9_strb = c_noa_strb+p_noa9_strb_offset;
+	Time c_noa10_drv = c_noa_drv+p_noa10_drv_offset;
+	Time c_noa10_strb = c_noa_strb+p_noa10_strb_offset;
+	Time c_noa11_drv = c_noa_drv+p_noa11_drv_offset;
+	Time c_noa11_strb = c_noa_strb+p_noa11_strb_offset;
+	Time c_noa12_drv = c_noa_drv+p_noa12_drv_offset;
+	Time c_noa12_strb = c_noa_strb+p_noa12_strb_offset;
+	Time c_noa13_drv = c_noa_drv+p_noa13_drv_offset;
+	Time c_noa13_strb = c_noa_strb+p_noa13_strb_offset;
+	Time c_noa14_drv = c_noa_drv+p_noa14_drv_offset;
+	Time c_noa14_strb = c_noa_strb+p_noa14_strb_offset;
+	Time c_noa15_drv = c_noa_drv+p_noa15_drv_offset;
+	Time c_noa15_strb = c_noa_strb+p_noa15_strb_offset;
+	Time c_peci_drv = c_bclk_drv_e1+(c_bclk_per*p_peci_drv_mul)+p_peci_drv_offset;
+	Time c_peci_strb = c_bclk_drv_e1+(c_bclk_per*p_peci_strb_mul)+p_peci_strb_offset;
+	Time c_probe_drv = c_bclk_drv_e1+(p_probe_drv_mul*c_bclk_per)+p_probe_drv_offset;
+	Time c_probe_strb = c_bclk_drv_e1+(p_probe_strb_mul*c_bclk_per)+p_probe_strb_offset;
+	Time c_pwrg_drv = c_bclk_drv_e1+(c_bclk_per*p_pwrg_drv_mul)+p_pwrg_drv_offset;
+	Time c_tclk_per = c_bclk_per*p_tclk_per_mul+p_tclk_per_offset;
+	Time c_tclk_drv_e1 = c_tclk_per*p_tclk_drv_mul+p_tclk_drv_offset;
+	Time c_tapin_drv_e1 = c_tclk_drv_e1+c_tclk_per*p_tapin_drv_mul+p_tapin_drv_offset;
+	Time c_tapin_strb = c_tapin_drv_e1+c_tclk_per*p_tapin_strb_mul+p_tapin_strb_offset;
+	Time c_tclk_drv_e2 = c_tclk_drv_e1+c_tclk_per/2;
+	Time c_tdo_strb_mul = p_tdo_strb_mul;
+	Time c_tdo_strb_e1 = c_tclk_drv_e2+(c_tclk_per*c_tdo_strb_mul)+p_tdo_strb_offset;
+	Time c_tms_drv_e1 = c_tclk_drv_e1+c_tclk_per*p_tms_drv_mul+p_tms_drv_offset;
+	Time c_thrmmon_drv = c_bclk_drv_e1+(p_thrmmon_drv_mul*c_bclk_per)+p_thrmmon_drv_offset;
+	Time c_thrmmon_strb = c_bclk_drv_e1+(p_thrmmon_strb_mul*c_bclk_per)+p_thrmmon_strb_offset;
+	Time c_trst_drv = c_tclk_drv_e1+c_tclk_per*p_trst_drv_mul+p_trst_drv_offset;
+	Time c_vid_drv = c_bclk_drv_e1+(p_vid_drv_mul*c_bclk_per)+p_vid_drv_offset;
+	Time c_vid_strb = c_bclk_drv_e1+(p_vid_strb_mul*c_bclk_per)+p_vid_strb_offset;
+	Time c_xiu_misc_drv = c_bclk_drv_e1+c_bclk_per*p_xiu_misc_drv_mul+p_xiu_misc_drv_offset;
+	Time c_xiu_misc_strb = c_bclk_drv_e1+c_bclk_per*p_xiu_misc_strb_mul+p_xiu_misc_strb_offset;
+	Time c_pltrst_cpub_drv = c_bclk_drv_e1+(p_pltrst_cpub_drv_mul*c_bclk_per)+p_pltrst_cpub_drv_offset;
+	Time c_pltrst_cpub_strb = c_bclk_drv_e1+(p_pltrst_cpub_strb_mul*c_bclk_per)+p_pltrst_cpub_strb_offset;
+	Time c_pciebclk_drv_e1 = c_ddrper_drv_e1*p_pcie_mult+p_pcie_offset;
+	Time c_pciebclk_drv_e2 = c_ddrper_drv_e2*p_pcie_mult+p_pcie_offset;
+}
+
+SpecificationSet cpu_func_stf_univ_par (b100_t100_d100,b100_t100_d200,b100_t100_d400,b100_t100_d50,b100_t50_d100,b100_t50_d200,b100_t50_d400,b25_t25_d100,b50_t50_d50)
+{
+	Double p_pcie_drv_mul = 1;
+	Time p_pcie_drv_offset = 0nS;
+	Double p_pcie_strb_mul = 0.5;
+	Time p_pcie_strb_offset = 0nS;
+	Double p_dmi_drv_mul = 1;
+	Time p_dmi_drv_offset = 0nS;
+	Double p_dmi_strb_mul = 0.5;
+	Time p_dmi_strb_offset = 0nS;
+	Double p_pltrst_cpub_drv_mul = 1;
+	Time p_pltrst_cpub_drv_offset = 0nS;
+	Double p_pltrst_cpub_strb_mul = 0.5;
+	Time p_pltrst_cpub_strb_offset = 0nS;
+	Integer EC_ratio = 1;
+	Double p_aud_drv_mul = 0;
+	Time p_aud_drv_offset = 0nS;
+	Double p_aud_strb_mul = 0.75;
+	Time p_aud_strb_offset = 0nS;
+	Double p_tapin_drv_mul = 0;
+	Time p_tapin_drv_offset = 0nS;
+	Double p_tms_drv_mul = 0;
+	Time p_tms_drv_offset = 0nS;
+	Double p_tapin_strb_mul = 0.75;
+	Time p_tapin_strb_offset = 0nS;
+	Double p_tclk_drv_mul = 0;
+	Time p_tclk_drv_offset = 0nS;
+	Double p_tclk_per_mul = 1,1,1,1,1,2,2,1,1;
+	Time p_tclk_per_offset = 0nS;
+	Double p_tdo_strb_mul = 0;
+	Time p_tdo_strb_offset = 0nS;
+	Double p_bclk_drv_mul = 0;
+	Time p_bclk_drv_offset = 0nS;
+	Double p_bclk_ratio_mul = 1;
+	Time p_bclkper_spec = 10nS,10nS,10nS,10nS,10nS,10nS,10nS,40nS,20nS;
+	Double p_ddi_drv_mul = 0;
+	Time p_ddi_drv_offset = 0nS;
+	Double p_ddi_strb_mul = 0.5;
+	Time p_ddi_strb_offset = 0nS;
+	Double p_ddr_clk_drv_mul = 0;
+	Time p_ddr_clk_drv_offset = 0nS;
+	Double p_ddr_clk_strb_mul = 0.5;
+	Time p_ddr_clk_strb_offset = 0nS;
+	Double p_ddr_cmd_ma_drv_mul = 0;
+	Time p_ddr_cmd_ma_drv_offset = 0nS;
+	Double p_ddr_cmd_ma_strb_mul = 0.5;
+	Time p_ddr_cmd_ma_strb_offset = 0nS;
+	Double p_ddr_ctrl_drv_mul = 0;
+	Time p_ddr_ctrl_drv_offset = 0nS;
+	Double p_ddr_ctrl_strb_mul = 0.5;
+	Time p_ddr_ctrl_strb_offset = 0nS;
+	Time p_ddr_data_drv_offset = 0nS;
+	Double p_ddr_data_strb_mul = 0.3;
+	Time p_ddr_data_strb_offset = 0nS;
+	Integer DDR_EC_ratio = 1;
+	Integer PCIEBCLK_ratio = 1,2,4,1,1,2,4,1,1;
+	Double p_pcie_mult = 1,2,4,2,1,2,4,1,1;
+	Time p_pcie_offset = 0nS;
+	Double p_ddr_domain_mult = 1,0.5,0.25,2,1,0.5,0.25,0.25,1;
+	Double p_ddr_dqs_drv_mul = 0.25;
+	Time p_ddr_dqs_drv_offset = 2nS,0nS,0nS,0nS,0nS,0nS,0nS,0nS,0nS;
+	Double p_ddr_dqs_strb_mul = 0.5;
+	Time p_ddr_dqs_strb_offset = 0nS;
+	Double p_ddrview_ddr_drv_mul = 0;
+	Time p_ddrview_ddr_drv_offset = 0nS;
+	Double p_ddrview_ddr_strb_mul = 0.75;
+	Time p_ddrview_ddr_strb_offset = 0nS;
+	Double p_leg_misc_drv_mul = 0;
+	Time p_leg_misc_drv_offset = 0nS;
+	Double p_leg_misc_strb_mul = 0.5;
+	Time p_leg_misc_strb_offset = 0nS;
+	Double p_mbp_drv_mul = 0;
+	Time p_mbp_drv_offset = 0nS;
+	Double p_mbp_strb_mul = 0.75;
+	Time p_mbp_strb_offset = 0nS;
+	Double p_misc_ddr_drv_mul = 0;
+	Time p_misc_ddr_drv_offset = 0nS;
+	Double p_misc_ddr_strb_mul = 0.5;
+	Time p_misc_ddr_strb_offset = 0nS;
+	Double p_noa_drv_mul = 1;
+	Time p_noa_drv_offset = 0nS;
+	Double p_noa_strb_mul = 2.8;
+	Time p_noa_strb_offset = 0nS;
+	Time p_noa0_drv_offset = 0nS;
+	Time p_noa0_strb_offset = 0nS;
+	Time p_noa1_drv_offset = 0nS;
+	Time p_noa1_strb_offset = 0nS;
+	Time p_noa2_drv_offset = 0nS;
+	Time p_noa2_strb_offset = 0nS;
+	Time p_noa3_drv_offset = 0nS;
+	Time p_noa3_strb_offset = 0nS;
+	Time p_noa4_drv_offset = 0nS;
+	Time p_noa4_strb_offset = 0nS;
+	Time p_noa5_drv_offset = 0nS;
+	Time p_noa5_strb_offset = 0nS;
+	Time p_noa6_drv_offset = 0nS;
+	Time p_noa6_strb_offset = 0nS;
+	Time p_noa7_drv_offset = 0nS;
+	Time p_noa7_strb_offset = 0nS;
+	Time p_noa8_drv_offset = 0nS;
+	Time p_noa8_strb_offset = 0nS;
+	Time p_noa9_drv_offset = 0nS;
+	Time p_noa9_strb_offset = 0nS;
+	Time p_noa10_drv_offset = 0nS;
+	Time p_noa10_strb_offset = 0nS;
+	Time p_noa11_drv_offset = 0nS;
+	Time p_noa11_strb_offset = 0nS;
+	Time p_noa12_drv_offset = 0nS;
+	Time p_noa12_strb_offset = 0nS;
+	Time p_noa13_drv_offset = 0nS;
+	Time p_noa13_strb_offset = 0nS;
+	Time p_noa14_drv_offset = 0nS;
+	Time p_noa14_strb_offset = 0nS;
+	Time p_noa15_drv_offset = 0nS;
+	Time p_noa15_strb_offset = 0nS;
+	Double p_peci_drv_mul = 0;
+	Time p_peci_drv_offset = 0nS;
+	Double p_peci_strb_mul = 0.5;
+	Time p_peci_strb_offset = 0nS;
+	Double p_pegview_drv_mul = 0;
+	Time p_pegview_drv_offset = 0nS;
+	Double p_pegview_strb_mul = 0.5;
+	Time p_pegview_strb_offset = 0nS;
+	Double p_probe_drv_mul = 0;
+	Time p_probe_drv_offset = 0nS;
+	Double p_probe_strb_mul = 0.5;
+	Time p_probe_strb_offset = 0nS;
+	Double p_pwrg_drv_mul = 0;
+	Time p_pwrg_drv_offset = 0nS;
+	Double p_thrmmon_drv_mul = 0;
+	Time p_thrmmon_drv_offset = 0nS;
+	Double p_thrmmon_strb_mul = 0.5;
+	Time p_thrmmon_strb_offset = 0.5nS;
+	Double p_ddrper_drv_mul = 0;
+	Time p_ddrper_drv_offset = 0nS;
+	Double p_trst_drv_mul = 0;
+	Time p_trst_drv_offset = 0nS;
+	Double p_vid_drv_mul = 0;
+	Time p_vid_drv_offset = 0nS;
+	Double p_vid_strb_mul = 0.5;
+	Time p_vid_strb_offset = 0nS;
+	Double p_vtpsim_mul = 0.5;
+	Double p_xiu_misc_drv_mul = 0;
+	Time p_xiu_misc_drv_offset = 0nS;
+	Double p_xiu_misc_strb_mul = 0.5;
+	Time p_xiu_misc_strb_offset = 0nS;
+	Double p_ddr0_stf_in_drv_mult = 1.2,0.8,0.8,0.25,0.25,0.25,0.25,0.25,0.25;
+	Time p_ddr0_stf_in_drv_offset = 0nS;
+	Double p_ddr0_stf_in_strb_mult = 1;
+	Time p_ddr0_stf_in_strb_offset = 0nS;
+	Double p_ddr1_stf_out_drv_mult = 0;
+	Time p_ddr1_stf_out_drv_offset = 0nS;
+	Double p_ddr1_stf_out_strb_mult = 2.2,1.8,2.2,0.75,0.75,0.75,0.75,0.75,0.75;
+	Time p_ddr1_stf_out_strb_offset = 0nS;
+	Double p_stf_clk_drv_fall_mult = 0,0.5,0.25,0,0,0.5,0.25,0,0;
+	Double p_stf_clk_drv_mult = 0.5;
+	Double p_stf_reset_drv_mult = 0;
+	Time p_stf_reset_drv_offset = 0nS;
+	Double p_stf_reset_strb_mult = 1;
+	Time p_stf_reset_strb_offset = 0nS;
+	Time p_stf_clk_drv_rise_offset = 0nS;
+	Time p_stf_clk_drv_fall_offset = 0nS;
+	Time p_ddr_common_offset = 0nS;
+	Time c_bclk_per = p_bclkper_spec*p_bclk_ratio_mul;
+	Time c_ddr_per = c_bclk_per*p_ddr_domain_mult;
+	Time c_bclk_drv_e1 = c_bclk_per*p_bclk_drv_mul+p_bclk_drv_offset;
+	Time c_bclk_drv_e2 = c_bclk_drv_e1+c_bclk_per/2;
+	Time c_ddrper_drv_e1 = c_ddr_per*DDR_EC_ratio*p_ddrper_drv_mul+p_ddrper_drv_offset+p_ddr_common_offset;
+	Time c_ddrper_drv_e2 = c_ddrper_drv_e1+c_ddr_per*DDR_EC_ratio/2;
+	Time c_ddr_dqs_drv_e1 = c_ddr_per*p_ddr_dqs_drv_mul+p_ddr_dqs_drv_offset+p_ddr_common_offset;
+	Time c_ddr_dqs_strb_e1 = c_ddr_dqs_drv_e1+p_ddr_dqs_strb_mul*c_ddr_per+p_ddr_dqs_strb_offset;
+	Time c_ddr_data_drv_e1 = c_ddr_dqs_drv_e1+p_vtpsim_mul*c_ddr_per+p_ddr_data_drv_offset;
+	Time c_ddr_data_strb_e1 = c_ddr_dqs_drv_e1+(p_ddr_data_strb_mul*c_ddr_per)+p_ddr_data_strb_offset;
+	Time c_ddr_clk_drv = c_ddr_dqs_drv_e1+(p_ddr_clk_drv_mul*c_ddr_per)+p_ddr_clk_drv_offset;
+	Time c_ddr_clk_strb = c_ddr_dqs_drv_e1+(p_ddr_clk_strb_mul*c_ddr_per)+p_ddr_clk_strb_offset;
+	Time c_ddr_cmd_ma_drv = c_ddr_dqs_drv_e1+(p_ddr_cmd_ma_drv_mul*c_ddr_per)+p_ddr_cmd_ma_drv_offset;
+	Time c_ddr_cmd_ma_strb = c_ddr_dqs_drv_e1+(p_ddr_cmd_ma_strb_mul*c_ddr_per)+p_ddr_cmd_ma_strb_offset;
+	Time c_ddr_ctrl_drv = c_ddr_dqs_drv_e1+(p_ddr_ctrl_drv_mul*c_ddr_per)+p_ddr_ctrl_drv_offset;
+	Time c_ddr_ctrl_strb = c_ddr_dqs_drv_e1+(p_ddr_ctrl_strb_mul*c_ddr_per)+p_ddr_ctrl_strb_offset;
+	Time c_misc_ddr_drv = c_ddr_dqs_drv_e1+(p_misc_ddr_drv_mul*c_ddr_per)+p_misc_ddr_drv_offset;
+	Time c_misc_ddr_strb = c_ddr_dqs_drv_e1+(p_misc_ddr_strb_mul*c_ddr_per)+p_misc_ddr_strb_offset;
+	Time c_ddrview_ddr_drv = c_ddr_dqs_drv_e1+(p_ddrview_ddr_drv_mul*c_ddr_per)+p_ddrview_ddr_drv_offset;
+	Time c_ddrview_ddr_strb = c_ddr_dqs_drv_e1+(p_ddrview_ddr_strb_mul*c_ddr_per)+p_ddrview_ddr_strb_offset;
+	Time c_aud_drv = c_ddr_dqs_drv_e1+(p_aud_drv_mul*c_ddr_per)+p_aud_drv_offset;
+	Time c_aud_strb = c_ddr_dqs_drv_e1+(p_aud_strb_mul*c_ddr_per)+p_aud_strb_offset;
+	Time c_ddi_drv = c_ddr_dqs_drv_e1+(c_ddr_per*p_ddi_drv_mul)+p_ddi_drv_offset;
+	Time c_ddi_strb = c_ddr_dqs_drv_e1+(c_ddr_per*p_ddi_strb_mul)+p_ddi_strb_offset;
+	Time c_pegview_drv = c_ddr_dqs_drv_e1+c_ddr_per*p_pegview_drv_mul+p_pegview_drv_offset;
+	Time c_pegview_strb = c_ddr_dqs_drv_e1+c_ddr_per*p_pegview_strb_mul+p_pegview_strb_offset;
+	Time c_dmi_drv = c_ddr_dqs_drv_e1+c_ddr_per*p_dmi_drv_mul+p_dmi_drv_offset;
+	Time c_dmi_strb = c_ddr_dqs_drv_e1+c_ddr_per*p_dmi_strb_mul+p_dmi_strb_offset;
+	Time c_pcie_drv = c_ddr_dqs_drv_e1+c_ddr_per*p_pcie_drv_mul+p_pcie_drv_offset;
+	Time c_pcie_strb = c_ddr_dqs_drv_e1+c_ddr_per*p_pcie_strb_mul+p_pcie_strb_offset;
+	Time c_leg_misc_drv = c_bclk_drv_e1+c_bclk_per*p_leg_misc_drv_mul+p_leg_misc_drv_offset;
+	Time c_leg_misc_strb = c_bclk_drv_e1+c_bclk_per*p_leg_misc_strb_mul+p_leg_misc_strb_offset;
+	Time c_mbp_drv = c_bclk_drv_e1+(p_mbp_drv_mul*c_bclk_per)+p_mbp_drv_offset;
+	Time c_mbp_strb = c_bclk_drv_e1+(p_mbp_strb_mul*c_bclk_per)+p_mbp_strb_offset;
+	Time c_noa_drv = c_bclk_drv_e1+(p_noa_drv_mul*c_bclk_per)+p_noa_drv_offset;
+	Time c_noa_strb = c_bclk_drv_e1+(p_noa_strb_mul*c_bclk_per)+p_noa_strb_offset;
+	Time c_noa0_drv = c_noa_drv+p_noa0_drv_offset;
+	Time c_noa0_strb = c_noa_strb+p_noa0_strb_offset;
+	Time c_noa1_drv = c_noa_drv+p_noa1_drv_offset;
+	Time c_noa1_strb = c_noa_strb+p_noa1_strb_offset;
+	Time c_noa2_drv = c_noa_drv+p_noa2_drv_offset;
+	Time c_noa2_strb = c_noa_strb+p_noa2_strb_offset;
+	Time c_noa3_drv = c_noa_drv+p_noa3_drv_offset;
+	Time c_noa3_strb = c_noa_strb+p_noa3_strb_offset;
+	Time c_noa4_drv = c_noa_drv+p_noa4_drv_offset;
+	Time c_noa4_strb = c_noa_strb+p_noa4_strb_offset;
+	Time c_noa5_drv = c_noa_drv+p_noa5_drv_offset;
+	Time c_noa5_strb = c_noa_strb+p_noa5_strb_offset;
+	Time c_noa6_drv = c_noa_drv+p_noa6_drv_offset;
+	Time c_noa6_strb = c_noa_strb+p_noa6_strb_offset;
+	Time c_noa7_drv = c_noa_drv+p_noa7_drv_offset;
+	Time c_noa7_strb = c_noa_strb+p_noa7_strb_offset;
+	Time c_noa8_drv = c_noa_drv+p_noa8_drv_offset;
+	Time c_noa8_strb = c_noa_strb+p_noa8_strb_offset;
+	Time c_noa9_drv = c_noa_drv+p_noa9_drv_offset;
+	Time c_noa9_strb = c_noa_strb+p_noa9_strb_offset;
+	Time c_noa10_drv = c_noa_drv+p_noa10_drv_offset;
+	Time c_noa10_strb = c_noa_strb+p_noa10_strb_offset;
+	Time c_noa11_drv = c_noa_drv+p_noa11_drv_offset;
+	Time c_noa11_strb = c_noa_strb+p_noa11_strb_offset;
+	Time c_noa12_drv = c_noa_drv+p_noa12_drv_offset;
+	Time c_noa12_strb = c_noa_strb+p_noa12_strb_offset;
+	Time c_noa13_drv = c_noa_drv+p_noa13_drv_offset;
+	Time c_noa13_strb = c_noa_strb+p_noa13_strb_offset;
+	Time c_noa14_drv = c_noa_drv+p_noa14_drv_offset;
+	Time c_noa14_strb = c_noa_strb+p_noa14_strb_offset;
+	Time c_noa15_drv = c_noa_drv+p_noa15_drv_offset;
+	Time c_noa15_strb = c_noa_strb+p_noa15_strb_offset;
+	Time c_peci_drv = c_bclk_drv_e1+(c_bclk_per*p_peci_drv_mul)+p_peci_drv_offset;
+	Time c_peci_strb = c_bclk_drv_e1+(c_bclk_per*p_peci_strb_mul)+p_peci_strb_offset;
+	Time c_probe_drv = c_bclk_drv_e1+(p_probe_drv_mul*c_bclk_per)+p_probe_drv_offset;
+	Time c_probe_strb = c_bclk_drv_e1+(p_probe_strb_mul*c_bclk_per)+p_probe_strb_offset;
+	Time c_pwrg_drv = c_bclk_drv_e1+(c_bclk_per*p_pwrg_drv_mul)+p_pwrg_drv_offset;
+	Time c_tclk_per = c_bclk_per*p_tclk_per_mul+p_tclk_per_offset;
+	Time c_tclk_drv_e1 = c_tclk_per*p_tclk_drv_mul+p_tclk_drv_offset;
+	Time c_tapin_drv_e1 = c_tclk_drv_e1+c_tclk_per*p_tapin_drv_mul+p_tapin_drv_offset;
+	Time c_tapin_strb = c_tapin_drv_e1+c_tclk_per*p_tapin_strb_mul+p_tapin_strb_offset;
+	Time c_tclk_drv_e2 = c_tclk_drv_e1+c_tclk_per/2;
+	Time c_tdo_strb_mul = p_tdo_strb_mul;
+	Time c_tdo_strb_e1 = c_tclk_drv_e2+(c_tclk_per*c_tdo_strb_mul)+p_tdo_strb_offset;
+	Time c_tms_drv_e1 = c_tclk_drv_e1+c_tclk_per*p_tms_drv_mul+p_tms_drv_offset;
+	Time c_thrmmon_drv = c_bclk_drv_e1+(p_thrmmon_drv_mul*c_bclk_per)+p_thrmmon_drv_offset;
+	Time c_thrmmon_strb = c_bclk_drv_e1+(p_thrmmon_strb_mul*c_bclk_per)+p_thrmmon_strb_offset;
+	Time c_trst_drv = c_tclk_drv_e1+c_tclk_per*p_trst_drv_mul+p_trst_drv_offset;
+	Time c_vid_drv = c_bclk_drv_e1+(p_vid_drv_mul*c_bclk_per)+p_vid_drv_offset;
+	Time c_vid_strb = c_bclk_drv_e1+(p_vid_strb_mul*c_bclk_per)+p_vid_strb_offset;
+	Time c_xiu_misc_drv = c_bclk_drv_e1+c_bclk_per*p_xiu_misc_drv_mul+p_xiu_misc_drv_offset;
+	Time c_xiu_misc_strb = c_bclk_drv_e1+c_bclk_per*p_xiu_misc_strb_mul+p_xiu_misc_strb_offset;
+	Time c_pltrst_cpub_drv = c_bclk_drv_e1+(p_pltrst_cpub_drv_mul*c_bclk_per)+p_pltrst_cpub_drv_offset;
+	Time c_pltrst_cpub_strb = c_bclk_drv_e1+(p_pltrst_cpub_strb_mul*c_bclk_per)+p_pltrst_cpub_strb_offset;
+	Time c_ddr0_stf_in_drv_e1 = c_ddr_per*p_ddr0_stf_in_drv_mult+p_ddr0_stf_in_drv_offset+p_ddr_common_offset;
+	Time c_ddr0_stf_in_strb_e1 = c_ddr_per*p_ddr0_stf_in_strb_mult+p_ddr0_stf_in_strb_offset+p_ddr_common_offset;
+	Time c_ddr1_stf_out_drv_e1 = c_ddr_per*p_ddr1_stf_out_drv_mult+p_ddr1_stf_out_drv_offset+p_ddr_common_offset;
+	Time c_ddr1_stf_out_strb_e1 = c_ddr_per*p_ddr1_stf_out_strb_mult+p_ddr1_stf_out_strb_offset+p_ddr_common_offset;
+	Time c_stf_clk_drv_fall = c_ddr_per*DDR_EC_ratio*p_stf_clk_drv_fall_mult+p_stf_clk_drv_fall_offset;
+	Time c_stf_clk_drv_rise = c_stf_clk_drv_fall+c_ddr_per*DDR_EC_ratio*p_stf_clk_drv_mult+p_stf_clk_drv_rise_offset;
+	Time c_stf_reset_drv_e1 = c_ddr_per*p_stf_reset_drv_mult+p_stf_reset_drv_offset;
+	Time c_stf_reset_strb_e1 = c_ddr_per*p_stf_reset_strb_mult+p_stf_reset_strb_offset;
+	Time c_pciebclk_drv_e1 = c_ddrper_drv_e1*p_pcie_mult+p_pcie_offset;
+	Time c_pciebclk_drv_e2 = c_ddrper_drv_e2*p_pcie_mult+p_pcie_offset;
+}
+
+SpecificationSet shops_timing_par (cat0)
+{
+	Time tper = 100nS;
+	Time p_cpushops_drv = 0nS;
+	Time p_dcyc = 100nS;
+	Time p_offset = 50nS;
+	Time c_cpushops_drv = p_cpushops_drv;
+	Time c_cpushops_stb = p_dcyc-p_offset;
+}
+
+TestConditionGroup cpu_func_sdr_univ_TCG
+{
+	SpecificationSet = cpu_func_sdr_univ_par;
+	Timing = __main__::cpu_func_sdr_univ;
+	
+}
+TestConditionGroup cpu_func_stf_univ_TCG
+{
+	SpecificationSet = cpu_func_stf_univ_par;
+	Timing = __main__::cpu_func_stf_univ;
+	
+}
+TestConditionGroup shops_timing_TCG
+{
+	SpecificationSet = shops_timing_par;
+	Timing = __main__::shops_timing;
+	
+}
+
+TestCondition cpu_func_sdr_univ_b100_t100_d100
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t100_d100;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t100_d200
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t100_d200;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t100_d250
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t100_d250;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t100_d400
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t100_d400;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t100_d50
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t100_d50;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t50_d100
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t50_d100;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t50_d200
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t50_d200;
+}
+
+TestCondition cpu_func_sdr_univ_b100_t50_d400
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b100_t50_d400;
+}
+
+TestCondition cpu_func_sdr_univ_b25_t25_d100
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b25_t25_d100;
+}
+
+TestCondition cpu_func_sdr_univ_b25_t25_d25
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b25_t25_d25;
+}
+
+TestCondition cpu_func_sdr_univ_b50_t50_d50
+{
+	TestConditionGroup  = cpu_func_sdr_univ_TCG;
+	Selector = b50_t50_d50;
+}
+
+TestCondition cpu_func_stf_univ_b100_t100_d100
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t100_d100;
+}
+
+TestCondition cpu_func_stf_univ_b100_t100_d200
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t100_d200;
+}
+
+TestCondition cpu_func_stf_univ_b100_t100_d400
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t100_d400;
+}
+
+TestCondition cpu_func_stf_univ_b100_t100_d50
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t100_d50;
+}
+
+TestCondition cpu_func_stf_univ_b100_t50_d100
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t50_d100;
+}
+
+TestCondition cpu_func_stf_univ_b100_t50_d200
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t50_d200;
+}
+
+TestCondition cpu_func_stf_univ_b100_t50_d400
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b100_t50_d400;
+}
+
+TestCondition cpu_func_stf_univ_b25_t25_d100
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b25_t25_d100;
+}
+
+TestCondition cpu_func_stf_univ_b50_t50_d50
+{
+	TestConditionGroup  = cpu_func_stf_univ_TCG;
+	Selector = b50_t50_d50;
+}
+
+TestCondition shops_timing_cat0
+{
+	TestConditionGroup  = shops_timing_TCG;
+	Selector = cat0;
+}

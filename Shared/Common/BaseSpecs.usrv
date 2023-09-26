@@ -1,0 +1,101 @@
+Version 1.0;
+
+UserVars Specs
+{
+	Const String ATOM_HIGH_SHMOO_LIMIT = "1.35";
+	Const String ATOM_LOW_SHMOO_LIMIT = "0.4";
+	Const String ATOM_RES_SHMOO = "0.02";
+	#Double ATOM_VMAX = 1.3V-GBVars.Vccc_ATOM_VMAX_GB;
+	Const String ATOML2FIXCOLDH = "1.2";
+	Const String ATOML2FIXCOLDL = "1";
+	Const String ATOML2FIXHOTH = "1.2";
+	Const String ATOML2FIXHOTL = "1";
+	#Double AVX_VMAX = 1.34V- GBVars.Vccc_CR_VMAX_GB;
+	Double CLR_VMAX = 1.34V - GBVars.Vccc_CLR_VMAX_GB;
+	#Double CORE_VMAX = 1.34V-GBVars.Vccc_CR_VMAX_GB;
+	Const String DE_HIGH_SHMOO_LIMIT = "1.2";
+	Const String DE_LOW_SHMOO_LIMIT = "0.5";
+	Const String DE_RES_SHMOO = "0.02";
+	Const String DISABLEBADATOM  = "DIE_RECOVERY!ExecSequence DisableBadAtom";
+	Const String DISABLEBADBIGCORE = "DIE_RECOVERY!ExecSequence DisableBadBigCore";
+	Const String DISABLEBADSLICES = "DIE_RECOVERY!ExecSequence DisableBadSlices";
+	Const String FAST_Check_Point_Expression = "SP[]";
+	Const Integer Sb_Edge_Tick = 3;
+	Const Integer Sb_Edge_Tick_SP = 1;
+	Const Integer Sb_Max_Fails = 20;
+	Const String FAST_LIMITED_GUARDBAND_ATLGC = "VMIN[]-USRV[GBVars.Vccc_ATLGC_GB]";
+	Const String FAST_LIMITED_GUARDBAND_ATOM = "VMIN[]-USRV[GBVars.Vccc_ATOM_GB]";
+	Const String FAST_LIMITED_GUARDBAND_ATOML = "VMIN[]-USRV[GBVars.Vccc_ATOML_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CLR = "VMIN[]-USRV[GBVars.Vccc_CLR_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CLRSS = "VMIN[]-USRV[GBVars.Vccc_CLRSS_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CR = "VMIN[]-USRV[GBVars.Vccc_CR_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CRI = "VMIN[]-USRV[GBVars.Vccc_CRI_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CRLGC = "VMIN[]-USRV[GBVars.Vccc_CRLGC_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CRSSA = "VMIN[]-USRV[GBVars.Vccc_CRSSA_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CRX2 = "VMIN[]-USRV[GBVars.Vccc_CRX2_GB]";
+	Const String FAST_LIMITED_GUARDBAND_CRX3 = "VMIN[]-USRV[GBVars.Vccc_CRX3_GB]";
+	Const String FAST_LIMITED_GUARDBAND_GTSM = "VMIN[]-USRV[GBVars.Vccc_GTSM_GB]";
+	Const String FAST_LIMITED_GUARDBAND_GTUS = "VMIN[]-USRV[GBVars.Vccc_GTUS_GB]";
+	Const String FAST_LIMITED_GUARDBAND_SACD = "VMIN[]-USRV[GBVars.Vccc_SACD_GB]";
+	Const String FAST_LIMITED_GUARDBAND_SAPF0 = "VMIN[]-USRV[GBVars.Vccc_SAPF0_GB]";
+	Const String FAST_LIMITED_GUARDBAND_SAQ = "VMIN[]-USRV[GBVars.Vccc_SAQ_GB]";
+	Const String FAST_Max_Fail_CHK = "100";
+	Const String FAST_Max_Fail_SRH = "0";
+	Const String FAST_MaxFailCounter_CHK = "9999999";
+	Const String FAST_MaxFailCounter_SRH = "0";
+	Const String FAST_Pattern_Mapping = "9,10,11,12,13,14,15";
+	Const String FAST_Pattern_Mapping_FUN = "1,2,3,4,5,6,7";
+	Const String FAST_Pattern_Mapping_SCN = "1,2,3,4,5,6,7";
+	Const String FAST_Search_Point_Expression = "SP[]";
+	Const String GT_HIGH_SHMOO_LIMIT = "1.25";
+	Const String GT_LOW_SHMOO_LIMIT = "0.5";
+	Const String GT_RES_SHMOO = "0.02";
+	#Const String GT_VMAX = "1.09V-GBVars.Vccc_GT_VMAX_GB";
+	#Double GT_VMAX = 1.09V - GBVars.Vccc_GT_VMAX_GB;
+	Const String IA_HIGH_SHMOO_LIMIT = "1.35";
+	Const String IA_LOW_SHMOO_LIMIT = "0.5";
+	Const String IA_LOW_SHMOO_LIMIT_HIGHFREQ = "0.65";
+	Const String IA_RES_SHMOO = "0.02";
+	Const String SA_HIGH_SHMOO_LIMIT = "1.2";
+	Const String SA_LOW_SHMOO_LIMIT = "0.5";
+	Const String SA_RES_SHMOO = "0.02";
+	#Double SA_VMAX = 1.04V-GBVars.Vccc_SA_VMAX_GB;
+	Const String VSet = "CPD_DEBUG!ExecPrimeCsCallback PrimeVdacSetUp";
+	Const String DPSreset = "CPD_DEBUG!ExecPrimeCsCallback RestoreDPSVoltage()";
+	Const String MultipassX2= "00111111,11001111,11110011,11111100";
+	Const String Multipass_CORE01= "11111100";
+	Const String Multipass_CORE23= "11110011";
+	Const String Multipass_CORE45= "11001111";
+	Const String Multipass_CORE67= "00111111";
+	Const String MultipassX4= "11110000,00001111";
+
+	##########################################################################################################
+	# VMAX variables                                                                                         #
+	##########################################################################################################
+	
+	String SA_VMAX = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.SA_HIGH_SEARCH_VALUE)- 0.03):FlowMatrixSingular.SA_HIGH_SEARCH_VALUE;
+	String GT_VMAX = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.GT_HIGH_SEARCH_VALUE)-0.03):FlowMatrixSingular.GT_HIGH_SEARCH_VALUE;
+	String GTUS_VMAX = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.GTUS_HIGH_SEARCH_VALUE)-0.03):FlowMatrixSingular.GTUS_HIGH_SEARCH_VALUE;
+	String VALUE_FOR_ATOML_CORE_VMAX  = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.L2_HIGH_SEARCH_VALUE)-0.03):FlowMatrixSingular.L2_HIGH_SEARCH_VALUE;
+	String ATOML_CORE_VMAX = VALUE_FOR_ATOML_CORE_VMAX;
+	String VALUE_FOR_ATOM_CORE_VMAX   = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.ATOM_HIGH_SEARCH_VALUE)-0.03):FlowMatrixSingular.ATOM_HIGH_SEARCH_VALUE;
+	String ATOM_CORE_VMAX  = VALUE_FOR_ATOM_CORE_VMAX;
+	String VALUE_FOR_ATOM_CORE_VMAX_MinDelay    = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.ATOM_HIGH_SEARCH_VALUE)+0.12):toString(toDouble(FlowMatrixSingular.ATOM_HIGH_SEARCH_VALUE)+0.15);
+	String ATOM_CORE_VMAX_MinDelay   = VALUE_FOR_ATOM_CORE_VMAX_MinDelay;
+	String ATOM_VMAX = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHMHOT"))?"0.97":(contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHMCOLD"))?"1.03":(contains(SCVars.SC_CURRENT_PROCESS_TYPE,"CLASSHOT"))?"0.94":(contains(SCVars.SC_CURRENT_PROCESS_TYPE,"CLASSCOLD"))?"1.0":"1.0";
+	String VALUE_FOR_IA_LFM_VMAX  = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.CORE_HIGH_TopFreq_SEARCH_VALUE)-0.28):toString(toDouble(FlowMatrixSingular.CORE_HIGH_TopFreq_SEARCH_VALUE )-0.25);
+	String IA_LFM_VMAX = VALUE_FOR_IA_LFM_VMAX;
+	String VALUE_FOR_IA_HFM_VMAX   = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.CORE_HIGH_TopFreq_SEARCH_VALUE)-0.03):FlowMatrixSingular.CORE_HIGH_TopFreq_SEARCH_VALUE;
+	String IA_HFM_VMAX  = VALUE_FOR_IA_HFM_VMAX;
+	String VALUE_FOR_IA_HFM_VMAX_NEW   = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.CORE_HIGH_SEARCH_VALUE)-0.03):FlowMatrixSingular.CORE_HIGH_SEARCH_VALUE;
+	String IA_HFM_VMAX_NEW  = VALUE_FOR_IA_HFM_VMAX_NEW;
+	String VALUE_FOR_CLR_HFM_VMAX    = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE)-0.03):FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE;
+	String CLR_HFM_VMAX   = VALUE_FOR_CLR_HFM_VMAX;
+	String VALUE_FOR_CLR_HFM_VMAX_NEW    = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.RING_HIGH_SEARCH_VALUE)-0.03):FlowMatrixSingular.RING_HIGH_SEARCH_VALUE;
+	String CLR_HFM_VMAX_NEW   = VALUE_FOR_CLR_HFM_VMAX_NEW;
+	String CLR_LFM_VMAX      = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE)-0.13):toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE )-0.1);
+	String CLR_LFM_VMAX_1P25      = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE)-0.15):toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE )-0.15);
+	String CLR_LFM_VMAX_1P40      = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE)-0.03):toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE )-0.0);
+	String CLR_LFM_VMAX_FUN      = (contains(SCVars.SC_CURRENT_PROCESS_TYPE,"PHM"))?toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE)-0.28):toString(toDouble(FlowMatrixSingular.RING_HIGH_TopFreq_SEARCH_VALUE )-0.25);
+	String VALUE_FOR_IA_LFM_HVBI  = "1.55";
+}

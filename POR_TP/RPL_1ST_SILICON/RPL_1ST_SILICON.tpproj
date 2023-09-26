@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <CustomProjectExtensionsPath Condition=" '$(CustomProjectExtensionsPath)' == '' ">$(TorchCustomProjectPath)\</CustomProjectExtensionsPath>
+    <ProjectGuid>de2d67a9-9387-437b-81cd-6b4e88235054</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(CustomProjectExtensionsPath)Torch.ProjectSystem.TestProgram.props" />
+  <ItemGroup>
+    <Folder Include="ProgramFlowsTestPlan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\ARR_ATOM_LSA\ARR_ATOM_LSA.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_ATOM_SSA\ARR_ATOM_SSA.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_CCF\ARR_CCF.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_CORE_LSA\ARR_CORE_LSA.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_CORE_SSA\ARR_CORE_SSA.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_DE\ARR_DE.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_DIERESET\ARR_DIERESET.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_GT\ARR_GT.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_LVR_LLC\ARR_LVR_LLC.mtproj" />
+    <ProjectReference Include="..\..\Modules\ARR_SOC\ARR_SOC.mtproj" />
+    <ProjectReference Include="..\..\Modules\CLK_CRO\CLK_CRO.mtproj" />
+    <ProjectReference Include="..\..\Modules\CLK_LCPLL_ALL\CLK_LCPLL_ALL.mtproj" />
+    <ProjectReference Include="..\..\Modules\CLK_LJPLL_ALL\CLK_LJPLL_ALL.mtproj" />
+    <ProjectReference Include="..\..\Modules\CLK_LJPLL_BASE\CLK_LJPLL_BASE.mtproj" />
+    <ProjectReference Include="..\..\Modules\CLK_LJPLL_CLKDIST\CLK_LJPLL_CLKDIST.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUN_ATOML\FUN_ATOML.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUN_ATOM\FUN_ATOM.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUN_CCF\FUN_CCF.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUN_CORE\FUN_CORE.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUN_DRNG\FUN_DRNG.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUN_GT\FUN_GT.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FACT\FUS_FACT.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FLE\FUS_FLE.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FUSEBURN\FUS_FUSEBURN.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FUSECFG\FUS_FUSECFG.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FUSEREAD\FUS_FUSEREAD.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_UNITINFO\FUS_UNITINFO.mtproj" />
+    <ProjectReference Include="..\..\Modules\MIO_DDR_AC\MIO_DDR_AC.mtproj" />
+    <ProjectReference Include="..\..\Modules\MIO_DDR_DC\MIO_DDR_DC.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_CEP\PTH_CEP.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_DIODE_SOT\PTH_DIODE_SOT.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_DIODE_THRSOAK\PTH_DIODE_THRSOAK.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_DTS\PTH_DTS.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_FIVR_OPSC\PTH_FIVR_OPSC.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_FIVR_TRIMC\PTH_FIVR_TRIMC.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_LVR_LLC\PTH_LVR_LLC.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_POWER\PTH_POWER.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_VREFLDO\PTH_VREFLDO.mtproj" />
+    <ProjectReference Include="..\..\Modules\QNR_CARV\QNR_CARV.mtproj" />
+    <ProjectReference Include="..\..\Modules\QNR_CARV_PKG\QNR_CARV_PKG.mtproj" />
+    <ProjectReference Include="..\..\Modules\RESET_ALL\RESET_ALL.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_ATOM\SCN_ATOM.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_ATOM_SF\SCN_ATOM_SF.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_CCF\SCN_CCF.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_CCF_SF\SCN_CCF_SF.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_CORE\SCN_CORE.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_DE\SCN_DE.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_GT\SCN_GT.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_SOC\SCN_SOC.mtproj" />
+    <ProjectReference Include="..\..\Modules\SCN_SOC_SF\SCN_SOC_SF.mtproj" />
+    <ProjectReference Include="..\..\Modules\SIO_BSCAN\SIO_BSCAN.mtproj" />
+    <ProjectReference Include="..\..\Modules\SIO_DMI_ALL1\SIO_DMI_ALL1.mtproj" />
+    <ProjectReference Include="..\..\Modules\SIO_DP_ALL1\SIO_DP_ALL1.mtproj" />
+    <ProjectReference Include="..\..\Modules\SIO_HSPHY_ALL1\SIO_HSPHY_ALL1.mtproj" />
+    <ProjectReference Include="..\..\Modules\SIO_INIT\SIO_INIT.mtproj" />
+    <ProjectReference Include="..\..\Modules\SIO_PCIE_ALL1\SIO_PCIE_ALL1.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_BASE\TPI_BASE.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_BASE_END\TPI_BASE_END.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_BIN\TPI_BIN.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_DFF\TPI_DFF.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_DLCPMIX\TPI_DLCPMIX.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_EDM\TPI_EDM.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_FLOWCTRL\TPI_FLOWCTRL.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_FLOWID\TPI_FLOWID.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_GFX_AGG\TPI_GFX_AGG.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_IDV\TPI_IDV.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_PUP\TPI_PUP.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_SHOPS\TPI_SHOPS.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_SKIP\TPI_SKIP.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_VCC\TPI_VCC.mtproj" />
+    <ProjectReference Include="..\..\Modules\VCC_MIM_ADTL\VCC_MIM_ADTL.mtproj" />
+    <ProjectReference Include="..\..\Modules\YBS_FVMIN_UPLOAD\YBS_FVMIN_UPLOAD.mtproj" />
+    <ProjectReference Include="..\..\Modules\YBS_INTERP_POST\YBS_INTERP_POST.mtproj" />
+    <ProjectReference Include="..\..\Modules\YBS_INTERP_PRE\YBS_INTERP_PRE.mtproj" />
+    <ProjectReference Include="..\..\Modules\YBS_UPSE\YBS_UPSE.mtproj" />
+    <ProjectReference Include="..\..\Modules\YBS_UPSS\YBS_UPSS.mtproj" />
+    <ProjectReference Include="..\..\Shared\Common\Common.ctproj" />
+  </ItemGroup>
+  <Import Project="$(CustomProjectExtensionsPath)Torch.ProjectSystem.TestProgram.targets" />
+</Project>

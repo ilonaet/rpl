@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<recovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UF_DieRecovery.xsd">
+	<defeaturing_rules>
+		<!-- Used for  Die Recovery to look for a matching combination for an specific SliceTracking  -->
+		<!-- Index size is 12-bits (11-0) as MSB>LSB, RPL8161S   -->
+		<rules name="SliceDefeaturingVector" index="11-0">
+			<rule mode="ValidCombinations" name="12Slices" size="12" type="FullyFeatured">
+				<bitvector value="000000000000"/>
+			</rule>
+			<rule mode="ValidCombinations" name="10Slices" size="10" type="Recovery">
+        <bitvector value="000000000011"/>
+        <bitvector value="000000001100"/>
+        <bitvector value="000000110000"/>
+        <bitvector value="000011000000"/>
+        <bitvector value="001100000000"/>
+        <bitvector value="110000000000"/>
+			</rule>
+			<rule mode="ValidCombinations" name="8Slices" size="8" type="Recovery">
+        <bitvector value="110000000011"/>
+        <bitvector value="110000001100"/>
+        <bitvector value="110000110000"/>
+        <bitvector value="110011000000"/>
+        <bitvector value="001100000011"/>
+        <bitvector value="111100000000"/>        
+			</rule>
+		</rules>
+		<rules name="AtomDefeaturingVector" index="23-0">
+			<rule mode="ValidCombinations" name="16A" size="24" type="FullyFeatured">
+				<bitvector value="000000000000000000000000"/>
+			</rule>
+			<rule mode="ValidCombinations" name="12A" size="20" type="Recovery">
+        <bitvector value="000000000000111100000000"/>
+        <bitvector value="000000001111000000000000"/>
+        <bitvector value="000011110000000000000000"/>
+        <bitvector value="111100000000000000000000"/>
+			</rule>
+			<rule mode="ValidCombinations" name="8A" size="16" type="Recovery">
+        <bitvector value="000000001111111100000000"/>
+        <bitvector value="000011111111000000000000"/>
+        <bitvector value="111111110000000000000000"/>
+        <bitvector value="111100001111000000000000"/>
+        <bitvector value="000011110000111100000000"/>
+        <bitvector value="111100000000111100000000"/>
+			</rule>
+      <rule mode="ValidCombinations" name="0A" size="8" type="Recovery">
+        <bitvector value="111111111111111100000000"/>
+			</rule>
+		</rules>
+		<rules name="BigCoreDefeaturingVector" index="7-0">
+			<rule mode="ValidCombinations" name="8C" size="8" type="FullyFeatured">
+				<bitvector value="00000000"/>
+			</rule>
+			<rule mode="ValidCombinations" name="6C" size="6" type="Recovery">
+				<bitvector value="00000011"/>
+				<bitvector value="00001100"/>
+				<bitvector value="00110000"/>
+				<bitvector value="11000000"/>
+			</rule>
+      <!--rule mode="ValidCombinations" name="4C" size="4" type="Recovery">
+				<bitvector value="00001111"/>
+				<bitvector value="11110000"/>
+			</rule-->
+		</rules>
+		<rules name="AtomSliceDefeaturingVector" index="3-0">
+			<rule mode="ValidCombinations" name="16A" size="4" type="FullyFeatured">
+				<bitvector value="0000"/>
+			</rule>
+			<rule mode="ValidCombinations" name="8A" size="2" type="Recovery">
+				<bitvector value="1100"/>
+				<bitvector value="0011"/>
+			</rule>
+		</rules>
+	</defeaturing_rules>
+	<setup>
+		<!-- Elements definition -->
+		<element_definition>
+			<element name="slices" index="11-0" description="ADL_SLICE"/>
+			<element name="cores" index="23-0" description="ADL_CORES"/>
+		</element_definition>
+		<!-- Slice definition   -->
+		<slice_definition>
+			<slice name="BigCore" description="BigCore_Slices" index="7-0">
+				<slice_elements>
+					<elements name="slices" index="7-0"/>
+				</slice_elements>
+			</slice>
+			<slice name="Slice" description="Slices" index="11-0">
+				<slice_elements>
+					<elements name="slices" index="11-0"/>
+				</slice_elements>
+			</slice>
+			<slice name="AtomCores" description="AtomCores" index="23-0">
+				<slice_elements>
+					<elements name="cores" index="23-0"/>
+				</slice_elements>
+			</slice>
+			<slice name="AtomSlice" description="AtomSlices" index="3-0">
+				<slice_elements>
+					<elements name="slices" index="3-0"/>
+				</slice_elements>
+			</slice>
+		</slice_definition>
+		<!-- Pin definition   -->
+		<pin_maps>
+			<map name="NOA_MAP_LLC">
+        <pin name="NOAB_00" expected_bits="1">
+          <slice name="Slice" index="11"/>
+        </pin>
+        <pin name="NOAB_01" expected_bits="1">
+          <slice name="Slice" index="10"/>
+        </pin>
+        <pin name="NOAB_02" expected_bits="1">
+          <slice name="Slice" index="9"/>
+        </pin>
+        <pin name="NOAB_03" expected_bits="1">
+          <slice name="Slice" index="8"/>
+        </pin>
+        <pin name="NOAB_04" expected_bits="1">
+          <slice name="Slice" index="7"/>
+        </pin>
+        <pin name="NOAB_05" expected_bits="1">
+          <slice name="Slice" index="6"/>
+        </pin>
+        <pin name="NOAB_06" expected_bits="1">
+          <slice name="Slice" index="5"/>
+        </pin>
+        <pin name="NOAB_07" expected_bits="1">
+          <slice name="Slice" index="4"/>
+        </pin>
+        <pin name="NOAB_08" expected_bits="1">
+          <slice name="Slice" index="3"/>
+        </pin>
+        <pin name="NOAB_09" expected_bits="1">
+          <slice name="Slice" index="2"/>
+        </pin>
+        <pin name="NOAB_10" expected_bits="1">
+          <slice name="Slice" index="1"/>
+        </pin>
+        <pin name="NOAB_11" expected_bits="1">
+          <slice name="Slice" index="0"/>
+        </pin>
+			</map>
+			<map name="NOA_MAP_BCORE">
+				<pin name="NOAB_00" expected_bits="1">
+					<slice name="BigCore" index="7"/>
+					<slice name="BigCore" index="6"/>
+				</pin>
+				<pin name="NOAB_01" expected_bits="1">
+					<slice name="BigCore" index="7"/>
+					<slice name="BigCore" index="6"/>
+				</pin>
+				<pin name="NOAB_08" expected_bits="1">
+					<slice name="BigCore" index="7"/>
+					<slice name="BigCore" index="6"/>
+				</pin>
+				<pin name="NOAB_02" expected_bits="1">
+					<slice name="BigCore" index="5"/>
+					<slice name="BigCore" index="4"/>
+				</pin>
+				<pin name="NOAB_03" expected_bits="1">
+					<slice name="BigCore" index="5"/>
+					<slice name="BigCore" index="4"/>
+				</pin>
+				<pin name="NOAB_09" expected_bits="1">
+					<slice name="BigCore" index="5"/>
+					<slice name="BigCore" index="4"/>
+				</pin>
+				<pin name="NOAB_04" expected_bits="1">
+					<slice name="BigCore" index="3"/>
+					<slice name="BigCore" index="2"/>
+				</pin>
+				<pin name="NOAB_05" expected_bits="1">
+					<slice name="BigCore" index="3"/>
+					<slice name="BigCore" index="2"/>
+				</pin>
+				<pin name="NOAB_10" expected_bits="1">
+					<slice name="BigCore" index="3"/>
+					<slice name="BigCore" index="2"/>
+				</pin>
+				<pin name="NOAB_06" expected_bits="1">
+					<slice name="BigCore" index="1"/>
+					<slice name="BigCore" index="0"/>
+				</pin>
+				<pin name="NOAB_07" expected_bits="1">
+					<slice name="BigCore" index="1"/>
+					<slice name="BigCore" index="0"/>
+				</pin>
+				<pin name="NOAB_11" expected_bits="1">
+					<slice name="BigCore" index="1"/>
+					<slice name="BigCore" index="0"/>
+				</pin>
+			</map>
+			<map name="NOA_MAP_ACORES">
+				<pin name="NOAB_00" expected_bits="1">
+					<slice name="AtomCores" index="15"/>
+				</pin>
+				<pin name="NOAB_01" expected_bits="1">
+					<slice name="AtomCores" index="14"/>
+				</pin>
+				<pin name="NOAB_02" expected_bits="1">
+					<slice name="AtomCores" index="13"/>
+				</pin>
+				<pin name="NOAB_03" expected_bits="1">
+					<slice name="AtomCores" index="12"/>
+				</pin>
+				<pin name="NOAB_04" expected_bits="1">
+					<slice name="AtomCores" index="11"/>
+				</pin>
+				<pin name="NOAB_05" expected_bits="1">
+					<slice name="AtomCores" index="10"/>
+				</pin>
+				<pin name="NOAB_06" expected_bits="1">
+					<slice name="AtomCores" index="9"/>
+				</pin>
+				<pin name="NOAB_07" expected_bits="1">
+					<slice name="AtomCores" index="8"/>
+				</pin>
+				<pin name="NOAB_08" expected_bits="1">
+					<slice name="AtomCores" index="7"/>
+				</pin>
+				<pin name="NOAB_09" expected_bits="1">
+					<slice name="AtomCores" index="6"/>
+				</pin>
+				<pin name="NOAB_10" expected_bits="1">
+					<slice name="AtomCores" index="5"/>
+				</pin>
+				<pin name="NOAB_11" expected_bits="1">
+					<slice name="AtomCores" index="4"/>
+				</pin>
+				<pin name="NOAB_12" expected_bits="1">
+					<slice name="AtomCores" index="3"/>
+				</pin>
+				<pin name="NOAB_13" expected_bits="1">
+					<slice name="AtomCores" index="2"/>
+				</pin>
+				<pin name="NOAB_14" expected_bits="1">
+					<slice name="AtomCores" index="1"/>
+				</pin>
+				<pin name="NOAB_15" expected_bits="1">
+					<slice name="AtomCores" index="0"/>
+				</pin>
+			</map>
+			<map name="NOA_MAP_ACORE">
+				<pin name="NOAB_08" expected_bits="1">
+					<slice name="AtomSlice" index="3"/>
+				</pin>
+				<pin name="NOAB_09" expected_bits="1">
+					<slice name="AtomSlice" index="2"/>
+				</pin>
+                <pin name="NOAB_10" expected_bits="1">
+                  <slice name="AtomSlice" index="1"/>
+                </pin>
+                <pin name="NOAB_11" expected_bits="1">
+                  <slice name="AtomSlice" index="0"/>
+                </pin>
+			</map>
+			<map name="SCAN_CONCURRENT" >
+				<pin name="TDO" expected_bits="8" use_expected_bits_as_split_size="true" capture_mode="dmem" >
+					<slice name="BigCore" index = "7"  bits="0" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "6"  bits="1" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "5"  bits="2" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "4"  bits="3" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "3"  bits="4" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "2"  bits="5" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "1"  bits="6" operator="or" apply_operator_in_same_pin="true"/>
+					<slice name="BigCore" index = "0"  bits="7" operator="or" apply_operator_in_same_pin="true"/>
+				</pin>
+			</map>
+      <map name="SCAN_CONCURRENT_CCF" >
+        <pin name="TDO" expected_bits="10" capture_mode="dmem" >
+          <slice name="BigCore" index = "9"  bits="0" />
+          <slice name="BigCore" index = "8"  bits="1" />
+          <slice name="BigCore" index = "7"  bits="2" />
+          <slice name="BigCore" index = "6"  bits="3" />
+          <slice name="BigCore" index = "5"  bits="4" />
+          <slice name="BigCore" index = "4"  bits="5" />
+          <slice name="BigCore" index = "3"  bits="6" />
+          <slice name="BigCore" index = "2"  bits="7" />
+          <slice name="BigCore" index = "1"  bits="8" />
+          <slice name="BigCore" index = "0"  bits="9" />
+
+        </pin>
+      </map>
+    </pin_maps>
+		<!-- Tracking Structures definition   -->
+		<tracking_structures>
+			<structure name="SliceTracking" description="Structures_to_track_Slice" index="1">
+				<structure_members>
+					<slice_name name="Slice"/>
+				</structure_members>
+				<is_defeatured mode="global" index="1" name="RecoveryVars.IsDefeatured"/>
+				<is_downbin mode="global" index="1" name="RecoveryVars.IsDownBin"/>
+			</structure>
+			<structure name="AtomCoresTracking" description="Structures_to_track_AtomCores" index="1">
+				<structure_members>
+					<slice_name name="AtomCores"/>
+				</structure_members>
+				<is_defeatured mode="global" index="1" name="RecoveryVars.IsDefeatured"/>
+				<is_downbin mode="global" index="1" name="RecoveryVars.IsDownBin"/>
+			</structure>
+			<structure name="BigSliceTracking" description="Structures_to_track_BigCore" index="1">
+				<structure_members>
+					<slice_name name="BigCore"/>
+				</structure_members>
+				<is_defeatured mode="global" index="1" name="RecoveryVars.IsDefeatured"/>
+				<is_downbin mode="global" index="1" name="RecoveryVars.IsDownBin"/>
+			</structure>
+			<structure name="BIGCoreMonitor" description="Structures_to_monitor_BigCore" index="1">
+				<structure_members>
+					<slice_name name="BigCore"/>
+				</structure_members>				
+			</structure>
+			<structure name="AtomSliceTracking" description="Structures_to_track_AtomSlice" index="1">
+				<structure_members>
+					<slice_name name="AtomSlice"/>
+				</structure_members>
+				<is_defeatured mode="global" index="1" name="RecoveryVars.IsDefeatured"/>
+				<is_downbin mode="global" index="1" name="RecoveryVars.IsDownBin"/>
+			</structure>
+		</tracking_structures>
+		<check_rule_settings>
+			<rule_group name="CoreRuleGroup">
+				<rule valid_combinations="SliceDefeaturingVector" update_mode="on_pass" kill_mode="single_fail" location_group="CHOT"/>
+				<rule valid_combinations="SliceDefeaturingVector" update_mode="on_pass" kill_mode="single_fail" location_group="RCHOT"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="COLD"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="FUSE"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="ROOM"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="PHM"/>
+			</rule_group>
+			<rule_group name="BigCoreRuleGroup">
+				<rule valid_combinations="BigCoreDefeaturingVector" update_mode="on_pass" kill_mode="default" location_group="CHOT"/>
+				<rule valid_combinations="BigCoreDefeaturingVector" update_mode="on_pass" kill_mode="default" location_group="RCHOT"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="COLD"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="FUSE"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="ROOM"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="PHM"/>
+			</rule_group>
+			<rule_group name="ScanBigCoreRuleGroup">
+				<rule valid_combinations="BigCoreDefeaturingVector" update_mode="always" kill_mode="default" location_group="CHOT"/>
+				<rule valid_combinations="BigCoreDefeaturingVector" update_mode="always" kill_mode="default" location_group="RCHOT"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="COLD"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="FUSE"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="ROOM"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="PHM"/>
+			</rule_group>
+			<rule_group name="AtomCoreRuleGroup">
+				<rule valid_combinations="AtomSliceDefeaturingVector" update_mode="on_pass" kill_mode="single_fail" location_group="CHOT"/>
+				<rule valid_combinations="AtomSliceDefeaturingVector" update_mode="on_pass" kill_mode="single_fail" location_group="RCHOT"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="COLD"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="FUSE"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="ROOM"/>
+				<rule kill_mode="single_fail" update_mode="on_pass" location_group="PHM"/>
+			</rule_group>
+			<rule_group name = "BigCoreRuleGroupFUNC6">
+				<rule valid_combinations = 'BigCoreDefeaturingVector' minimum_size = "6" update_mode = "on_pass" kill_mode = "default" location_group= 'CHOT'/>
+				<rule valid_combinations = 'BigCoreDefeaturingVector' minimum_size = "6" update_mode = "on_pass" kill_mode = "default" location_group= 'RCHOT'/>
+				<rule minimum_size = "6" kill_mode = "single_fail" update_mode = "on_pass" location_group= 'COLD'/>
+				<rule minimum_size = "6" kill_mode = "single_fail" update_mode = "on_pass" location_group= 'FUSE'/>
+				<rule minimum_size = "6" kill_mode = "single_fail" update_mode = "on_pass" location_group= 'ROOM'/>
+				<rule minimum_size = "6" kill_mode = "single_fail" update_mode = "on_pass" location_group= 'PHM'/>
+			</rule_group>
+		</check_rule_settings>
+		<actions>
+			<action name="ClearFlagVars" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<user_func name="CPD_DEBUG!SetUsrVars" arguments="RecoveryVars.IsDefeatured=[FALSE] RecoveryVars.IsDownBin=[FALSE]"/>
+			</action>
+			<action name="InitDownstreamSlices" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<init_struct input_mode="gsds" input="G.U.S.SLICEREC"/>
+			</action>
+			<action name="InitDownstreamAtomCores" target_structure="AtomCoresTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<init_struct input_mode="gsds" input="G.U.S.ATOMCORESREC"/>
+			</action>
+			<action name="InitDownstreamBigCores" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<init_struct input_mode="gsds" input="G.U.S.BIGCORESREC"/>
+			</action>
+			<action name="InitDownstreamAtomSlices" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<init_struct input_mode="gsds" input="G.U.S.ATOMSLICEREC"/>
+			</action>
+			<action name="MirrorSlice" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.InitialBitVectorSlice"/>
+			</action>
+			<action name="MirrorAtomSlice" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.InitialBitVectorAtomSlice"/>
+			</action>
+			<action name="MirrorBigCoreSlice" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.InitialBitVectorBigCore"/>
+			</action>
+			<action name="ConcatenateGSDS" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<!-- Concatenate G.U.S.ReadAtom+G.U.S.ReadBigCore=G.U.S.ActualDisableVector    -->
+				<user_func name="CPD_DEBUG!Execute" arguments="TPI_BASE::CTRL_X_UF_K_START_X_X_X_X_GSDSCONCAT"/>
+			</action>
+			<action name="PrintGSDS" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<!-- Concatenate G.U.S.ReadAtom+G.U.S.ReadBigCore=G.U.S.ActualDisableVector    -->
+				<user_func name="GSDS_UF!PrintSingleGSDS" arguments="G.U.S.ReadBigCore#G.U.S.ATOMREC#G.U.S.ActualDisableVector#G.U.S.InitialBitVectorBigCore#G.U.S.BitVectorMaskBigCore#G.U.S.MultiPassBitVector"/>
+			</action>
+			<action name="SetBitVectorMaskBigCore" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.BitVectorMaskBigCore"/>
+			</action>
+			<!--<action name = "SetBitVectorMaskAtomCore"      target_structure = "AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode = "user_input"  input_mode="gsds" input="G.U.S.BitVectorMaskAtomCore" />
+			</action>-->
+			<action name="ReadTestResultsBigCore" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="dfm" output_gsds="G.U.S.SearchPointBitVectorResultBigCore"/>
+			</action>
+			<action name="ReadTestResultsAtomCore" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="dfm" output_gsds="G.U.S.SearchPointBitVectorResultAtomCore"/>
+			</action>
+			<action name="ReadTestResultsSlice" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="dfm" output_gsds="G.U.S.SearchPointBitVectorResultSlice"/>
+			</action>
+			<action name="ReadTestResultsFromGSDSBigCore" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="input" input_mode="gsds" input="G.U.S.CumulativeBitVectorResultBigCore"/>
+			</action>
+			<action name="ReadTestResultsFromGSDSAtomCore" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="input" input_mode="gsds" input="G.U.S.CumulativeBitVectorResultAtomCore"/>
+			</action>
+			<action name="ReadTestResultsFromGSDSSlice" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="input" input_mode="gsds" input="G.U.S.CumulativeBitVectorResultSlice"/>
+			</action>
+			<action name="CheckRulesValidComboBigCore" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<check_rules name="BigCoreDefeaturingVector" kill_mode="single_fail" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds"/>
+			</action>
+			<action name="CheckRulesValidComboAtomCore" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<check_rules name="AtomSliceDefeaturingVector" kill_mode="single_fail" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds"/>
+			</action>
+			<action name="CoreCheckRulesValidComboSlice" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<check_rules name="SliceDefeaturingVector" kill_mode="single_fail" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds"/>
+			</action>
+			<action name="MaskClearCore" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="clear"/>
+			</action>
+			<action name="MaskClearAtomCore" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="clear"/>
+			</action>
+			<action name="MaskClearBigCore" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="clear"/>
+			</action>
+			<action name="EnableAllCores" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<disable_slice mode="clear" register="CPU0" fuse_group="punit/LLC_SLICE_IA_CORE_DIS" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="EnableAtomCores" target_structure="AtomCoresTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<disable_slice mode="clear" register="CPU0" fuse_group="punit/IA_LOGICAL_CORE_DISABLE_MASK" partial_pattern_name="adl_pre"/>
+			</action>  
+
+			<action name="DisableSliceFromTrackingStructure" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<disable_slice mode="track_struct" register="CPU0" fuse_group="punit/LLC_SLICE_IA_CORE_DIS" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="DisableBadBigCoreFromTrackingStructure" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<disable_slice mode="track_struct" register="CPU0" fuse_group="punit/LLC_SLICE_IA_CORE_DIS" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="DisableAtomCore" target_structure="AtomCoresTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<disable_slice mode="track_struct" register="CPU0" fuse_group="punit/IA_LOGICAL_CORE_DISABLE_MASK" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="CoreSetMaskFromUserInput" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.CoreUserBitVectorMask"/>
+			</action>
+			<action name="MaskTrackStructAtom" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="track_struct"/>
+			</action>
+			<!-- Static Actions    -->
+			<action name="ACoreSetMaskFromUserInput" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.ACoreUserBitVectorMask"/>
+			</action>
+			<action name="BCoreSetMaskFromUserInput" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.BCoreUserBitVectorMask"/>
+			</action>
+			<action name="CoreDisableFromUserInput" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<!-- Disable can be done only for full SliceTracking   -->
+				<disable_slice mode="user_input" input_mode="gsds" input="G.U.S.CoreUserBitVectorMask" register="CPU0" fuse_group="punit/LLC_SLICE_IA_CORE_DIS" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="CoreReadDFM" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<read_test_results mode="dfm" output_gsds="G.U.S.CoreDFMResults"/>
+			</action>
+			<action name="CoreCheckRulesValidComboMonitorStatic" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<check_rules rule_group_reference="CoreRuleGroup" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds"/>
+			</action>
+			<action name="CoreCheckRulesSingleFailStatic" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<check_rules rule_group_reference="CoreRuleGroup" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds"/>
+			</action>
+			<action name="SliceSetMaskFromTrackingStructure" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="track_struct"/>
+			</action>
+			<action name="BigCoreSetMaskFromTrackingStructure" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="track_struct"/>
+			</action>
+			<action name="SetBitVectorMaskAtomCore" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.BitVectorMaskAtomSlice"/>
+			</action>
+			<action name="CoreDisableFromTrackingStructure" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<disable_slice mode="track_struct" register="CPU0" fuse_group="punit/LLC_SLICE_IA_CORE_DIS" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="Exec1" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<user_func name="DIE_RECOVERY!ExecSequence" arguments="SeqDisableAtomCore"/>
+			</action>
+			<action name="Exec2" target_structure="AtomSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<user_func name="DIE_RECOVERY!ExecSequence" arguments="SeqMaskAtomCore"/>
+			</action>
+			<action name="SetPattModiffy" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<user_func name="CPD_DEBUG!Execute" arguments="TPI_BASE::CTRL_X_UF_K_START_X_X_X_X_PATTMODIFY"/>
+			</action>
+			<action name="DisableBadBigCoreStatic" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+
+				<disable_slice mode="user_input" input_mode="gsds"  input="G.U.S.SLICEREC" register="CPU0" fuse_group="punit/LLC_SLICE_IA_CORE_DIS" partial_pattern_name="adl_pre"/>
+			</action>
+			<action name="SetMaskBigCoreStatic" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.BIGCORESREC"/>
+			</action>
+			<action name="SetMaskSliceStatic" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.SLICEREC"/>
+			</action>
+			<action name="MirrorBigCoreSlicetoPatModify" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.DIERECPATMODIFY"/>
+			</action>
+			<action name="PassingBuffer" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<user_func name="CPD_DEBUG!SetUsrVars" arguments="_UserVars.DieRecoveryInput=[$value]"  input_mode="literal" input="00001111" />
+			</action>		
+			
+			
+			<action name="MirrorLLC" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.LLCState"/>
+			</action>
+			<action name="MirrorCCF" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.CCFState"/>
+			</action>
+			<action name="SetBitVectorMaskLLC" target_structure="SliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.LLCState"/>
+			</action>
+			<action name="SetBitVectorMaskCCF" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<set_mask mode="user_input" input_mode="gsds" input="G.U.S.CCFState"/>
+			</action>
+			<action name="SetCaptureSettingsScan" target_structure="BigSliceTracking" target_index="1">
+				<set_capture_settings capture_memory_type="DMEM" capture_mode="IT_CAPTURE_FAIL" enhanced_capture_mode="IT_ENHANCEDCAPTURE_TRIGGERED" pattern_execution_mode="IT_PGSTOP_ON_FULL" number_captures="3000000"/>
+			</action>
+			<action name = "ReadDMEM" target_structure = "BigSliceTracking" target_index= "1" ituff_mode = "brief">
+				<read_test_results mode = "dmem" output_global= "_UserVars.DieRecoveryInput" />
+			</action>
+			<action name = "ReadSCANFix" target_structure = "BigSliceTracking" target_index= "1" ituff_mode = "brief">
+				<read_test_results mode = "input" input_mode="global" input="_UserVars.DieRecoveryInput" />
+			</action>
+			<action name = "CheckSliceTrackNonFast" target_structure = "BigSliceTracking" target_index = "1" ituff_mode = "verbose">
+				<check_rules rule_group_reference="ScanBigCoreRuleGroup" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds"/>	
+			</action>
+			<action name="PinMaskingFromSliceScan" target_structure="BigSliceTracking" target_index="1">
+				<pattern_modify mask_bits_gsds="G.U.S.SLC_TRK_SCAN" set_point_group_base="CORE" />
+			</action>
+			<action name="PinUnMaskingFromSliceScan" target_structure="BigSliceTracking" target_index="1">
+				<pattern_modify mask_bits_gsds="G.U.S.SLC_TRK_SCAN" set_point_group_base="UNMASK" />
+			</action>
+			<action name="MirrorScan" target_structure="BigSliceTracking" target_index="1">
+				<mirror_struct output_gsds="G.U.S.TRK_SCAN"/>
+			</action>			
+			<action name="MirrorBigCoreSliceScan" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+				<mirror_struct output_gsds="G.U.S.BIGCORESREC"/>
+			</action>
+			<action name = "CheckRuleSingleFailMultiPassMon" target_structure = "BIGCoreMonitor" target_index="1" ituff_mode = "verbose">
+				<check_rules name="BigCoreDefeaturingVector"  kill_mode="single_fail" kill_type="update_gsds" kill_result_gsds="G.U.I.Repetition_Flag" />
+			</action>
+			<action name = "InitMonitorTrackingMP"  target_structure = "BIGCoreMonitor" target_index = "1" ituff_mode = "verbose" > 
+				<init_struct input_mode = "gsds" input= "G.U.S.InitialBitVectorBigCore" />
+			</action>
+			<action name = "MirrorBitVectorMP" target_structure = "BIGCoreMonitor" target_index = "1" ituff_mode = "verbose" >  
+				<mirror_struct output_gsds="G.U.S.InitialBitVector" />
+			</action>
+			<action name = "SetBitVectorMaskMPMon" target_structure = "BIGCoreMonitor" target_index="1" ituff_mode = "verbose" >
+				<set_mask mode = "user_input"  input_mode="gsds" input="G.U.S.BitVectorMask" />
+			</action>
+			<action name = "ReadTestResultsMPMon"   	   target_structure = "BIGCoreMonitor" target_index= "1" ituff_mode = "verbose" >
+				<read_test_results mode = "dfm" output_gsds= "G.U.S.SearchPointBitVectorResult"  />
+			</action>
+			<action name = "ReadTestResultsFromGSDSMPMon" target_structure = "BIGCoreMonitor" target_index= "1" ituff_mode = "verbose" >
+				<read_test_results mode = "input" input_mode = "gsds" input= "G.U.S.CumulativeBitVectorResult" />
+			</action>
+			<action name = "CheckRulesMPMon6" target_structure = "BIGCoreMonitor" target_index = "1" ituff_mode = "verbose">			
+				<check_rules name = "BigCoreDefeaturingVector" update_mode = "always" kill_mode = "default" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds" >
+					<!--<rule_mode mode = "min_combinations_size" size = "4" />-->
+				</check_rules>
+			</action>
+			<action name = "Set_Partial_GSDS" target_structure = "BIGCoreMonitor" target_index="1" ituff_mode = "verbose" >
+				<mirror_struct output_gsds = "G.U.S.SLC_TRK_PARTIAL" />
+			</action>
+			<action name= "Set_Final_GSDS" target_structure = "BIGCoreMonitor" target_index="1" ituff_mode = "verbose" >
+				<bit_set mode = "xor"  input_mode="gsds" input1="G.U.S.BIGCORESREC" input2="G.U.S.SLC_TRK_PARTIAL" output_gsds="G.U.S.SLC_TRK_FINAL" />
+			</action>
+			<action name="ReadTestResultFromInputMPFinal" target_structure="BigSliceTracking" target_index="1" ituff_mode = "verbose" >
+				<read_test_results mode = "input" input_mode = "gsds" input = "G.U.S.SLC_TRK_FINAL"/>
+			</action>
+			<action name = "CheckRulesValidCombo6" target_structure = "BigSliceTracking" target_index = "1" ituff_mode = "verbose">			
+				<check_rules rule_group_reference = "BigCoreRuleGroup" kill_type="update_gsds" kill_result_gsds="G.U.I.kill_gsds" >
+				</check_rules>			
+			</action>
+            <action name="ConcatSLICEREC" target_structure="BIGCoreMonitor" target_index="1" ituff_mode = "trackingStructureChanged">
+				<!-- Concatenate G.U.S.ReadAtom+G.U.S.ReadBigCore=G.U.S.ActualDisableVector    -->
+				<user_func name="CPD_DEBUG!ExecPrimeCsCallback" arguments="G.U.S.SLICEREC=GSDSConcat(ATOMSLICEINITSTATE,BIGCORESREC)"/>
+			</action>
+
+      <action name="ApplyDisableSlice" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+
+        <user_func name="CPD_DEBUG!ExecPrimeCsCallback" arguments="ApplyDisableSlice()"/>
+      </action>
+      <action name="ResetSlice" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+
+        <user_func name="CPD_DEBUG!ExecPrimeCsCallback" arguments="ResetSlice()"/>
+      </action>
+      <action name="CreateVoltageRegulator" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+
+        <user_func name="CPD_DEBUG!ExecPrimeCsCallback" arguments="CreateVoltageRegulator()"/>
+      </action>
+      <action name="SetVoltage" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+
+        <user_func name="CPD_DEBUG!ExecPrimeCsCallback" arguments="SetVoltage()"/>
+      </action>
+      <action name="ResetVoltage" target_structure="BigSliceTracking" target_index="1" ituff_mode = "trackingStructureChanged">
+
+        <user_func name="CPD_DEBUG!ExecPrimeCsCallback" arguments="ResetVoltage()"/>
+      </action>
+
+
+		</actions>
+		<sequences>
+			
+
+			<sequence name="InitClass" pin_map="NOA_MAP_LLC">
+				<action name="ClearFlagVars"/>
+				<action name="InitDownstreamSlices"/>
+				<action name="InitDownstreamAtomCores"/>
+				<action name="InitDownstreamBigCores"/>
+				<action name="InitDownstreamAtomSlices"/>
+			</sequence>
+			<sequence name="MaskClearCore" pin_map="NOA_MAP_CORE">
+				<action name="MaskClearCore"/>
+			</sequence>
+			<sequence name="MaskClearAtomCore" pin_map="NOA_MAP_ACORE">
+				<action name="MaskClearAtomCore"/>
+			</sequence>
+			<sequence name="MaskClearBigCore" pin_map="NOA_MAP_BCORE">
+				<action name="MaskClearBigCore"/>
+			</sequence>
+			<sequence name="CoreSetMaskFromUserInput" pin_map="NOA_MAP_CORE">
+				<action name="CoreSetMaskFromUserInput"/>
+			</sequence>
+			<sequence name="ACoreSetMaskFromUserInput" pin_map="NOA_MAP_ACORE">
+				<action name="ACoreSetMaskFromUserInput"/>
+			</sequence>
+			<sequence name="BCoreSetMaskFromUserInput" pin_map="NOA_MAP_BCORE">
+				<action name="BCoreSetMaskFromUserInput"/>
+			</sequence>
+			<sequence name="CoreDisableFromUserInput" pin_map="NOA_MAP_CORE">
+				<!-- Disable can be done only for full SliceTracking   -->
+				<action name="CoreDisableFromUserInput"/>
+				<action name="CoreSetMaskFromUserInput"/>
+			</sequence>
+			<sequence name="CorePostDfmValidComboMonitor" pin_map="NOA_MAP_CORE">
+				<action name="CoreReadDFM"/>
+				<action name="CoreCheckRulesValidComboMonitorStatic"/>
+				<action name="MaskClearCore"/>
+				<action name="EnableAllCores"/>
+			</sequence>
+			<sequence name="CorePostDfmSingleFail" pin_map="NOA_MAP_CORE">
+				<action name="CoreReadDFM"/>
+				<action name="CoreCheckRulesSingleFailStatic"/>
+				<action name="MaskClearCore"/>
+				<action name="EnableAllCores"/>
+			</sequence>
+			<sequence name="SetBitVectorMaskSlice" pin_map="NOA_MAP_LLC">
+				<action name="SliceSetMaskFromTrackingStructure"/>
+			</sequence>
+			<sequence name="SetBitVectorMaskLLC" pin_map="NOA_MAP_LLC">
+				<action name="MirrorLLC"/>
+				<action name="SetBitVectorMaskLLC"/>
+			</sequence>
+			<sequence name="SetBitVectorMaskCCF" pin_map="NOA_MAP_BCORE">
+				<action name="MirrorCCF"/>
+				<action name="SetBitVectorMaskCCF"/>
+			</sequence>
+			<sequence name="CoreDisableFromTrackingStructure" pin_map="NOA_MAP_CORE">
+				<action name="CoreDisableFromTrackingStructure"/>
+			</sequence>
+			<sequence name="SetInitialBitVectorBigCore" pin_map="NOA_MAP_BCORE">
+				<action name="MirrorBigCoreSlice"/>
+			</sequence>
+			<sequence name="SetInitialBitVectorAtomCore" pin_map="NOA_MAP_ACORE">
+				<action name="MirrorAtomSlice"/>
+			</sequence>
+			<sequence name="SetInitialBitVectorSlice" pin_map="NOA_MAP_LLC">
+				<action name="MirrorSlice"/>
+			</sequence>
+			<sequence name="SetBitVectorMaskBigCore" pin_map="NOA_MAP_BCORE">
+				<action name="SetBitVectorMaskBigCore"/>
+			</sequence>
+			<sequence name="SetBitVectorMaskAtomCore" pin_map="NOA_MAP_ACORE">
+				<action name="SetBitVectorMaskAtomCore"/>
+			</sequence>
+			<sequence name="ReadTestResultsBigCore" pin_map="NOA_MAP_BCORE">
+				<action name="ReadTestResultsBigCore"/>
+
+			</sequence>
+			<sequence name="ReadTestResultsAtomCore" pin_map="NOA_MAP_ACORE">
+				<action name="ReadTestResultsAtomCore"/>
+			</sequence>
+			<sequence name="ReadTestResultsSlice" pin_map="NOA_MAP_LLC">
+				<action name="ReadTestResultsSlice"/>
+			</sequence>
+			<sequence name="UpdateTrackingStructureBCore" pin_map="NOA_MAP_BCORE">
+				<action name="ReadTestResultsFromGSDSBigCore"/>
+				<!-- G.U.S.CumulativeBitVectorResult -->
+				<action name="CheckRulesValidComboBigCore"/>
+				<!--G.U.I.kill_gsds-->
+				<action name="MaskClearBigCore"/>
+				<action name="ResetSlice"/>
+			</sequence>
+			<sequence name="UpdateTrackingStructureBCoreFUNC6Core" pin_map="NOA_MAP_BCORE">
+				<action name="ReadTestResultsFromGSDSBigCore"/>
+				<!-- G.U.S.CumulativeBitVectorResult -->
+				<!--<action name="CheckRuleSingleFailMultiPass"/>
+				<!{1}** G.U.I.REPETION_FLAG **{1}>
+				<action name="CheckRulesValidComboBigCore"/>
+				<!{1}**G.U.I.kill_gsds**{1}>
+				<action name="MaskClearBigCore"/>
+				<action name="EnableSliceFunction"/>-->
+			</sequence>
+			<sequence name="UpdateTrackingStructureACore" pin_map="NOA_MAP_ACORE">
+				<action name="ReadTestResultsFromGSDSAtomCore"/>
+				<!-- G.U.S.CumulativeBitVectorResult -->
+				<action name="CheckRulesValidComboAtomCore"/>
+				<!--G.U.I.kill_gsds-->
+				<action name="MaskClearAtomCore"/>
+				
+			</sequence>
+			<sequence name="UpdateTrackingStructureSlice" pin_map="NOA_MAP_LLC">
+				<action name="ReadTestResultsFromGSDSSlice"/>
+				<!-- G.U.S.CumulativeBitVectorResult -->
+				<action name="CoreCheckRulesValidComboSlice"/>
+				<!--G.U.I.kill_gsds-->
+				<action name="MaskClearCore"/>
+				<action name="EnableAllCores"/>
+			</sequence>
+			
+			<sequence name="DisableAtomSlice" pin_map="NOA_MAP_ACORE">
+				<action name="DisableAtomCore"/>
+			</sequence>
+			
+			<sequence name="DisableSlice" pin_map="NOA_MAP_LLC">
+				<action name="DisableSliceFromTrackingStructure"/>
+			</sequence>
+			<!-- Static sequences -->
+			<sequence name="DisableBadSlices" pin_map="NOA_MAP_LLC">
+				<action name="DisableBadBigCoreStatic"/>
+				<action name="SetMaskSliceStatic"/>
+				<action name="MirrorBigCoreSlicetoPatModify"/>
+				<action name="SetPattModiffy"/>
+			</sequence>
+			<sequence name="DisableBadBigCore" pin_map="NOA_MAP_BCORE">
+				<action name="DisableBadBigCoreStatic"/>
+				<action name="SetMaskBigCoreStatic"/>
+				<action name="MirrorBigCoreSlicetoPatModify"/>
+				<action name="SetPattModiffy"/>
+			</sequence>
+			<sequence name="DisableBadAtom" pin_map="NOA_MAP_ACORE">
+				<action name="Exec1"/>
+				<action name="Exec2"/>
+			</sequence>
+			<sequence name="SeqDisableAtomCore" pin_map="NOA_MAP_ACORES">
+				<action name="DisableAtomCore"/>
+			</sequence>
+			<sequence name="SeqMaskAtomCore" pin_map="NOA_MAP_ACORE">
+				<action name="MaskTrackStructAtom"/>
+			</sequence>
+			<sequence name="SetPattModiffy" pin_map="NOA_MAP_BCORE">
+				<action name="SetPattModiffy"/>
+			</sequence>
+			<sequence name="EnableAllSlices" pin_map="NOA_MAP_LLC">
+				<action name="EnableAllCores"/>
+				<action name="MaskClearCore"/>
+			</sequence>
+			<sequence name="SetCaptureSettingsScanSeq" pin_map="SCAN_CONCURRENT">
+				<action name="SetCaptureSettingsScan"/>                
+				<!--action name="PinMaskingFromSliceScan"/-->				
+			</sequence>
+			<sequence name = "UpdateSliceTrackScan"	pin_map = "SCAN_CONCURRENT">
+				<action name = "ReadDMEM" /> <!-- Check the DFM value against Defeaturing rules to see if any Valid Core Configuration exits and update the Slice tracker-->
+        <!--action name = "TruckingFix" /-->
+				<action name = "ReadSCANFix" />
+				<action name = "CheckSliceTrackNonFast" /> <!-- Check the DFM value against Defeaturing rules to see if any Valid Core Configuration exits and update the Slice tracker-->				
+				<action name="MirrorScan"/>
+			</sequence>
+			<sequence name="MirrorBigCoreSliceScan" pin_map="NOA_MAP_BCORE">
+				<action name="MirrorBigCoreSliceScan"/>                
+				<!--action name="PinMaskingFromSliceScan"/-->				
+			</sequence>
+			<sequence name = "InitMonitorTrackingMP" 		 pin_map = "NOA_MAP_BCORE"> 
+				<action name = "MirrorBigCoreSlice" />
+				<action name = "InitMonitorTrackingMP" />	
+			</sequence>
+			<sequence name = "SetInitialBitVectorMPMon" 	 pin_map = "NOA_MAP_BCORE" > 
+				<action name = "MirrorBitVectorMP" />
+			</sequence>
+			<sequence name = "SetBitVectorMaskDisableMPMon" 	 pin_map = "NOA_MAP_BCORE" > 
+				<!--<action name = "DisableSliceFromFastInputMPMon" />-->
+				<action name = "SetBitVectorMaskMPMon" />
+			</sequence>
+			<sequence name = "ReadTestResultsMPMon" 	 pin_map = "NOA_MAP_BCORE" > 
+				<action name = "ReadTestResultsMPMon" />
+			</sequence>
+			<sequence name = "UpdateTrackingStructurePartialMPMon6" 	 pin_map = "NOA_MAP_BCORE" > 
+				<action name = "ReadTestResultsFromGSDSMPMon" /> <!-- G.U.S.CumulativeBitVectorResult --> 
+				<action name = "CheckRuleSingleFailMultiPassMon" /> <!--G.U.I.Repetition_Flag-->				
+				<action name = "CheckRulesMPMon6" /> <!--G.U.I.kill_gsds-->
+				<action name = "Set_Partial_GSDS" />
+			</sequence>
+			<sequence name = "UpdateTrackingStructureMPFinal6" 	 pin_map = "NOA_MAP_BCORE" > 
+				<action name = "Set_Final_GSDS"/>
+				<!--<action name = "TruckingFix" />-->
+				<action name = "ReadTestResultFromInputMPFinal"/>							
+				<action name = "CheckRulesValidCombo6"/>
+				<action name = "MirrorBigCoreSliceScan"/>
+				<action name = "ConcatSLICEREC"/>
+				<action name = "InitDownstreamSlices"/>			
+
+			</sequence>
+
+      <sequence name = "ApplyDisableSlice" 	 pin_map = "NOA_MAP_BCORE" >
+        <action name = "ApplyDisableSlice"/>
+      </sequence>
+      <sequence name = "ApplyDisableSliceInit" 	 pin_map = "NOA_MAP_BCORE" >
+        <action name = "ApplyDisableSlice"/>
+      </sequence>
+      <sequence name = "ResetSlice" 	 pin_map = "NOA_MAP_BCORE" >
+        <action name = "ResetSlice"/>
+      </sequence>
+      <sequence name = "CreateVoltageRegulator" 	 pin_map = "NOA_MAP_BCORE" >
+        <action name = "CreateVoltageRegulator"/>
+      </sequence>
+      <sequence name = "SetVoltage" 	 pin_map = "NOA_MAP_BCORE" >
+        <action name = "SetVoltage"/>
+      </sequence>
+      <sequence name = "ResetVoltage" 	 pin_map = "NOA_MAP_BCORE" >
+        <action name = "ResetVoltage"/>
+      </sequence>
+      
+    </sequences>
+	</setup>
+</recovery>

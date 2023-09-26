@@ -1,0 +1,5912 @@
+# FlowOrder
+Version 1.0;
+
+ProgramStyle = Modular;
+
+TestPlan Flows;
+
+
+DUTFlow TVBFAIL_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_TVBFAIL TPI_FLOWID::TPI_FLOWID_TVBFAIL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+
+DUTFlow SRHRINGF0_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHRINGF0 TPI_FLOWID::TPI_FLOWID_SRHRINGF0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+
+}
+DUTFlow SRHRINGF7_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHRINGF7 TPI_FLOWID::TPI_FLOWID_SRHRINGF7
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+
+DUTFlow CHKRINGF0_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKRINGF0 TPI_FLOWID::TPI_FLOWID_CHKRINGF0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+
+}
+DUTFlow CHKRINGF7_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKRINGF7 TPI_FLOWID::TPI_FLOWID_CHKRINGF7
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+DUTFlow SRHIAF7_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHIAF7 TPI_FLOWID::TPI_FLOWID_SRHIAF7
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}
+
+DUTFlow LTTC_SubFlow
+{
+	DUTFlowItem PTH_DTS_LTTC PTH_DTS::PTH_DTS_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_LTTC;
+		}
+	}
+	DUTFlowItem TPI_BASE_LTTC TPI_BASE::TPI_BASE_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -2;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_LTTC;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	DUTFlowItem PTH_DIODE_SOT_LTTC PTH_DIODE_SOT::PTH_DIODE_SOT_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_VCC_LTTC;
+		}
+	}
+	DUTFlowItem TPI_VCC_LTTC TPI_VCC::TPI_VCC_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_SHOPS_LTTC;
+		}
+	}
+	DUTFlowItem TPI_SHOPS_LTTC TPI_SHOPS::TPI_SHOPS_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VCC_MIM_ADTL_LTTC;
+		}
+	}
+	DUTFlowItem VCC_MIM_ADTL_LTTC VCC_MIM_ADTL::VCC_MIM_ADTL_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_FIVR_OPSC_LTTC;
+		}
+	}
+
+	DUTFlowItem PTH_FIVR_OPSC_LTTC PTH_FIVR_OPSC::PTH_FIVR_OPSC_LTTC
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+
+}# End of DUTFlow LTTC_SubFlow
+
+DUTFlow MAV_SubFlow
+{
+	DUTFlowItem TPI_BASE_MAV TPI_BASE::TPI_BASE_MAV
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_MAV;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_MAV;
+		}		
+	}
+	DUTFlowItem TPI_BASE_END_MAV TPI_BASE_END::TPI_BASE_END_MAV
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}
+}  # End of DUTFlow MAV_SubFlow
+
+
+DUTFlow HVBI_SubFlow
+{
+	DUTFlowItem TPI_BASE_HVBI TPI_BASE::TPI_BASE_HVBI
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+			Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+
+}  # End of DUTFlow HVBI_SubFlow
+
+  # End of DUTFlow CHKGTUSF4_SubFlow
+  # End of DUTFlow CHKGTUSF2_SubFlow
+  # End of DUTFlow SRHATOMF4_SubFlow
+  # End of DUTFlow CHKATOMF4_SubFlow
+  # End of DUTFlow SRHIAF4_SubFlow
+  # End of DUTFlow SRHIAF2_SubFlow
+  # End of DUTFlow CHKIAF4_SubFlow
+  # End of DUTFlow CHKIAF2_SubFlow
+
+
+  # End of DUTFlow VMAXATOMFX_SubFlow
+
+  # End of DUTFlow SRHIAF8_SubFlow
+
+  # End of DUTFlow SRHIAF3_SubFlow
+
+DUTFlow START_SubFlow
+{
+	DUTFlowItem TPI_BASE_START TPI_BASE::TPI_BASE_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 6;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_START;
+		}		
+	}	
+	DUTFlowItem TPI_BIN_START TPI_BIN::TPI_BIN_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_THRSOAK_START;
+		}		
+	}	
+	DUTFlowItem PTH_DIODE_THRSOAK_START PTH_DIODE_THRSOAK::PTH_DIODE_THRSOAK_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_VCC_START;
+		}		
+	}	
+	DUTFlowItem TPI_VCC_START TPI_VCC::TPI_VCC_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_SHOPS_START;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+	}	
+	DUTFlowItem TPI_SHOPS_START TPI_SHOPS::TPI_SHOPS_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_EDM_START;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+	}	
+	DUTFlowItem TPI_EDM_START TPI_EDM::TPI_EDM_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_START;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+	}	
+	DUTFlowItem PTH_DIODE_SOT_START PTH_DIODE_SOT::PTH_DIODE_SOT_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_UNITINFO_START;
+		}		
+	}	
+	DUTFlowItem FUS_UNITINFO_START FUS_UNITINFO::FUS_UNITINFO_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_DFF_START;
+		}		
+	}	
+	DUTFlowItem TPI_DFF_START TPI_DFF::TPI_DFF_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VCC_MIM_ADTL_START;
+		}		
+	}	
+	DUTFlowItem VCC_MIM_ADTL_START VCC_MIM_ADTL::VCC_MIM_ADTL_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 6;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_START;
+		}		
+	}	
+	DUTFlowItem TPI_GFX_AGG_START TPI_GFX_AGG::TPI_GFX_AGG_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSECFG_START;
+		}		
+	}	
+	DUTFlowItem FUS_FUSECFG_START FUS_FUSECFG::FUS_FUSECFG_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 5;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_VREFLDO_START;
+		}		
+	}
+	DUTFlowItem PTH_VREFLDO_START PTH_VREFLDO::PTH_VREFLDO_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CLK_LJPLL_BASE_START;
+		}		
+	}	
+	DUTFlowItem CLK_LJPLL_BASE_START CLK_LJPLL_BASE::CLK_LJPLL_BASE_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSEREAD_START;
+		}		
+	}	
+	DUTFlowItem FUS_FUSEREAD_START FUS_FUSEREAD::FUS_FUSEREAD_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 5;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_START;
+		}		
+	}	
+
+	DUTFlowItem TPI_BASE_END_START TPI_BASE_END::TPI_BASE_END_START
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 3;
+		}		
+	}	
+}  # End of DUTFlow START_SubFlow
+
+DUTFlow BEGIN_SubFlow
+{
+	DUTFlowItem TPI_BASE_BEGIN TPI_BASE::TPI_BASE_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FACT_BEGIN;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 3;
+		}		
+	}	
+	DUTFlowItem FUS_FACT_BEGIN FUS_FACT::FUS_FACT_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 3;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_FIVR_TRIMC_BEGIN;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+	DUTFlowItem PTH_FIVR_TRIMC_BEGIN PTH_FIVR_TRIMC::PTH_FIVR_TRIMC_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_FIVR_OPSC_BEGIN;
+		}		
+	}	
+	DUTFlowItem PTH_FIVR_OPSC_BEGIN PTH_FIVR_OPSC::PTH_FIVR_OPSC_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_VREFLDO_BEGIN;
+		}		
+	}	
+	DUTFlowItem PTH_VREFLDO_BEGIN PTH_VREFLDO::PTH_VREFLDO_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DTS_BEGIN;
+		}		
+	}	
+	DUTFlowItem PTH_DTS_BEGIN PTH_DTS::PTH_DTS_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_BEGIN;
+		}		
+	}	
+	DUTFlowItem PTH_DIODE_SOT_BEGIN PTH_DIODE_SOT::PTH_DIODE_SOT_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_THRSOAK_BEGIN;
+		}		
+	}	
+	DUTFlowItem PTH_DIODE_THRSOAK_BEGIN PTH_DIODE_THRSOAK::PTH_DIODE_THRSOAK_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}		
+	}	
+	DUTFlowItem TPI_GFX_AGG_BEGIN TPI_GFX_AGG::TPI_GFX_AGG_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_BIN_BEGIN;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	DUTFlowItem TPI_BIN_BEGIN TPI_BIN::TPI_BIN_BEGIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_BEGIN;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 3
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 4
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 5
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 6
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 7
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 8
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 9
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_BEGIN;
+		}
+		Result 10
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_BEGIN;
+		}
+		Result 11
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_BEGIN;
+		}
+		Result 12
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_BEGIN;
+		}
+		Result 13
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_BEGIN;
+		}
+		Result 14
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 15
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 16
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 17
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 18
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 19
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}	
+}  # End of DUTFlow BEGIN_SubFlow
+
+  # End of DUTFlow SRHIAF6_SubFlow
+
+DUTFlow PRESRCH_SubFlow
+{
+	DUTFlowItem TPI_BASE_PRESRCH TPI_BASE::TPI_BASE_PRESRCH
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_PRESRCH;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_PRESRCH;
+		}		
+	}	
+	DUTFlowItem TPI_BASE_END_PRESRCH TPI_BASE_END::TPI_BASE_END_PRESRCH
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}		
+	}	
+}  # End of DUTFlow PRESRCH_SubFlow
+
+DUTFlow POSTSRCH_SubFlow
+{
+	DUTFlowItem TPI_BASE_POSTSRCH TPI_BASE::TPI_BASE_POSTSRCH
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_POSTSRCH;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+	DUTFlowItem TPI_FLOWID_POSTSRCH TPI_FLOWID::TPI_FLOWID_POSTSRCH
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow POSTSRCH_SubFlow
+DUTFlow PREEND_SubFlow
+{
+	DUTFlowItem TPI_BASE_PREEND TPI_BASE::TPI_BASE_PREEND
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+}
+ # End of DUTFlow PREEND_SubFlow
+
+DUTFlow END_SubFlow
+{
+	DUTFlowItem TPI_BASE_END TPI_BASE::TPI_BASE_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_END;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	
+	DUTFlowItem TPI_FLOWID_END TPI_FLOWID::TPI_FLOWID_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_END;
+		}
+	}
+	DUTFlowItem PTH_DIODE_SOT_END PTH_DIODE_SOT::PTH_DIODE_SOT_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DTS_END;
+		}
+	}
+	DUTFlowItem PTH_DTS_END PTH_DTS::PTH_DTS_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_DFF_END;
+		}
+	}	
+	DUTFlowItem TPI_DFF_END TPI_DFF::TPI_DFF_END
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow END_SubFlow
+
+DUTFlow EDCFLOW_SubFlow
+{
+	DUTFlowItem TPI_BASE_EDCFLOW TPI_BASE::TPI_BASE_EDCFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}		
+}  # End of DUTFlow EDCFLOW_SubFlow
+
+DUTFlow SRHGTSMF5_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHGTSMF5 TPI_FLOWID::TPI_FLOWID_SRHGTSMF5
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of DUTFlow SRHGTSMF5_SubFlow
+
+DUTFlow FACT_SubFlow
+{
+	DUTFlowItem TPI_BASE_FACT TPI_BASE::TPI_BASE_FACT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_FACT;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_FACT;
+		}		
+	}	
+	DUTFlowItem PTH_DIODE_SOT_FACT PTH_DIODE_SOT::PTH_DIODE_SOT_FACT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FACT_FACT;
+		}		
+	}	
+	DUTFlowItem FUS_FACT_FACT FUS_FACT::FUS_FACT_FACT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSEBURN_FACT;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSEBURN_FACT;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}		
+	}	
+	DUTFlowItem FUS_FUSEBURN_FACT FUS_FUSEBURN::FUS_FUSEBURN_FACT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_FACT;
+		}		
+	}	
+	DUTFlowItem TPI_BASE_END_FACT TPI_BASE_END::TPI_BASE_END_FACT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow FACT_SubFlow
+
+DUTFlow FINAL_SubFlow
+{
+	DUTFlowItem PTH_DIODE_SOT_FINAL PTH_DIODE_SOT::PTH_DIODE_SOT_FINAL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_FINAL;
+		}		
+	}	
+	DUTFlowItem TPI_BIN_FINAL TPI_BIN::TPI_BIN_FINAL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_FINAL;
+		}		
+	}	
+	DUTFlowItem TPI_BASE_FINAL TPI_BASE::TPI_BASE_FINAL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_DFF_FINAL;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_FINAL;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_FINAL;
+		}		
+	}	
+	DUTFlowItem TPI_BASE_END_FINAL TPI_BASE_END::TPI_BASE_END_FINAL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_DFF_FINAL;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_FINAL;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_DFF_FINAL;
+		}		
+	}	
+	DUTFlowItem TPI_GFX_AGG_FINAL TPI_GFX_AGG::TPI_GFX_AGG_FINAL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_DFF_FINAL;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_DFF_FINAL;
+		}		
+	}	
+	DUTFlowItem TPI_DFF_FINAL TPI_DFF::TPI_DFF_FINAL
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow FINAL_SubFlow
+
+DUTFlow ALARM_SubFlow
+{
+	DUTFlowItem TPI_BASE_ALARM TPI_BASE::TPI_BASE_ALARM
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow ALARM_SubFlow
+
+DUTFlow FAILFLOW_SubFlow
+{
+	DUTFlowItem TPI_BASE_FAILFLOW TPI_BASE::TPI_BASE_FAILFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+}  # End of DUTFlow FAILFLOW_SubFlow
+
+DUTFlow DCFAILFLOW_SubFlow
+{
+	DUTFlowItem TPI_VCC_DCFAILFLOW TPI_VCC::TPI_VCC_DCFAILFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_SHOPS_DCFAILFLOW;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+	}	
+	DUTFlowItem TPI_SHOPS_DCFAILFLOW TPI_SHOPS::TPI_SHOPS_DCFAILFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_UNITINFO_DCFAILFLOW;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FUS_UNITINFO_DCFAILFLOW;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+	}	
+	DUTFlowItem FUS_UNITINFO_DCFAILFLOW FUS_UNITINFO::FUS_UNITINFO_DCFAILFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_DCFAILFLOW;
+		}		
+	}	
+	DUTFlowItem TPI_BASE_END_DCFAILFLOW TPI_BASE_END::TPI_BASE_END_DCFAILFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow DCFAILFLOW_SubFlow
+
+  # End of DUTFlow DEDC_SubFlow
+
+DUTFlow SRHSAF2_SubFlow
+{	
+	DUTFlowItem TPI_BIN_SRHSAF2 TPI_BIN::TPI_BIN_SRHSAF2
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow SRHSAF2_SubFlow
+
+DUTFlow SRHSAF3_SubFlow
+{	
+	DUTFlowItem TPI_FLOWID_SRHSAF3 TPI_FLOWID::TPI_FLOWID_SRHSAF3
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow SRHSAF3_SubFlow
+
+DUTFlow CHKSAF3_SubFlow
+{	
+	DUTFlowItem TPI_FLOWID_CHKSAF3 TPI_FLOWID::TPI_FLOWID_CHKSAF3
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow CHKSAF3_SubFlow
+
+DUTFlow CHKSAF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKSAF1 TPI_FLOWID::TPI_FLOWID_CHKSAF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_CHKSAF1;
+		}		
+	}
+	DUTFlowItem TPI_BIN_CHKSAF1 TPI_BIN::TPI_BIN_CHKSAF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}
+	}	
+}  # End of DUTFlow CHKSAF1_SubFlow
+
+DUTFlow CHKSAF2_SubFlow
+{	
+	DUTFlowItem TPI_BIN_CHKSAF2 TPI_BIN::TPI_BIN_CHKSAF2
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow CHKSAF2_SubFlow
+
+DUTFlow SRHSAF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHSAF1 TPI_FLOWID::TPI_FLOWID_SRHSAF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_SRHSAF1;
+		}		
+	}	
+	DUTFlowItem TPI_BIN_SRHSAF1 TPI_BIN::TPI_BIN_SRHSAF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow SRHSAF1_SubFlow
+DUTFlow CHKIAF0_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKIAF0 TPI_FLOWID::TPI_FLOWID_CHKIAF0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+
+}  # End of DUTFlow CHKIAF1_SubFlow
+
+
+  # End of DUTFlow CHKIAF1_SubFlow
+
+  # End of DUTFlow SRHIAF5_SubFlow
+
+  # End of DUTFlow CHKIAF5_SubFlow
+
+DUTFlow SRHIAF0_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHIAF0 TPI_FLOWID::TPI_FLOWID_SRHIAF0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+	
+}  # End of DUTFlow SRHF0_SubFlow
+
+  # End of DUTFlow SRHIAF1_SubFlow
+
+  # End of DUTFlow CHKIAF6_SubFlow
+
+  # End of DUTFlow CHKIAF8_SubFlow
+DUTFlow CHKIAF7_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKIAF7 TPI_FLOWID::TPI_FLOWID_CHKIAF7
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}
+}  # End of DUTFlow CHKIAF3_SubFlow
+
+  # End of DUTFlow CHKGTSMF4_SubFlow
+
+DUTFlow CHKGTSMF5_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKGTSMF5 TPI_FLOWID::TPI_FLOWID_CHKGTSMF5
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of DUTFlow CHKGTSMF5_SubFlow
+
+  # End of DUTFlow CHKGTSMF2_SubFlow
+
+  # End of DUTFlow CHKGTSMF3_SubFlow
+
+DUTFlow CHKGTSMF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKGTSMF1 TPI_FLOWID::TPI_FLOWID_CHKGTSMF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of DUTFlow CHKGTSMF1_SubFlow
+
+DUTFlow SRHGTSMF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHGTSMF1 TPI_FLOWID::TPI_FLOWID_SRHGTSMF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow SRHGTSMF1_SubFlow
+
+  # End of DUTFlow SRHGTSMF3_SubFlow
+
+  # End of DUTFlow SRHGTSMF2_SubFlow
+
+  # End of DUTFlow SRHGTSMF4_SubFlow
+
+DUTFlow SRHATOMF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHATOMF1 TPI_FLOWID::TPI_FLOWID_SRHATOMF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow SRHATOMF1_SubFlow
+
+  # End of DUTFlow CHKATOMF3_SubFlow
+
+  # End of DUTFlow SRHATOMF2_SubFlow
+
+  # End of DUTFlow CHKATOMF2_SubFlow
+
+DUTFlow CHKATOMF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKATOMF1 TPI_FLOWID::TPI_FLOWID_CHKATOMF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_THRSOAK_CHKATOMF1;
+		}		
+	}	
+	DUTFlowItem PTH_DIODE_THRSOAK_CHKATOMF1 PTH_DIODE_THRSOAK::PTH_DIODE_THRSOAK_CHKATOMF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow CHKATOMF1_SubFlow
+
+  # End of DUTFlow SRHATOMF3_SubFlow
+
+DUTFlow VMAXIAFX_SubFlow
+{
+	DUTFlowItem TPI_BASE_VMAXIAFX TPI_BASE::TPI_BASE_VMAXIAFX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}
+}  # End of DUTFlow VMAXIAFX_SubFlow
+
+DUTFlow VMAXGTFX_SubFlow
+{
+	DUTFlowItem TPI_BASE_VMAXGTFX TPI_BASE::TPI_BASE_VMAXGTFX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow VMAXGTFX_SubFlow
+
+DUTFlow VMAXSAFX_SubFlow
+{
+	DUTFlowItem TPI_BASE_VMAXSAFX TPI_BASE::TPI_BASE_VMAXSAFX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_VMAXSAFX;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+	DUTFlowItem TPI_BIN_VMAXSAFX TPI_BIN::TPI_BIN_VMAXSAFX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}
+
+}  # End of DUTFlow VMAXSAFX_SubFlow
+
+DUTFlow CHKATOMF5_SubFlow
+{	
+	DUTFlowItem TPI_FLOWID_CHKATOMF5 TPI_FLOWID::TPI_FLOWID_CHKATOMF5
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow CHKATOMF5_SubFlow
+
+DUTFlow SRHATOMF5_SubFlow
+{	
+	DUTFlowItem TPI_FLOWID_SRHATOMF5 TPI_FLOWID::TPI_FLOWID_SRHATOMF5
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow SRHATOMF5_SubFlow
+
+  # End of DUTFlow SRHGTUSF4_SubFlow
+
+# DUTFlow CHKGTUSF3_SubFlow
+# {
+# 	DUTFlowItem SCN_GT_CHKGTUSF3 SCN_GT::SCN_GT_CHKGTUSF3
+# 	{
+#		Result -2
+#		{
+#			Property PassFail = "Fail";
+#			Return -2;
+#		}
+#		Result -1
+#		{
+#			Property PassFail = "Fail";
+#			Return -1;
+#		}
+#		Result 0
+#		{
+#			Property PassFail = "Fail";
+#			Return 0;
+#		}
+#		Result 1
+#		{
+#			Property PassFail = "Pass";
+#			GoTo ARR_GT_CHKGTUSF3;
+#		}
+# 	}	
+# 	DUTFlowItem ARR_GT_CHKGTUSF3 ARR_GT::ARR_GT_CHKGTUSF3
+# 	{
+#		Result -2
+#		{
+#			Property PassFail = "Fail";
+#			Return  -1;
+#		}		
+#		Result -1
+#		{
+#			Property PassFail = "Fail";
+#			Return  -1;
+#		}		
+#		Result 0
+#		{
+#			Property PassFail = "Fail";
+#			Return 0;
+#		}
+#		Result 1
+#		{
+#			Property PassFail = "Pass";
+#			GoTo FUN_GT_CHKGTUSF3;
+#		}		
+# 	}
+# 	DUTFlowItem FUN_GT_CHKGTUSF3 FUN_GT::FUN_GT_CHKGTUSF3
+# 	{
+#		Result -2
+#		{
+#			Property PassFail = "Fail";
+#			Return -2;
+#		}
+#		Result -1
+#		{
+#			Property PassFail = "Fail";
+#			Return -1;
+#		}
+#		Result 0
+#		{
+#			Property PassFail = "Fail";
+#			Return 0;
+#		}
+#		Result 1
+#		{
+#			Property PassFail = "Pass";
+#			Return 1;
+#		}
+# 	}	
+# }  # End of DUTFlow CHKGTUSF3_SubFlow
+# 
+# DUTFlow SRHGTUSF3_SubFlow
+# {
+# 	DUTFlowItem SCN_GT_SRHGTUSF3 SCN_GT::SCN_GT_SRHGTUSF3
+# 	{
+#		Result -2
+#		{
+#			Property PassFail = "Fail";
+#			Return -2;
+#		}
+#		Result -1
+#		{
+#			Property PassFail = "Fail";
+#			Return -1;
+#		}
+#		Result 0
+#		{
+#			Property PassFail = "Fail";
+#			Return 0;
+#		}
+#		Result 1
+#		{
+#			Property PassFail = "Pass";
+#			GoTo ARR_GT_SRHGTUSF3;
+#		}
+# 	}	
+# 	DUTFlowItem ARR_GT_SRHGTUSF3 ARR_GT::ARR_GT_SRHGTUSF3
+# 	{
+#		Result -2
+#		{
+#			Property PassFail = "Fail";
+#			Return  -1;
+#		}		
+#		Result -1
+#		{
+#			Property PassFail = "Fail";
+#			Return  -1;
+#		}		
+#		Result 0
+#		{
+#			Property PassFail = "Fail";
+#			Return 0;
+#		}
+#		Result 1
+#		{
+#			Property PassFail = "Pass";
+#			GoTo FUN_GT_SRHGTUSF3;
+#		}		
+# 	}
+# 	DUTFlowItem FUN_GT_SRHGTUSF3 FUN_GT::FUN_GT_SRHGTUSF3
+# 	{
+#		Result -2
+#		{
+#			Property PassFail = "Fail";
+#			Return -2;
+#		}
+#		Result -1
+#		{
+#			Property PassFail = "Fail";
+#			Return -1;
+#		}
+#		Result 0
+#		{
+#			Property PassFail = "Fail";
+#			Return 0;
+#		}
+#		Result 1
+#		{
+#			Property PassFail = "Pass";
+#			Return 1;
+#		}
+# 	}	
+# }  # End of DUTFlow SRHGTUSF3_SubFlow
+
+  # End of DUTFlow SRHGTUSF2_SubFlow
+
+DUTFlow CHKGTUSF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKGTUSF1 TPI_FLOWID::TPI_FLOWID_CHKGTUSF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow CHKGTUSF1_SubFlow
+
+DUTFlow CHKGTUSF5_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKGTUSF5 TPI_FLOWID::TPI_FLOWID_CHKGTUSF5
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of DUTFlow CHKGTUSF5_SubFlow
+
+DUTFlow SRHGTUSF1_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHGTUSF1 TPI_FLOWID::TPI_FLOWID_SRHGTUSF1
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow SRHGTUSF1_SubFlow
+
+DUTFlow SRHGTUSF5_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_SRHGTUSF5 TPI_FLOWID::TPI_FLOWID_SRHGTUSF5
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of DUTFlow SRHGTUSF5_SubFlow
+
+DUTFlow VMAXGTUSFX_SubFlow
+{
+	DUTFlowItem TPI_BASE_VMAXGTUSFX TPI_BASE::TPI_BASE_VMAXGTUSFX
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow VMAXGTUSFX_SubFlow
+
+DUTFlow CHKGTPRE_SubFlow
+{
+	DUTFlowItem TPI_BIN_CHKGTPRE TPI_BIN::TPI_BIN_CHKGTPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_CHKGTPRE;
+		}		
+	}	
+	DUTFlowItem TPI_FLOWID_CHKGTPRE TPI_FLOWID::TPI_FLOWID_CHKGTPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow CHKGTPRE_SubFlow
+
+DUTFlow SRHGT0_SubFlow
+{
+	DUTFlowItem TPI_BIN_SRHGT0 TPI_BIN::TPI_BIN_SRHGT0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow SRHGT0_SubFlow
+
+DUTFlow SRHATOMPRE_SubFlow
+{
+	DUTFlowItem TPI_BIN_SRHATOMPRE TPI_BIN::TPI_BIN_SRHATOMPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_SRHATOMPRE;
+		}		
+	}	
+	DUTFlowItem TPI_FLOWID_SRHATOMPRE TPI_FLOWID::TPI_FLOWID_SRHATOMPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}		
+	}	
+}  # End of DUTFlow SRHATOMPRE_SubFlow
+
+DUTFlow CHKGT0_SubFlow
+{	
+	DUTFlowItem TPI_BIN_CHKGT0 TPI_BIN::TPI_BIN_CHKGT0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow CHKGT0_SubFlow
+
+DUTFlow SRHGTPRE_SubFlow
+{
+	DUTFlowItem TPI_BIN_SRHGTPRE TPI_BIN::TPI_BIN_SRHGTPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_SRHGTPRE;
+		}		
+	}	
+	DUTFlowItem TPI_FLOWID_SRHGTPRE TPI_FLOWID::TPI_FLOWID_SRHGTPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}		
+	}	
+}  # End of DUTFlow SRHGTPRE_SubFlow
+
+DUTFlow SRHATOM0_SubFlow
+{	
+	DUTFlowItem TPI_BIN_SRHATOM0 TPI_BIN::TPI_BIN_SRHATOM0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow SRHATOM0_SubFlow
+
+DUTFlow CHKATOMPRE_SubFlow
+{
+	DUTFlowItem TPI_BIN_CHKATOMPRE TPI_BIN::TPI_BIN_CHKATOMPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_CHKATOMPRE;
+		}		
+	}	
+	DUTFlowItem TPI_FLOWID_CHKATOMPRE TPI_FLOWID::TPI_FLOWID_CHKATOMPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 2;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow CHKATOMPRE_SubFlow
+
+DUTFlow CHKATOM0_SubFlow
+{	
+	DUTFlowItem TPI_BIN_CHKATOM0 TPI_BIN::TPI_BIN_CHKATOM0
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 0;
+		}		
+	}	
+}  # End of DUTFlow CHKATOM0_SubFlow
+
+DUTFlow SRHDEPRE_SubFlow
+{
+	DUTFlowItem TPI_BIN_SRHDEPRE TPI_BIN::TPI_BIN_SRHDEPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow SRHDEPRE_SubFlow
+
+DUTFlow CHKDEPRE_SubFlow
+{
+	DUTFlowItem TPI_BIN_CHKDEPRE TPI_BIN::TPI_BIN_CHKDEPRE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow CHKDEPRE_SubFlow
+
+DUTFlow TVBSTORE_SubFlow
+{
+	DUTFlowItem TPI_BIN_TVBSTORE TPI_BIN::TPI_BIN_TVBSTORE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_FLOWID_TVBSTORE;
+		}
+	}
+
+	DUTFlowItem TPI_FLOWID_TVBSTORE TPI_FLOWID::TPI_FLOWID_TVBSTORE
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of DUTFlow TVBSTORE_SubFlow - removed THRSOAK module for TTR
+
+DUTFlow CHKIATVB_SubFlow
+{
+	DUTFlowItem TPI_FLOWID_CHKIATVB TPI_FLOWID::TPI_FLOWID_CHKIATVB
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_CHKIATVB;
+		}
+		Result 2
+		{
+			Property PassFail = "Pass";
+			Return 2;
+		}
+	}
+	DUTFlowItem TPI_BIN_CHKIATVB TPI_BIN::TPI_BIN_CHKIATVB
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -2;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_THRSOAK_CHKIATVB;
+		}
+	}	
+	DUTFlowItem PTH_DIODE_THRSOAK_CHKIATVB PTH_DIODE_THRSOAK::PTH_DIODE_THRSOAK_CHKIATVB
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 3;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow CHKIATVB_SubFlow
+
+DUTFlow MAIN
+{
+	DUTFlowItem TPI_BASE_MAIN TPI_BASE::TPI_BASE_MAIN
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo START_SubFlow;
+		}
+	}	
+	DUTFlowItem START_SubFlow START_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo BEGIN_SubFlow;
+		}
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo DCFAILFLOW_SubFlow;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Fail";
+			GoTo FACT_SubFlow;
+		}		
+		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 5
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}		
+		
+		Result 6
+		{
+			Property PassFail = "Fail";
+			Return 6;
+		}		
+	}	
+	DUTFlowItem BEGIN_SubFlow BEGIN_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo MAV_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}		
+	}	
+		DUTFlowItem MAV_SubFlow MAV_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo LTTC_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo HVBI_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+
+	DUTFlowItem HVBI_SubFlow HVBI_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FACT_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PRESRCH_SubFlow;
+		}		
+		
+	}
+	DUTFlowItem PRESRCH_SubFlow PRESRCH_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHDEPRE_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo POSTSRCH_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHDEPRE_SubFlow SRHDEPRE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHSAF1_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHSAF1_SubFlow SRHSAF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHSAF2_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHSAF2_SubFlow SRHSAF2_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHSAF3_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHSAF3_SubFlow SRHSAF3_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHIAF0_SubFlow;
+		}		
+	}
+	DUTFlowItem SRHIAF0_SubFlow SRHIAF0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHIAF7_SubFlow;
+		}		
+	}
+	DUTFlowItem SRHIAF7_SubFlow SRHIAF7_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHRINGF0_SubFlow;
+		}
+	}
+		DUTFlowItem SRHRINGF0_SubFlow SRHRINGF0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHRINGF7_SubFlow;
+		}
+	}
+		DUTFlowItem SRHRINGF7_SubFlow SRHRINGF7_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHATOMPRE_SubFlow;
+		}
+	}	
+	DUTFlowItem SRHATOMPRE_SubFlow SRHATOMPRE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHATOMF1_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo SRHATOM0_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHATOMF1_SubFlow SRHATOMF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHATOMF5_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHATOMF5_SubFlow SRHATOMF5_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHATOM0_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHATOM0_SubFlow SRHATOM0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHGTPRE_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHGTPRE_SubFlow SRHGTPRE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHGTUSF1_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHGTUSF1_SubFlow SRHGTUSF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHGTUSF5_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+	}	
+	#DUTFlowItem SRHGTUSF3_SubFlow SRHGTUSF3_SubFlow
+	#{
+	#	Result -2
+	#	{
+	#		Property PassFail = "Fail";
+	#		GoTo ALARM_SubFlow;
+	#	}		
+	#	Result -1
+	#	{
+	#		Property PassFail = "Fail";
+	#		GoTo ALARM_SubFlow;
+	#	}		
+	#	Result 0
+	#	{
+	#		Property PassFail = "Fail";
+	#		GoTo SRHGT0_SubFlow;
+	#	}		
+	#	
+	#	Result 1
+	#	{
+	#		Property PassFail = "Pass";
+	#		GoTo SRHGTUSF4_SubFlow;
+	#	}		
+	#}	
+		
+	DUTFlowItem SRHGTUSF5_SubFlow SRHGTUSF5_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHGTSMF1_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHGTSMF1_SubFlow SRHGTSMF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHGTSMF5_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHGTSMF5_SubFlow SRHGTSMF5_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo SRHGT0_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo SRHGT0_SubFlow;
+		}		
+	}	
+	DUTFlowItem SRHGT0_SubFlow SRHGT0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo POSTSRCH_SubFlow;
+		}		
+	}	
+	DUTFlowItem POSTSRCH_SubFlow POSTSRCH_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKDEPRE_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKDEPRE_SubFlow;
+		}		
+	}
+	DUTFlowItem CHKDEPRE_SubFlow CHKDEPRE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKSAF1_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKSAF1_SubFlow CHKSAF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKSAF2_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKSAF2_SubFlow CHKSAF2_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKSAF3_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKSAF3_SubFlow CHKSAF3_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAXSAFX_SubFlow;
+		}		
+	}	
+	DUTFlowItem VMAXSAFX_SubFlow VMAXSAFX_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKIAF0_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKIAF0_SubFlow CHKIAF0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKIAF7_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKIAF7_SubFlow CHKIAF7_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAXIAFX_SubFlow;
+		}		
+	}	
+	DUTFlowItem VMAXIAFX_SubFlow VMAXIAFX_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKRINGF0_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo CHKRINGF0_SubFlow;
+		}		
+	}
+	DUTFlowItem CHKRINGF0_SubFlow CHKRINGF0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKRINGF7_SubFlow;
+		}
+	}
+		DUTFlowItem CHKRINGF7_SubFlow CHKRINGF7_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKATOMPRE_SubFlow;
+		}
+	}
+	DUTFlowItem CHKATOMPRE_SubFlow CHKATOMPRE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKATOMF1_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKATOMF1_SubFlow CHKATOMF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKATOMF5_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKATOMF5_SubFlow CHKATOMF5_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKATOM0_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKATOM0_SubFlow CHKATOM0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKGTPRE_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKGTPRE_SubFlow CHKGTPRE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKGTUSF1_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKGTUSF1_SubFlow CHKGTUSF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKGTUSF5_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	#DUTFlowItem CHKGTUSF3_SubFlow CHKGTUSF3_SubFlow
+	#{
+	#	Result -2
+	#	{
+	#		Property PassFail = "Fail";
+	#		GoTo ALARM_SubFlow;
+	#	}		
+	#	Result -1
+	#	{
+	#		Property PassFail = "Fail";
+	#		GoTo ALARM_SubFlow;
+	#	}		
+	#	Result 0
+	#	{
+	#		Property PassFail = "Fail";
+	#		GoTo CHKGT0_SubFlow;
+	#	}		
+	#	
+	#	Result 1
+	#	{
+	#		Property PassFail = "Pass";
+	#		GoTo CHKGTUSF4_SubFlow;
+	#	}		
+	#}
+		
+	DUTFlowItem CHKGTUSF5_SubFlow CHKGTUSF5_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAXGTUSFX_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem VMAXGTUSFX_SubFlow VMAXGTUSFX_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKGTSMF1_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKGTSMF1_SubFlow CHKGTSMF1_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKGTSMF5_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKGTSMF5_SubFlow CHKGTSMF5_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo VMAXGTFX_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem VMAXGTFX_SubFlow VMAXGTFX_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKGT0_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem CHKGT0_SubFlow CHKGT0_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PREEND_SubFlow;
+		}		
+	}
+	DUTFlowItem PREEND_SubFlow PREEND_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CHKIATVB_SubFlow;
+		}		
+	}
+	DUTFlowItem CHKIATVB_SubFlow CHKIATVB_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo TVBFAIL_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TVBSTORE_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo END_SubFlow;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}		
+	}	
+	DUTFlowItem TVBSTORE_SubFlow TVBSTORE_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo END_SubFlow;
+		}		
+	}	
+	DUTFlowItem END_SubFlow END_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo EDCFLOW_SubFlow;
+		}		
+	}	
+	DUTFlowItem EDCFLOW_SubFlow EDCFLOW_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo LTTC_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FACT_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 3
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}		
+		
+		Result 4
+		{
+			Property PassFail = "Fail";
+			Return 4;
+		}		
+	}
+	DUTFlowItem LTTC_SubFlow LTTC_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FACT_SubFlow;
+		}
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}
+	}	
+	DUTFlowItem FACT_SubFlow FACT_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FINAL_SubFlow;
+		}		
+		
+		Result 2
+		{
+			Property PassFail = "Fail";
+			GoTo FINAL_SubFlow;
+		}		
+	}	
+	DUTFlowItem FINAL_SubFlow FINAL_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}	
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+	DUTFlowItem FAILFLOW_SubFlow FAILFLOW_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FINAL_SubFlow;
+		}		
+	}
+	DUTFlowItem TVBFAIL_SubFlow TVBFAIL_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}
+				Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo FAILFLOW_SubFlow;
+		}	
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TVBSTORE_SubFlow;
+		}		
+	}	
+	DUTFlowItem ALARM_SubFlow ALARM_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+	DUTFlowItem DCFAILFLOW_SubFlow DCFAILFLOW_SubFlow
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			GoTo ALARM_SubFlow;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of DUTFlow MAIN
+
+Flow INIT
+{
+	FlowItem TPI_BASE_INIT TPI_BASE::TPI_BASE_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSECFG_INIT;
+		}		
+	}	
+	FlowItem FUS_FUSECFG_INIT FUS_FUSECFG::FUS_FUSECFG_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_INIT;
+		}		
+	}	
+	FlowItem PTH_DIODE_SOT_INIT PTH_DIODE_SOT::PTH_DIODE_SOT_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FLE_INIT;
+		}		
+	}	
+	FlowItem FUS_FLE_INIT FUS_FLE::FUS_FLE_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_UNITINFO_INIT;
+		}		
+	}	
+	FlowItem FUS_UNITINFO_INIT FUS_UNITINFO::FUS_UNITINFO_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSEREAD_INIT;
+		}		
+	}	
+	FlowItem FUS_FUSEREAD_INIT FUS_FUSEREAD::FUS_FUSEREAD_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_VREFLDO_INIT;
+		}		
+	}	
+	FlowItem PTH_VREFLDO_INIT PTH_VREFLDO::PTH_VREFLDO_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_GFX_AGG_INIT;
+		}		
+	}	
+	FlowItem TPI_GFX_AGG_INIT TPI_GFX_AGG::TPI_GFX_AGG_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_DFF_INIT;
+		}		
+	}	
+	FlowItem TPI_DFF_INIT TPI_DFF::TPI_DFF_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo CLK_LJPLL_BASE_INIT;
+		}		
+	}		
+	FlowItem CLK_LJPLL_BASE_INIT CLK_LJPLL_BASE::CLK_LJPLL_BASE_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DTS_INIT;
+		}		
+	}	
+		
+	FlowItem PTH_DTS_INIT PTH_DTS::PTH_DTS_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_FIVR_TRIMC_INIT;
+		}		
+	}	
+	FlowItem PTH_FIVR_TRIMC_INIT PTH_FIVR_TRIMC::PTH_FIVR_TRIMC_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FUSEBURN_INIT;
+		}		
+	}	
+	FlowItem FUS_FUSEBURN_INIT FUS_FUSEBURN::FUS_FUSEBURN_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_FIVR_OPSC_INIT;
+		}		
+	}	
+	FlowItem PTH_FIVR_OPSC_INIT PTH_FIVR_OPSC::PTH_FIVR_OPSC_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo FUS_FACT_INIT;
+		}		
+	}	
+	FlowItem FUS_FACT_INIT FUS_FACT::FUS_FACT_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BIN_INIT;
+		}		
+	}	
+	FlowItem TPI_BIN_INIT TPI_BIN::TPI_BIN_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_THRSOAK_INIT;
+		}		
+	}	
+	FlowItem PTH_DIODE_THRSOAK_INIT PTH_DIODE_THRSOAK::PTH_DIODE_THRSOAK_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_INIT;
+		}		
+	}
+	FlowItem TPI_BASE_END_INIT TPI_BASE_END::TPI_BASE_END_INIT
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return -1;
+		}
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}
+	}	
+}  # End of Flow INIT
+
+Flow LOTENDFLOW
+{
+	FlowItem TPI_BASE_LOTENDFLOW TPI_BASE::TPI_BASE_LOTENDFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of Flow LOTENDFLOW
+
+Flow LOTSTARTFLOW
+{
+	FlowItem TPI_BASE_LOTSTARTFLOW TPI_BASE::TPI_BASE_LOTSTARTFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of Flow LOTSTARTFLOW
+
+Flow TESTPLANSTARTFLOW
+{
+	FlowItem TPI_BASE_TESTPLANSTARTFLOW TPI_BASE::TPI_BASE_TESTPLANSTARTFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_TESTPLANSTARTFLOW;
+		}		
+	}	
+	FlowItem PTH_DIODE_SOT_TESTPLANSTARTFLOW PTH_DIODE_SOT::PTH_DIODE_SOT_TESTPLANSTARTFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_TESTPLANSTARTFLOW;
+		}		
+	}	
+	FlowItem TPI_BASE_END_TESTPLANSTARTFLOW TPI_BASE_END::TPI_BASE_END_TESTPLANSTARTFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return  -1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of Flow TESTPLANSTARTFLOW
+
+Flow TESTPLANENDFLOW
+{
+	FlowItem TPI_BASE_TESTPLANENDFLOW TPI_BASE::TPI_BASE_TESTPLANENDFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_DFF_TESTPLANENDFLOW;
+		}
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_DFF_TESTPLANENDFLOW;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_DFF_TESTPLANENDFLOW;
+		}		
+	}
+	FlowItem TPI_DFF_TESTPLANENDFLOW TPI_DFF::TPI_DFF_TESTPLANENDFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo PTH_DIODE_SOT_TESTPLANENDFLOW;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo PTH_DIODE_SOT_TESTPLANENDFLOW;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo PTH_DIODE_SOT_TESTPLANENDFLOW;
+		}		
+	}	
+	FlowItem PTH_DIODE_SOT_TESTPLANENDFLOW PTH_DIODE_SOT::PTH_DIODE_SOT_TESTPLANENDFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_BASE_END_TESTPLANENDFLOW;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			GoTo TPI_BASE_END_TESTPLANENDFLOW;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			GoTo TPI_BASE_END_TESTPLANENDFLOW;
+		}		
+	}	
+	FlowItem TPI_BASE_END_TESTPLANENDFLOW TPI_BASE_END::TPI_BASE_END_TESTPLANENDFLOW
+	{
+		Result -2
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result -1
+		{
+			Property PassFail = "Fail";
+			Return 1;
+		}		
+		Result 0
+		{
+			Property PassFail = "Fail";
+			Return 0;
+
+		}		
+		
+		Result 1
+		{
+			Property PassFail = "Pass";
+			Return 1;
+		}		
+	}	
+}  # End of Flow TESTPLANENDFLOW
+
+
+FlowDefs
+{
+	InitFlow = INIT;
+	MainFlow = MAIN;
+	LotEndFlow = LOTENDFLOW;
+	LotStartFlow = LOTSTARTFLOW;
+	TestPlanEndFlow = TESTPLANENDFLOW;
+	TestPlanStartFlow = TESTPLANSTARTFLOW;
+}

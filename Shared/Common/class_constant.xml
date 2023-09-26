@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BLLConfig>
+	<ULTFile>
+		<RootPath>C:\odese\temp\</RootPath>
+		<WriteZeros>true</WriteZeros>
+		<LineFormat>EFUSE:SSID=PKG,TYPE=PBIC_S1;SSPEC;BIN;FVID;FFDATA;</LineFormat>
+		<Filename>LOT_OPER</Filename>
+		<Extension>UBE</Extension>
+	</ULTFile>
+	<Constants>
+		<Flat_File_Path>J:\ult_download\</Flat_File_Path>
+	</Constants>
+</BLLConfig>

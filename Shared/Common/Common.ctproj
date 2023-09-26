@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{19A3FCB9-D393-48E8-9AC1-1E2497932F1E}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <CustomProjectExtensionsPath Condition="'$(CustomProjectExtensionsPath)' == ''">$(TorchCustomProjectPath)\</CustomProjectExtensionsPath>
+    <ProjectGuid>a4f03d0c-4fdb-48fd-926a-d7e183df4da0</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Label="TorchConfiguration">
+    <IsMTTSpeedFlow>true</IsMTTSpeedFlow>
+  </PropertyGroup>
+  <Import Project="$(CustomProjectExtensionsPath)Torch.ProjectSystem.Common.props" />
+  <ItemGroup>
+    <FlowMatrixFile Update="FlowMatrix.flm.xml">
+      <LastGenOutput>FlowMatrix.flm.usrv</LastGenOutput>
+    </FlowMatrixFile>
+  </ItemGroup>
+  <ItemGroup>
+    <UsrVarsFile Update="FlowMatrix.flm.usrv">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FlowMatrix.flm.xml</DependentUpon>
+    </UsrVarsFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PrimeCode\CCR\FailFork\FailFork\FailFork.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\CLK_LJPLL_ALL\CLK_FLL_END_FLOW\CLK_FLL_END_FLOW\CLK_FLL_END_FLOW.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\CLK_LJPLL_ALL\CLK_FuseCheck\CLK_FuseCheck\CLK_FuseCheck.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\CLK_LJPLL_ALL\PLL_FVcuve\PLL_FVcuve\PLL_FVcurve.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\CLK_LJPLL_ALL\PLL_Lock\PLL_Lock\PLL_Lock.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\CLK_LJPLL_ALL\PLL_Lock_2Timing\PLL_Lock_2Timing\PLL_Lock_2Timing.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\AtomLVmin\AtomLVmin\AtomLVmin.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\DataOnFail\DataOnFail\DataOnFail.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\DierecoverCallbacks\DierecoveryCallBacks.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\DummyTemplate\DummyTemplate\DummyTemplate.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\ForkTest\ForkTest\ForkTest.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\GroupDomain\GroupDomain\GroupDomain.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\HVBI_FORK\HVBI_FORK\HVBI_FORK.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\PatternModify\PatternModify\PatternModify.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\PerByteVix\PerByteVix\PerByteVix.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\PhyDecoder\PhyDecoder\PhyDecoder.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\PrintGSDS2Ituff\PrintGSDS2Ituff\PrintGSDS2Ituff.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\RPLcommon\RPLcommon\RPLcommon.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\RPLRecoveryInit\RPLRecoveryInit\RPLRecoveryInit.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\RPLShmoo\RPLShmoo\RPLshmoo.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\RPLVminSearchInit\RPLVminSearchInit\RPLVminSearchInit.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\RPLVminSearch\RPLVminSearch\RPLVminSearch.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\TVB_FAVORITE_CORE\TVB_FAVORITE_CORE\TVB_FAVORITE_CORE.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\UPS2GSDfix\UPS2GSDfix\UPS2GSDfix.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\Uservarstogsds\Uservarstogsds\Uservarstogsds.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\VDACSetUp\VDACSetUp.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\VectorScreeningTest\VectorScreeningTest\VectorScreeningTest.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\VminForwardInit\VminForwardInit\VminForwardInit.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\VminPredict\VminPredict\VminPredict.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\Common\ZeroDomainFix\ZeroDomainFix\ZeroDomainFix.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\MIO\MIO_DDR\MIO_DDR.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\PTH_DIODE_THRSOAK\PowerFollowing\PowerFollowing\PowerFollowing.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\PTH_POWER\PthPowerTM\PthPowerTM\PthPowerTM.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\QNR_CARV\QNRCallBacks\QNRCallBacks.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\QNR_CARV_PKG\FlowHooksFileGenerator\FlowHooksFileGenerator.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\QNR_CARV_PKG\QNRRVCallback\QNRRVCallback.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\QNR_CARV_PKG\QNRRVCustomCode\QNRRVCustomCode.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\SIO_HSPHY\SIOHsphyFunctionalVdac\SIOHsphyFunctionalVdac\SIOHsphyFunctionalVdac.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\SIO_PCIE_ALL1\SIOFunctionalWithVDAC\SIOFunctionalWithVDAC\SIOFunctionalWithVDAC.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\SIO_PCIE_ALL1\SIOPcieAll1AnalogMeasure\SIOPcieAll1AnalogMeasure\SIOPcieAll1AnalogMeasure.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\SIO_PCIE_ALL1\SioPcieFork\SioPcieFork\SioPcieFork.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\TesterScreen\TesterScreen\TesterScreen.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\TPI_BIN\AlarmToBin\AlarmToBin\AlarmToBin.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\TPI_BIN\COFforce\COFforce.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\TPI_DFF\FRVupdate\FRVupdate\FRVupdate.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\TPI_PUP\PupCallbacks\PupCallbacks.csproj" />
+    <ProjectReference Include="..\..\PrimeCode\UPS\UpsEngine\UpsEngine.csproj" />
+  </ItemGroup>
+  <Import Project="$(CustomProjectExtensionsPath)Torch.ProjectSystem.Common.targets" />
+</Project>

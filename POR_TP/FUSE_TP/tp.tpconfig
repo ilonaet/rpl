@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestProgram>
+    <ProductCodeName>
+      RPL<!--Define a product code-->
+    </ProductCodeName>
+    <TestProgramDescriptiveName>
+      CLASS_RPL8161S<!--Define a descriptive name for your TP-->
+    </TestProgramDescriptiveName>
+    <TeamEmailAddress>
+      ori.spokoini@intel.com
+    </TeamEmailAddress>
+    <SortClassType>
+      CLASS<!--Define either SORT or CLASS depending on your program type-->
+    </SortClassType>
+    <TPNameUservar>
+      RunTimeLibraryVars.iCGL_TpAltName<!--Define the uservar that holds the TP name-->
+    </TPNameUservar>
+    <TpTag>
+      <!--Define a tag for the test program-->
+    </TpTag>
+  </TestProgram>
+
+  <TestProgramFiles>
+    <BaseTplPath>..\..\BaseTestPlan.tpl</BaseTplPath>
+    <!--Define the path to the .tpl file-->
+    <ENVPath>EnvironmentFile.env</ENVPath>
+    <!--Define the path to the .env file-->
+    <STPLPath>SubTestPlan.stpl</STPLPath>
+    <!--Define the path to the .stpl file-->
+    <RootPath>
+      ..\..\<!--Define the solution topmost folder-->
+    </RootPath>
+    <TPIESignaturePath>..\..\TPIE.Signature</TPIESignaturePath>
+    <!--Define the path to the TPIE.Signature file-->
+  </TestProgramFiles>
+
+  <LTLTestProgramNameToSocketMapping>
+    <!--update the socket file name to the correct one-->
+    <TPToSocketMapping TPNameUservar="RunTimeLibraryVars.iCGL_TpAltName" SocketFile="..\..\Shared\Common\S8161_LGA_HDMT.soc" />
+    <!--Add more TPToSocketMapping tags for each unique TP name uservar-->
+  </LTLTestProgramNameToSocketMapping>
+  <!--Delete this SupportedBomGroups section if you don't need Bom groups support-->
+  <!--Enter the Flow Matrix relative path-->
+
+  <SupportedBomGroups FlowMatrixPath="..\..\Shared\Common\FlowMatrix.flm.xml">
+    <!--Enter the Bom group name and the Plist reference files path-->
+    <BomGroup name="CLASS_RPL8161S" plist="all.plist.xml" slimplist="all.slimplist.xml" soc="..\..\Shared\Common\S8161_LGA_HDMT.soc"/>
+    <!--Add more BomGroup tags as needed-->
+  </SupportedBomGroups>
+
+  <!--Delete the Recipes section if you don't need Class ASTRA recipe generation-->
+	<Recipes>
+		<Seeds DirectoryName="\\ger.corp.intel.com\ec\proj\mdl\ha\intel\engineering\dev\sctp\recipe_gen\hdmx\rpl\seed\R58" />
+		<LocationsStandard FileName="\\ger.corp.intel.com\ec\proj\mdl\ha\intel\engineering\dev\sctp\recipe_gen\hdmx\central\location_mapping\MPS\R1\MPS_LocationStandard.xlsx" />
+		<!--Enter the correct path of your recipe config file-->
+		<Settings FileName="\\ger.corp.intel.com\ec\proj\mdl\ha\intel\engineering\dev\sctp\recipe_gen\hdmx\rpl\config\R31\MPS_Class_RPL8161S.xlsx" />
+	</Recipes>
+  <TPCustomAttributes>
+    <!--Define any custom XML tags here-->
+  </TPCustomAttributes>
+</Configuration>

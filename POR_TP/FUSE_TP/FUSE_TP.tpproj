@@ -1,0 +1,37 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <CustomProjectExtensionsPath Condition=" '$(CustomProjectExtensionsPath)' == '' ">$(TorchCustomProjectPath)\</CustomProjectExtensionsPath>
+    <ProjectGuid>c9293cba-765b-4991-9eaa-ca0c64f5d356</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(CustomProjectExtensionsPath)Torch.ProjectSystem.TestProgram.props" />
+  <ItemGroup>
+    <Folder Include="ProgramFlowsTestPlan\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\CLK_LJPLL_BASE\CLK_LJPLL_BASE.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FACT\FUS_FACT.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FLE\FUS_FLE.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FUSEBURN\FUS_FUSEBURN.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FUSECFG\FUS_FUSECFG.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_FUSEREAD\FUS_FUSEREAD.mtproj" />
+    <ProjectReference Include="..\..\Modules\FUS_UNITINFO\FUS_UNITINFO.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_DIODE_SOT\PTH_DIODE_SOT.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_DIODE_THRSOAK\PTH_DIODE_THRSOAK.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_DTS\PTH_DTS.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_FIVR_OPSC\PTH_FIVR_OPSC.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_FIVR_TRIMC\PTH_FIVR_TRIMC.mtproj" />
+    <ProjectReference Include="..\..\Modules\PTH_VREFLDO\PTH_VREFLDO.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_BASE\TPI_BASE.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_BASE_END\TPI_BASE_END.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_BIN\TPI_BIN.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_DFF\TPI_DFF.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_EDM\TPI_EDM.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_FLOWID\TPI_FLOWID.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_GFX_AGG\TPI_GFX_AGG.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_SHOPS\TPI_SHOPS.mtproj" />
+    <ProjectReference Include="..\..\Modules\TPI_VCC\TPI_VCC.mtproj" />
+    <ProjectReference Include="..\..\Modules\VCC_MIM_ADTL\VCC_MIM_ADTL.mtproj" />
+    <ProjectReference Include="..\..\Shared\Common\Common.ctproj" />
+  </ItemGroup>
+  <Import Project="$(CustomProjectExtensionsPath)Torch.ProjectSystem.TestProgram.targets" />
+</Project>

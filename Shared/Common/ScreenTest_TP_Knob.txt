@@ -1,0 +1,109 @@
+START_SCREEN:CheckFlag
+#RunOn: TestName  	: Data Type	: Param Type	:  Param1   				: Operation 	: Param Type  	: Param2  			: TmpStore 	: OnTrue  	: OnFalse
+EXEC  : Chk01     	: -    		: FUNCTION  	: GETCURRENTBINSET()    	:    -      	:    -        	: -       			:     -    	: Chk02   	: 3
+EXEC  : Chk02     	: INT      	: CUSTOM    	: BIN_TOS_HARD       	 	:    >      	: LITERAL     	: 999     			:     -    	: Chk03     : Chk04
+EXEC  : Chk03     	: INT      	: GLOBAL    	: TP_KNOB.Bin69_FLG   		:    ==     	: LITERAL     	: 2       			:     -    	: Chk04   	: Chk05
+EXEC  : Chk04    	: INT      	: GLOBAL      	: TP_KNOB.Bin69_FLG    		:   SET     	: LITERAL     	: 3       			:     -    	: 1       	: 3
+EXEC  : Chk05    	: INT      	: GLOBAL      	: TP_KNOB.Bin69_FLG    		:   SET     	: LITERAL     	: 3       			:     -    	: 2       	: 3
+END_SCREEN
+
+START_SCREEN:PrimarySocketCheck
+#RunOn: TestName  	: Data Type	: Param Type	:  Param1   				: Operation 	: Param Type  	: Param2  							: TmpStore 	: OnTrue  	: OnFalse
+EXEC  : ChkLocNum   : STRING   	: LOCATIONSET	: LOCNGROUP					:    ==     	: GLOBAL     	: _UserVars.PrimarySocketLocn     	:     -    	: 1   		: 2
+END_SCREEN
+
+START_SCREEN:RejectFork
+#RunOn: TestName  	: Data Type	: Param Type	:  Param1   				: Operation 	: Param Type  	: Param2  			: TmpStore 	: OnTrue  	: OnFalse
+EXEC  : Chk01     	: -    		: FUNCTION  	: GETCURRENTBINSET()    	:    -      	:    -        	: -       			:     -    	: Chk02   	: 3
+EXEC  : Chk02     	: INT      	: CUSTOM    	: BIN_TOS_HARD       	 	:    >      	: LITERAL     	: 999     			:     -    	: 1     	: Chk03
+EXEC  : Chk03     	: STRING	: GSDS			: U.S.TTR_MONITOR_FAIL      :    ==    		: LITERAL     	: "TRUE"			:	  - 	: 4         : 2
+END_SCREEN
+
+START_SCREEN::CQN_VMIN_DIEREC_CHECK
+#RunOn	:	TestName	:	DataType	:	ParamType	:	Param1										:	Operation	:	ParamType	:	Param2		:	TmpStore	:	OnTrue	:	OnFalse
+EXEC	:	Test1		:	STRING		:	GLOBAL		:	SCVars.SC_ENGID								:	==			:	LITERAL		:	"QE"		:	-			:	Test5	:	Test2
+EXEC	:	Test2		:	STRING		:	GLOBAL		:	SCVars.SC_ENGID								:	==			:	LITERAL		:	"QQ"		:	-			:	Test5	:	Test3
+EXEC	:	Test3		:	STRING		:	GLOBAL		:	SCVars.SC_ENGID								:	==			:	LITERAL		:	"QC"		:	-			:	Test5	:	Test4
+EXEC	:	Test4		:	STRING		:	GLOBAL		:	SCVars.SC_ENGID								:	==			:	LITERAL		:	"QP"		:	-			:	Test5	:	Test6
+EXEC	:	Test5		:	STRING		:	GLOBAL		:	_UserVars.FAST_VminForwardingEnabled		:	SET			:	LITERAL		:	"EDC"		:	-			:	2		:	3
+EXEC	:	Test6		:	STRING		:	GLOBAL		:	_UserVars.FAST_VminForwardingEnabled		:	SET			:	LITERAL		:	"TRUE"		:	-			:	1		:	3
+END_SCREEN
+
+
+START_SCREEN:HWRTREMAP_BIN80
+#RunOn	:	TestName  	: Data Type		: 	Param Type	:  	Param1   								: 	Operation 	: 	Param Type	:	Param2  		:	TmpStore 	:	OnTrue	:	OnFalse
+EXEC	:	Test1		:	STRING		:	GLOBAL		:	SCVars.SC_LOCN							:	==			:	LITERAL		:	"6263"			:	-			:	Test5	:	Test2
+EXEC	:	Test2		:	STRING		:	GLOBAL		:	SCVars.SC_LOCN							:	==			:	LITERAL		:	"6264"			:	-			:	Test5	:	Test3
+EXEC	:	Test3		:	STRING		:	GLOBAL		:	SCVars.SC_LOCN							:	==			:	LITERAL		:	"6208"			:	-			:	Test5	:	Test4
+EXEC	:	Test4		:	STRING		:	GLOBAL		:	SCVars.SC_LOCN							:	==			:	LITERAL		:	"6258"			:	-			:	Test5	:	1
+EXEC  	:	Test5     	: 	-    		: 	FUNCTION  	: 	GETCURRENTBINSET()    					:	-      		:	-        	:	-       		:	-    		:	Test6	:	2
+EXEC  	:	Test6     	: 	INT    		: 	GLOBAL  	: 	TPI_BASE.ORIBIN    						:	SET     	:	CUSTOM      :	BIN_TOS_SOFT    :	-    		:	Test7	:	2
+EXEC  	:	Test7     	: 	INT      	: 	CUSTOM    	: 	BIN_TOS_HARD       	 					:	>      		: 	LITERAL     :	999     		:	-    		:	Test8   :	1
+EXEC 	: 	Test8 		: 	STRING		: 	GLOBAL   	: 	SCVars.SC_TEST_COUNT 					: 	==   		: 	LITERAL     : 	""           	: 	-   		: 	1   	: 	Test9
+EXEC 	: 	Test9 		: 	- 			: 	FUNCTION   	: 	STR2INT(GLOBAL.SCVars.SC_TEST_COUNT) 	: 	-   		: 	-         	: 	-           	: 	-   		: 	Test10  : 	2
+EXEC 	: 	Test10 		: 	INT    		: 	CUSTOM     	: 	STR2INT                              	: 	>  			: 	LITERAL   	: 	1          		: 	-   		: 	3       : 	1
+END_SCREEN
+
+# port 0 - failing template internal execution, set bin94.
+# port 1 - passing, no bin set.
+# port 2 - failing screen test execution, set bin94.
+# port 3 - HWRT passing port, set bin8020.
+
+START_SCREEN:FACTSUBFLOWFORK
+#RunOn	   	: TestName  	: Data Type    	: Param Type  	: Param1   				    		: Operation    	: Param Type  	: Param2  				: TmpStore 		: OnTrue			: OnFalse
+EXEC  		: Test00		: STRING    	: GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP   	: ==			: LITERAL		: "CLASSCOLD"  				:     -     : 2					: Test01
+EXEC  		: Test01		: STRING    	: GLOBAL		: SCVars.SC_FACTMODE    			: ==        	: LITERAL  		: "LotLevel"  			:     -     	: Test02			: Test03
+EXEC  		: Test02		: STRING    	: GLOBAL		: SCVars.SC_TWOSTEPFACT    			: ==        	: LITERAL  		: "TRUE"  				:     -     	: 1					: 3
+EXEC  		: Test03		: STRING    	: GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP   	: ==			: LITERAL		: "FUSE"  				:     -     	: 1					: 2
+END_SCREEN
+#PORT1 - FaCT_Mode = OFF & SC_CURRENT_PROCESS_STEP != "FUSE")||(FaCT_Mode = LotLevel & TWOSTEPFACT != TRUE) , Proceed with Class
+#PORT2 - FaCT_Mode = OFF & SC_CURRENT_PROCESS_STEP == "FUSE", jumps to fuse.
+#PORT3 - FaCT_Mode = LotLevel & TWOSTEPFACT == TRUE, jump to fuse.
+#loc	FACTMODE	twostepfact		process		port
+#6261	off			TRUE			class		port 1
+#6262	lotlevel	FALSE			class		port 1
+#6197	lotlevel	TRUE			fuse		port 3
+#6261	""			""				class		port 1
+#6197	""			""				fuse		port 2
+
+START_SCREEN:FACTFORK
+#RunOn	   	: TestName   	: Data Type    	: Param Type  	: Param1   				    		: Operation    	: Param Type  	: Param2  				: TmpStore 		: OnTrue		: OnFalse
+EXEC  		: Test01		: STRING    	: GLOBAL		: SCVars.SC_FACTMODE    			: ==        	: LITERAL  		: "LotLevel"  			:     -     	: 1				: Test02
+EXEC		: Test02		: STRING		: GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP   	: ==			: LITERAL		: "FUSE"				:     -			: 1				: 2
+END_SCREEN
+#PORT1 - Fusing - 6262 FACT or 6197 FACT/NONFACT
+
+START_SCREEN:KLOTB56
+#RunOn	   	: TestName   	: Data Type    	: Param Type  	: Param1   				    		: Operation    	: Param Type  	: Param2  		: TmpStore 		: OnTrue		: OnFalse
+EXEC		: Test00		: STRING		: GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP   	: ==			: LITERAL		: "CLASSHOT"	:     -			: Test01		: 1
+EXEC  		: Test01		: STRING    	: GLOBAL		: SCVars.SC_LOCN   					: ==			: LITERAL		: "6881"  		:     -     	: Test05		: Test02
+EXEC  		: Test02		: STRING    	: GLOBAL		: SCVars.SC_LOCN   					: ==			: LITERAL		: "6889"  		:     -     	: Test05		: Test03
+EXEC  		: Test03		: STRING    	: GLOBAL		: SCVars.SC_LOCN   					: ==			: LITERAL		: "6262"  		:     -     	: Test05		: Test04
+EXEC  		: Test04		: STRING    	: GLOBAL		: SCVars.SC_LOCN   					: ==			: LITERAL		: "6267"  		:     -     	: Test05		: 1
+EXEC  		: Test05		: INT	    	: DFF			: PKG.BI.BIN    					: <        		: LITERAL  		: 100  			:     -     	: 2				: Test06
+EXEC  		: Test06		: INT	    	: DFF			: PKG.BI.BIN    					: >        		: LITERAL  		: 699  			:     -     	: 2				: 1
+END_SCREEN
+#PORT0 - Bin5600
+#PORT1 - NA
+#PORT2 - Bin5600
+START_SCREEN:INLINERVREBIN
+#InlineRV rebinning infrastructure. Port 2 is general failures (get bin failure or unit is reject escape).
+#Process step = CHR and location set = INLINE_REBI_RV, rebin passing unit to 8020 (port 6)
+#Process step = CHR and location set != FH_ENG, rebin passing unit to 8080 (port 7)
+#Process step = PHR, rebin passing unit to 8030 (port 3)
+#Process step = PCR, rebin passing unit to 8040 (port 4)
+#Process step = PRR, rebin passing unit to 8050 (port 5)
+#RunOn: TestName    :Data Type  :Param Type     :Param1   						 	:Operation  : Param Type    : Param2  		     : TmpStore  : OnTrue  	   : OnFalse
+EXEC  : INLINE001   : -    	    : FUNCTION  	: GETCURRENTBINSET()    			:    -   	:    -    		: -       		     :    -    	 : INLINE002   : 2
+EXEC  : INLINE002   : INT       : CUSTOM    	: BIN_TOS_HARD       	 			:    >   	: LITERAL     	: 999     		     :    -    	 : INLINE003   : 2
+EXEC  : INLINE003   : STRING    : GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP  	:   ==    	: LITERAL    	:"PHMHOTR"           :    -      : 3           : INLINE004    
+EXEC  : INLINE004   : STRING    : GLOBAL     	: SCVars.SC_CURRENT_PROCESS_STEP    :   ==    	: LITERAL    	:"PHMCOLDR"          :    -      : 4           : INLINE005    
+EXEC  : INLINE005   : STRING    : GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP   	:   ==    	: LITERAL    	:"PHMROOMR" 	     :    -      : 5           : INLINE006    
+EXEC  : INLINE006   : STRING    : GLOBAL		: SCVars.SC_CURRENT_PROCESS_STEP   	:   ==    	: LITERAL    	:"CLASSHOTR"   	     :    -      : INLINE007   : 1 
+EXEC  : INLINE007   : STRING    : GLOBAL	    : SCVars.SC_LOCN                    :   ==    	: LITERAL    	:"7821"              :    -      : 6           : INLINE008 
+EXEC  : INLINE008   : STRING    : GLOBAL	    : SCVars.SC_LOCN                    :   ==    	: LITERAL    	:"7823"              :    -      : 6           : INLINE009   
+EXEC  : INLINE009   : STRING    : GLOBAL	    : SCVars.SC_LOCN                    :   ==    	: LITERAL    	:"5821"              :    -      : 6           : INLINE010  
+EXEC  : INLINE010   : STRING    : GLOBAL	    : SCVars.SC_LOCN                    :   ==    	: LITERAL    	:"5823"              :    -      : 6           : INLINE011  
+EXEC  : INLINE011   : STRING    : GLOBAL	    : SCVars.SC_LOCN                    :   ==    	: LITERAL    	:"6233"              :    -      : 1           : INLINE012
+EXEC  : INLINE012   : STRING    : GLOBAL	    : SCVars.SC_LOCN                    :   ==    	: LITERAL    	:"6234"              :    -      : 1           : 7
+END_SCREEN

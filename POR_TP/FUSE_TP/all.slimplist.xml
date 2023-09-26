@@ -1,0 +1,13 @@
+<HdmtReferenceFile>
+	<PList>
+		<PListFile name="slim_CLK_CRO_allplist.plist" />
+		<PListFile name="slim_FIVR_OPS_allplist.plist" />
+		<PListFile name="slim_FIVR_TRIM_allplist.plist" />
+		<PListFile name="slim_fun_basic_class_allplist.plist" />
+		<PListFile name="slim_fuse_cpu_allplist.plist" />
+		<PListFile name="slim_ljpll_allplist.plist" />
+		<PListFile name="slim_shops.plist" />
+		<PListFile name="slim_thermal_sensor_allplist.plist" />
+		<PListFile name="slim_vref_ldo_allplist.plist" />
+	</PList>
+</HdmtReferenceFile>

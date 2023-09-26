@@ -1,0 +1,14 @@
+#------------------------------------------------------------------------------------------------
+#
+#     The TPIE.signature file is designed to be used for all test programs in the solution.
+#     Do not change the file name, as TOS automation is dependent on it.
+#
+#------------------------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+[Build Identification]
+#-------------------------------------------------------------------------------
+<Built By>        pbogomol
+<Log ID>          66dbae87-5fc0-4db8-b597-0e4e098e40d4
+<Staging Folder>  \\haswebtbe05.ger.corp.intel.com\TPIE_OUTPUT_STAGING\PROD_IDC_REMOTE_TO_US\BASE\66dbae87-5fc0-4db8-b597-0e4e098e40d4
